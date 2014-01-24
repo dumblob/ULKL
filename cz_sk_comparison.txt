@@ -1,0 +1,5 @@
+a   á       b   c   č   d   ď   e   é ě f   g   h   i   í   j   k   l
+A   Á   Ä   B   C   Č   D   Ď   E   É   F   G   H   I   Í   J   K   L   Ĺ   Ľ
+
+m   n   ň   o   ó       p   q   r   ř   s   š   t   ť   u   ú ů v   w   x   y   ý   z   ž
+M   N   Ň   O   Ó   Ô   P   Q   R   Ŕ   S   Š   T   Ť   U   Ú   V   W   X   Y   Ý   Z   Ž

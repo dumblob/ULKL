@@ -1,0 +1,290 @@
+// 2010-2014 Jan Pacner <pacnerjan@volny.cz>
+// etaoin shrdlu!
+
+// implemented concept of czech dvorak
+//   motto: be as much compatible with ISO dvorak as possible
+//   4. level is the same as 3. level
+//   2. level of ISO dvorak goes without modifications to the 3. level
+//   the whole czech alphabet is accessible directly from 1. and 2. level
+//     without any exception
+//   3. level has some additional non-alphabet characters (e.g. numbers)
+//   3. level is accessible only by pressing both Shifts at once (and
+//     holding either of them)
+//   there are 2 variants which differ in placement and/or availability of
+//       characters ' " < > „ “ SHY
+//     in `xml', characters „ “ are not available and ' " < > are on their
+//       original places and ! is duplicated for better reachability
+//     in `writer', all characters are available, but " < > are in
+//       the 3. level, thus less reachable
+
+//FIXME
+//  Shift+Enter non-breakable LF
+//  X upstream
+//    xkeyboard-config-2.10.1/rules/compat/layoutsMapping.lst
+//  Cesky narodni korpus (FFUK)
+//    http://ucnk.ff.cuni.cz/syn2010.php
+//    co cizi jazyky (napr. anglictina) v nasem korpusu?
+//    informace pro kazdy oddil korpusu zvlast?
+//  characters
+//    horni (U+201C) a spodni (U+201E) ceske uvozovky, euro,
+//    stupen celsia (degree sign), stupnove minuty
+//    spojovnik (pomlcku uz mam, minus se podle CSN nahrazuje pomlckou),
+//    paragraf (section sign), ceske znaky, tvrda mezera
+//    !, @, %, *, (, ), ?, /, +, -, _, :, ;,   =
+//             ?           ?  ?  ?  ?     ?    ?
+//                         8     2  5     166  1
+//    "d hacek" = "n hacek"  FIXME
+//    "t hacek" ? "n hacek" (to jenom pro zajimavost - menit to nebudu)
+//    "i carka" kam umistit? FIXME
+//  ideas
+//    http://kam.mff.cuni.cz/~pasky/dev/debian/lenny/ucwcs-xkb/ucwcs-xkb/README.CZ
+//    zmacknu jeden shift, pak druhy (je jedno v jakem poradi), nasledne
+//      pustim-li jenom jeden z shiftu a tuknu na nejakou jinou klavesu X
+//        (ruznou od toho pusteneho shiftu), bude to povazovano za
+//        docasne prepnuti do shiftLevel3, ktery se okamzite po
+//        stisknuti minimalne jedne X s naslednym pustenim drzeneho shiftu zase
+//        vypne a vrati do puvodniho stavu
+//      pustim-li jeden shift a nasledne ten druhy (je jedno v jakem poradi),
+//        bude to povazovano za toggle do rezimu shiftLevel3, ktery se ukonci
+//        stisknutim (a pripadnym drzenim) jakehokoliv shiftu - v pripade
+//        drzeni shiftu se uplne normalne prepne do puvodniho stavu a chova
+//        se to, jako kdyz je stisknuty normalni shift
+//    pri aktivnim rezimu toggle tretiho levelu se mi rozsviti nejaka
+//      ledka, napr. CapsLock
+
+// ----------- standard ISO dvorak, 1. and 2. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//  `   1   2   3   4   5   6   7   8   9   0   [   ]
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   +   |
+//          '   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            space
+//                            space
+
+// ----------- czech dvorak xml, 1. and 2. level
+//  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
+//  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   Ť   Ň
+//          '   ,   .   p   y   f   g   c   r   l   /   ť   ň
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            NBSP
+//                            space
+
+// ----------- czech dvorak xml, 3. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//
+//              SHY !   §       :   7   8   9   [   ]   +   |
+//              SHY (soft hyphen)
+//              hyphen (spojovnik)
+//              non-breaking hyphen
+//
+//          @   °   €   `       ,   4   5   6   =   \
+//
+//                              0   1   2   3   .
+//
+//                            NBSP
+
+// ----------- czech dvorak writer, 1. and 2. level
+//  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
+//  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
+//
+//          “   SHY '   P   Y   F   G   C   R   L   ?   Ť   Ň
+//              SHY (soft hyphen)
+//              hyphen (spojovnik)
+//              non-breaking hyphen
+//          „   ,   .   p   y   f   g   c   r   l   /   ť   ň
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            NBSP
+//                            space
+
+// ----------- czech dvorak writer, 3. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//
+//          "   <   >   §       :   7   8   9   [   ]   +   |
+//
+//          @   °   €   `       ,   4   5   6   =   \
+//
+//                              0   1   2   3   .
+//
+//                            NBSP
+
+// ----------- czech dvorak (xml|writer), 4. level
+// the same as 3. level
+
+//default                                  // wtf is this?
+//hidden                                   // wtf is this?
+//partial                                  // wtf is this? (not necessary for include)
+//alphanumeric_keys                        // wtf is this?
+//modifier_keys                            // wtf is this?
+//xkb_compatibility "some_xkb_symbols_id"  // wtf is this?
+xkb_symbols "base" {
+  //virtual_modifiers LevelThree, Lock;
+  //interpret ISO_Level3_Shift + Lock {
+  //  action = SetMods(modifiers = LevelThree);
+  //};
+
+  //key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
+  //name[Group1] = "Czech Dvorak for writers/typography";
+
+  //key <SPCE> { [ level1, level2,  level3, level...  ],   // Group 1
+  //             [ U2423,  emspace, U2420,  ...       ] }; // Group 2
+  //               |       |        |       level3-shift + shift + key
+  //               |       |        level3-shift + key
+  //               |       shift + key
+  //               plain key
+  //replace key <...> {...}
+
+  //(int)NoSymbol results to the previously defined character
+  //(int)VoidSymbol results in "nothing"
+  //(int)Any
+
+  // topmost row
+
+  key <TLDE> {[ uacute,     Uacute,     asciitilde,  asciitilde  ]};
+  key <AE01> {[ eacute,     Eacute,     exclam,      exclam      ]};
+  key <AE02> {[ aacute,     Aacute,     at,          at          ]};
+  key <AE03> {[ oacute,     Oacute,     numbersign,  numbersign  ]};
+  key <AE04> {[ ecaron,     Ecaron,     dollar,      dollar      ]};
+  key <AE05> {[ uring,      Uring,      percent,     percent     ]};
+  key <AE06> {[ yacute,     Yacute,     asciicircum, asciicircum ]};
+  key <AE07> {[ dcaron,     Dcaron,     ampersand,   ampersand   ]};
+  key <AE08> {[ iacute,     Iacute,     asterisk,    asterisk    ]};
+  key <AE09> {[ ccaron,     Ccaron,     parenleft,   parenleft   ]};
+  key <AE10> {[ rcaron,     Rcaron,     parenright,  parenright  ]};
+  key <AE11> {[ scaron,     Scaron,     braceleft,   braceleft   ]};
+  key <AE12> {[ zcaron,     Zcaron,     braceright,  braceright  ]};
+  // FIXME wtf is this key?
+  key <AE13> {[ VoidSymbol, VoidSymbol, VoidSymbol,  VoidSymbol  ]};
+  key <BKSP> {[ BackSpace,  BackSpace,  BackSpace,   BackSpace   ]};
+
+  // top row
+
+  // ISO_Left_Tab
+  key <TAB>  {[ Tab,    Tab,      Tab,          Tab          ]};
+  //key <AD01> see specific variants
+  //key <AD02> see specific variants
+  //key <AD03> see specific variants
+  key <AD04> {[ p,      P,        section,      section      ]};
+  key <AD05> {[ y,      Y,        VoidSymbol,   VoidSymbol   ]};
+  key <AD06> {[ f,      F,        colon,        colon        ]};
+  key <AD07> {[ g,      G,        7,            7            ]};
+  key <AD08> {[ c,      C,        8,            8            ]};
+  key <AD09> {[ r,      R,        9,            9            ]};
+  key <AD10> {[ l,      L,        bracketleft,  bracketleft  ]};
+  key <AD11> {[ slash,  question, bracketright, bracketright ]};
+  key <AD12> {[ tcaron, Tcaron,   plus,         plus         ]};
+  key <BKSL> {[ ncaron, Ncaron,   bar,          bar          ]};
+
+  // home/middle row
+
+  key <CAPS> {[ Escape,   Escape,     Escape,     Escape     ]};
+  key <AC01> {[ a,        A,          at,         at         ]};
+  key <AC02> {[ o,        O,          degree,     degree     ]};
+  key <AC03> {[ e,        E,          EuroSign,   EuroSign   ]};
+  key <AC04> {[ u,        U,          grave,      grave      ]};
+  key <AC05> {[ i,        I,          VoidSymbol, VoidSymbol ]};
+  key <AC06> {[ d,        D,          comma,      comma      ]};
+  key <AC07> {[ h,        H,          4,          4          ]};
+  key <AC08> {[ t,        T,          5,          5          ]};
+  key <AC09> {[ n,        N,          6,          6          ]};
+  key <AC10> {[ s,        S,          equal,      equal      ]};
+  // pomlcka (= minus = dash)
+  key <AC11> {[ minus,    underscore, backslash,  backslash  ]};
+  // FIXME wtf is this key?
+  //key <ENTR> {[ KP_Enter, KP_Enter,   KP_Enter,   KP_Enter   ]};
+  key <RTRN> {[ Return,   Return,     Return,     Return     ]};
+
+  // bottom row
+
+  // Shift_Lock
+  key <LFSH> {[ Shift_L,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
+  // left bottom key, right from <LFSH>, which doesn't follow the kbd standard
+  key <LSGT> {[ VoidSymbol, VoidSymbol,       VoidSymbol,       VoidSymbol       ]};
+  key <AB01> {[ semicolon,  colon,            VoidSymbol,       VoidSymbol       ]};
+  key <AB02> {[ q,          Q,                VoidSymbol,       VoidSymbol       ]};
+  key <AB03> {[ j,          J,                VoidSymbol,       VoidSymbol       ]};
+  key <AB04> {[ k,          K,                VoidSymbol,       VoidSymbol       ]};
+  key <AB05> {[ x,          X,                VoidSymbol,       VoidSymbol       ]};
+  key <AB06> {[ b,          B,                0,                0,               ]};
+  key <AB07> {[ m,          M,                1,                1                ]};
+  key <AB08> {[ w,          W,                2,                2                ]};
+  key <AB09> {[ v,          V,                3,                3                ]};
+  key <AB10> {[ z,          Z,                period,           period           ]};
+  // FIXME wtf is this key?
+  key <AB11> {[ VoidSymbol, VoidSymbol,       VoidSymbol,       VoidSymbol       ]};
+  key <RTSH> {[ Shift_R,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
+
+  // bottom-most row
+
+  key <LCTL> {[ Control_L,  Control_L,    Control_L,    Control_L    ]};
+  // SUPR
+  key <LWIN> {[ Super_L,    Super_L,      Super_L,      Super_L      ]};
+  // META
+  key <LALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
+              [ Alt_L,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  key <SPCE> {[ space,      nobreakspace, nobreakspace, nobreakspace ]};
+  // META
+  key <RALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
+              [ Alt_R,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  // SUPR
+  key <RWIN> {[ Super_R,    Super_R,      Super_R,      Super_R      ]};
+  //key <RWIN> {[ Hyper_R,    Hyper_R,      Hyper_R,      Hyper_R      ]};
+  key <MENU> {[ Menu,       VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  key <RCTL> {[ Control_R,  Control_R,    Control_R,    Control_R    ]};
+
+  // ISO_Next_Group
+  key <SCLK> {[ Scroll_Lock, Scroll_Lock, Scroll_Lock, Scroll_Lock ]};
+
+  //shift, lock, control, mod1=Meta, mod2, mod3=Alt?, mod4, mod5=Alt
+  //Mode_switch, Meta_L, Meta_R, LevelThree,
+  //Shift_Lock, ISO_Prev_Group, ISO_First_Group, ISO_Last_Group
+
+  // this could be useful for some window managers which utilize the
+  // Meta key, but it could have bad impact on level3 of some keys
+  //modifier_map Mod1 { ISO_Level3_Shift };
+};
+
+xkb_symbols "xml" {
+  include "czd(base)"
+
+  name[Group1] = "Czech Dvorak xml (useful for extensive XML/HTML editing)";
+
+  key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
+  // spojovnik (soft hyphen)
+  key <AD02> {[ comma,      less,     U00AD,      U00AD      ]};
+  key <AD03> {[ period,     greater,  exclam,     exclam     ]};
+};
+
+xkb_symbols "writer" {
+  include "czd(base)"
+
+  name[Group1] = "Czech Dvorak writer (useful for non-markup text editing)";
+
+  // dolni, horni uvozovky
+  key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};
+  // spojovnik (soft hyphen)
+  key <AD02> {[ comma,  U00AD,      less,     less     ]};
+  key <AD03> {[ period, apostrophe, greater,  greater  ]};
+};
+
+// vim:syn=xkb

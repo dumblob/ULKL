@@ -1,0 +1,9 @@
+ČSN 36 9050
+  Informační technika. Rozložení znaků na české klávesnici pro textové a kancelářské systémy
+  Vydána: 9.1994
+
+Oprava: Opr.1 (Katalogové číslo: 39762)
+  Vydána: 12.1995
+  meni pouze "TECKA NAD" na "DOT ABOVE", nic vic
+
+vim: set wrap:
