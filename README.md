@@ -1,9 +1,9 @@
 What?!
 ======
 
-Ever experienced problems with slow typing or hand-pain (wrist, carpal tunnels etc.) or switching to another nationalized layout in your head and hand-memory?
+Ever experienced problems with slow typing or hand-pain (wrist, carpal tunnels etc.) or switching to another nationalized layout in your head and hand-memory or tricky-accessible characters (especially the national-specific ones)?
 
-This project should offer you a solution which mitigates the above-mentioned issues by introducing a easy-to-remember and easy-to-learn unified approach to creating nationalized but conceptually-uniform keyboard layout.
+This project should offer you a solution which mitigates the above-mentioned issues by introducing a easy-to-remember and easy-to-learn unified approach to creating nationalized but conceptually-uniform keyboard layouts.
 
 Structure of this directory
 ---------------------------
@@ -77,4 +77,4 @@ Druha skupina je jiz z principu schopna si sama prehodit layout, naucit se neco 
 
 Podle meho nazoru je zbytecne zabyvat se prohazovanim Y/Z (jak se tim zabyva napr. web http://www.ceskaklavesnice.cz/historie), prestoze tato malickost cloveka muze mirne otravovat. Avsak jedna se o tak nepatrny detail, ktery je kazdy kdo pise vsemi deseti schopen (docasne) udrzet v hlave. Pripadne si prepne na druhou variantu (kazdy bezne dostupny OS jiz mnoho let umi bezproblemove prepinat mezi rozlozenimi).
 
-Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad a bylo zjisteno, ze ceska abeceda obsahuje nejvice pismen. Spolu s tim byla navrzena jednoducha metodika jak vytvaret narodni klavesnicova rozlozeni pro jazyky pouzivajici latinku jako zaklad. A\ protoze se podarilo uspesne vytvorit ceskou variantu dvorak, je zaruceno, ze danou metodikou lze v pripade ostatnich latinskych abeced dosahnout jiz pouze lepsich vysledku.
+Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad a bylo zjisteno, ze slovenska abeceda obsahuje nejvice pismen a ceska je hned druha v poradi. Spolu s tim byla navrzena jednoducha metoda jak vytvaret narodni klavesnicova rozlozeni pro jazyky pouzivajici jako zaklad latinku. A\ protoze se podarilo uspesne vytvorit slovenskou a ceskou variantu dvorak, koncept zarucuje, ze danou metodou lze v pripade ostatnich latinskych abeced dosahnout nemene kvalitnich vysledku.
