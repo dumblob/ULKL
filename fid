@@ -42,12 +42,12 @@
 // ----------- finnish dvorak, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
-//              SHY !   §       :   7   8   9   [   ]   +   |
+//              SHY !   §       ,   7   8   9   [   ]   +   |
 //              SHY (soft hyphen)
 //              hyphen (spojovnik)
 //              non-breaking hyphen
 //
-//          @   °   €   `       ,   4   5   6   =   \
+//          @   °   €   `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
@@ -86,7 +86,7 @@ xkb_symbols "base" {
   key <AD03> {[ period,     greater,  exclam,       exclam       ]};
   key <AD04> {[ p,          P,        section,      section      ]};
   key <AD05> {[ y,          Y,        VoidSymbol,   VoidSymbol   ]};
-  key <AD06> {[ f,          F,        colon,        colon        ]};
+  key <AD06> {[ f,          F,        comma,        comma        ]};
   key <AD07> {[ g,          G,        7,            7            ]};
   key <AD08> {[ c,          C,        8,            8            ]};
   key <AD09> {[ r,          R,        9,            9            ]};
@@ -103,7 +103,7 @@ xkb_symbols "base" {
   key <AC03> {[ e,        E,          EuroSign,   EuroSign   ]};
   key <AC04> {[ u,        U,          grave,      grave      ]};
   key <AC05> {[ i,        I,          VoidSymbol, VoidSymbol ]};
-  key <AC06> {[ d,        D,          comma,      comma      ]};
+  key <AC06> {[ d,        D,          colon,      colon      ]};
   key <AC07> {[ h,        H,          4,          4          ]};
   key <AC08> {[ t,        T,          5,          5          ]};
   key <AC09> {[ n,        N,          6,          6          ]};
