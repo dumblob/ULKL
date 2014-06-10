@@ -1,9 +1,9 @@
 What?!
 ======
 
-Ever experienced problems with slow typing or hand-pain (wrist, carpal tunnels etc.) or switching to another nationalized layout in your head and hand-memory or tricky-accessible characters (especially the national-specific ones)?
+Ever experienced problems with *slow typing* or *hand-pain* (wrist, carpal tunnels etc.) or *switching to another nationalized layout in your head and hand-memory* or *tricky-accessible characters* (especially the national-specific ones)?
 
-This project should offer you a solution which mitigates the above-mentioned issues by introducing a easy-to-remember and easy-to-learn unified approach to creating nationalized but conceptually-uniform keyboard layouts.
+This project offers you a solution which mitigates the above-mentioned issues by introducing a easy-to-remember and easy-to-learn unified approach to creating nationalized but conceptually-uniform keyboard layouts.
 
 Structure of this directory
 ---------------------------
@@ -61,7 +61,7 @@ The goal is to *not* create an *ultimate keyboard layout* (either by combining k
 Elaboration explaining the reasons behind this idea/attitude
 ------------------------------------------------------------
 
-(The following text is in Czech because of it\`s history. It'll be translated as soon as someone request it.)
+(The following text is in Czech because of it\`s history. It'll be translated as soon as someone requests it.)
 
 Volim proto variantu, kdy uzivatel bezne pouziva vice jazykove-specifickych layoutu a mezi nimi se podle potreby prepina. Tim ovsem vznika otazka nauceni se mnoha layoutu. Resenim je zachovat kompatibilitu zakladnich znaku (napr. cele latinky) a vhodne menit pouze zbytek (lze napr. prohazet urovne, cimz se dosahne pozadovane efektivity) podle predem daneho jednoducheho vzoru.
 
