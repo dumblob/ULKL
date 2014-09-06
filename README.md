@@ -83,3 +83,4 @@ References
 ----------
 
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
+[huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose)
