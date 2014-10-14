@@ -24,8 +24,8 @@
 //                            space
 
 // ----------- finnish dvorak, 1. and 2. level
-//      Å   Ä   Ö                               Š   Ž
-//      å   ä   ö                               š   ž
+//      Å   Ä   Ö                               Š
+//      å   ä   ö                               š
 //
 //          "   <   >   P   Y   F   G   C   R   L   ?   +   |
 //          '   ,   .   p   y   f   g   c   r   l   /   =   \
@@ -71,7 +71,7 @@ xkb_symbols "base" {
   key <AE09> {[ VoidSymbol, VoidSymbol, parenleft,   parenleft   ]};
   key <AE10> {[ VoidSymbol, VoidSymbol, parenright,  parenright  ]};
   key <AE11> {[ scaron,     Scaron,     braceleft,   braceleft   ]};
-  key <AE12> {[ zcaron,     Zcaron,     braceright,  braceright  ]};
+  key <AE12> {[ VoidSymbol, VoidSymbol, braceright,  braceright  ]};
   // FIXME wtf is this key?
   key <AE13> {[ VoidSymbol, VoidSymbol, VoidSymbol,  VoidSymbol  ]};
   key <BKSP> {[ BackSpace,  BackSpace,  BackSpace,   BackSpace   ]};
