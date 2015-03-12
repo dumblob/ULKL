@@ -47,11 +47,23 @@ Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or c
 
 `setxkbmap czed -variant xml`
 
+### Mac OS X
+
+Instructions stolen from http://osxnotes.net/keylayout-files-and-ukelele.html .
+
+1. Move the keyboard layout to `/Library/Keyboard Layouts/`. Keyboard layouts in `~/Library/Keyboard Layouts/` cannot be selected in password dialogs or in the login screen.
+2. Restart to apply the changes. Logging out and back in is not enough.
+3. Enable the new keyboard layout from System Preferences.
+
+To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard Layouts'` and restart.
+
 ## TODO
 
+* add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
 * finally add `engd`
-* support more platforms (Blackberry, Android)
+* support more platforms (Blackberry, Android, ...)
+* rewrite and structure the "Brief explanation of other reasons behind this idea" part of this readme
 
 ## Miscellaneous
 
@@ -68,7 +80,7 @@ to `"$HOME/.xmodmaprc"`.
 
 In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
-## Brief explanation of other reasons behind this idea [TO BE REMOVED]
+## Brief explanation of other reasons behind this idea
 
 (The following text is in Czech because of it\`s history. It'll be translated as soon as someone requests it.)
 
@@ -91,4 +103,9 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 ## References
 
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
+
 [huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose)
+
+[Ukrainian example of Ukelele layout (Mac OS X)](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian)
+
+[Apple documentation about Mac OS X layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html)
