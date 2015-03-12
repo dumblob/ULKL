@@ -1,65 +1,73 @@
-What?!
-======
+# ULKL (Uniform Latin Keyboard Layouts)
 
-Ever experienced problems with *slow typing* or *hand-pain* (wrist, carpal tunnels etc.) or *switching to another nationalized layout in your head and hand-memory* or *tricky-accessible characters* (especially the national-specific ones)?
+Ever experienced problems like *slow typing* or *hand-pain* (wrist, carpal tunnels etc.) or *switching to another nationalized layout both in a head and in a hand-memory* or *tricky-accessible characters* (especially the national-specific ones)?
 
-This project offers you a solution which mitigates the above-mentioned issues by introducing a easy-to-remember and easy-to-learn unified approach to creating nationalized but conceptually-uniform keyboard layouts.
+This project offers you a solution which mitigates among others the above-mentioned issues by introducing an **easy-to-remember** and **easy-to-learn** way of having conceptually-uniform keyboard layout for each latin-based language.
 
-Structure of this directory
----------------------------
+The layout design idea is thus: **put the nationalized characters at places, where your fingers expect them to be without any modifiers** (modifiers are keys like `Shift` `Ctrl` `Alt` etc.). In other words, typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quicky switch between layouts without the need to learn anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (xml variant) example.
 
-### X11 layout files
+FIXME add here a colorful picture (animated gif?)
 
-*   `czd` czech dvorak
-*   `fid` finnish dvorak
-*   `ged` german dvorak, *in progress (not implemented yet)*
-*   `...` ... dvorak
-*   `dvorakng` dvorak next generation, *in progress (not implemented yet)*
+On the other hand the goal was **not** to create one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that will by definition lead to unpleasant writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
 
-### Unix/Linux/BSD console layout files
+## Supported features
 
-*In progress (not implemented yet).* (binary special files?)
+* the particular national alphabet
+* all non-alpha and non-numeric symbols from the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) (useful not only for IT people)
+* numbers
+* additional frequently used symbols like ```§ @ ° € ` non-breakable-space```
+* nationalized punctuation like `„“` (always only the *writer* variant of the layout)
 
-### Windows layout files
+## Available layouts
 
-*In progress (not implemented yet).* (binary special files?)
+Platforms supported include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `x11` `console` `osx` `win`.
 
-### MacOSX layout files
+The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
 
-*In progress (not implemented yet).* (XML files?)
+Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages. Also considering the growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable layout solution for many years. Thus allowing us to teach this layout also at schools.
 
-Usage
------
+Example names:
+* `czed` Czech dvorak
+* `gerd` German dvorak
+* `engd` English dvorak (yes, this is Dvorak, but with improvements for the 3. level as found in all other <lang>d layouts in this repository)
+* `find` Finnish dvorak
+* `slod` Slovak dvorak
 
-### Direct usage
+Each layout has 2 variants - *xml* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly worse accessible `<` and `>` characters. The *xml* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *xml* is the default variant.
 
-X11
+## Usage
+
+### X11
+
+For testing purposes:
 
 `setxkbmap -print -I/path/to/a/layout/file -layout czd -variant xml | xkbcomp - "$DISPLAY"`
 
-### System-wide usage
+Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`) and running:
 
-X11
+`setxkbmap czed -variant xml`
 
-Possible after putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/fid`).
+## TODO
 
-`setxkbmap czd -variant xml`
+* finally add `engd`
+* support more platforms (Blackberry, Android)
 
-`setxkbmap fid`
+## Miscellaneous
 
-### Overwrite CapsLock by Escape
+#### Overwrite CapsLock by Escape
 
-X11
+In *X11* either with `xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'` or by putting
 
-`setxkbmap dvorak; xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'`
+~~~~
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
+~~~~
 
-Motto
------
+to `"$HOME/.xmodmaprc"`.
 
-The goal is to *not* create an *ultimate keyboard layout* (either by combining keys or by switching to ultra-high levels or both), because that will by definition lead to unpleasant writing of many symbols, digraphs, trigraphs etc.
+In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
-Elaboration explaining the reasons behind this idea/attitude
-------------------------------------------------------------
+## Brief explanation of other reasons behind this idea [TO BE REMOVED]
 
 (The following text is in Czech because of it\`s history. It'll be translated as soon as someone requests it.)
 
