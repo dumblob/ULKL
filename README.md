@@ -20,7 +20,7 @@ On the other hand the goal was **not** to create one *ultimate keyboard layout* 
 
 ## Available layouts
 
-Platforms supported include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `x11` `console` `osx` `win`.
+Platforms supported include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
 
@@ -49,6 +49,7 @@ Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or c
 
 ## TODO
 
+* correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
 * finally add `engd`
 * support more platforms (Blackberry, Android)
 
@@ -87,8 +88,7 @@ Podle meho nazoru je zbytecne zabyvat se prohazovanim Y/Z (jak se tim zabyva nap
 
 Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad a bylo zjisteno, ze slovenska abeceda obsahuje nejvice pismen a ceska je hned druha v poradi. Spolu s tim byla navrzena jednoducha metoda jak vytvaret narodni klavesnicova rozlozeni pro jazyky pouzivajici jako zaklad latinku. A\ protoze se podarilo uspesne vytvorit slovenskou a ceskou variantu dvorak, koncept zarucuje, ze danou metodou lze v pripade ostatnich latinskych abeced dosahnout nemene kvalitnich vysledku.
 
-References
-----------
+## References
 
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
 [huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose)
