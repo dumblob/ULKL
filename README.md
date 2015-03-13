@@ -59,6 +59,8 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
+* add versioning (to each layout file or to the whole platform or to the whole repository?)
+* add packages for easy installation (win -> msi; osx -> dmg; x11 -> <distro-specific-e.g.-PKGBUILD>)
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
 * finally add `engd`
