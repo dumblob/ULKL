@@ -41,7 +41,7 @@ Each layout has 2 variants - *xml* and *writer*. The *writer* variant is allowed
 
 For testing purposes:
 
-`setxkbmap -print -I/path/to/a/layout/file -layout czd -variant xml | xkbcomp - "$DISPLAY"`
+`setxkbmap -print -I/path/to/a/layout/file -layout czed -variant xml | xkbcomp - "$DISPLAY"`
 
 Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`) and running:
 
