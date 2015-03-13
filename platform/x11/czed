@@ -265,7 +265,7 @@ xkb_symbols "base" {
 };
 
 xkb_symbols "xml" {
-  include "czd(base)"
+  include "czed(base)"
 
   name[Group1] = "Czech Dvorak xml (useful for extensive XML/HTML editing)";
 
@@ -276,7 +276,7 @@ xkb_symbols "xml" {
 };
 
 xkb_symbols "writer" {
-  include "czd(base)"
+  include "czed(base)"
 
   name[Group1] = "Czech Dvorak writer (useful for non-markup text editing)";
 

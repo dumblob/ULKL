@@ -1,8 +1,7 @@
-// 2010-2014 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2015 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
-// FIXME this will be improved and simplified in the future,
-//   therefore the `ng' postfix
+// FIXME this will be improved and simplified in the future
 
 default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
