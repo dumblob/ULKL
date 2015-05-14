@@ -60,6 +60,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 ## TODO
 
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
+* take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
 * add versioning to the whole repository (not to each layout file nor to the whole platform)
 * add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
