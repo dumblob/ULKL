@@ -264,10 +264,10 @@ xkb_symbols "base" {
   //modifier_map Mod1 { ISO_Level3_Shift };
 };
 
-xkb_symbols "xml" {
+xkb_symbols "ltgt" {
   include "czed(base)"
 
-  name[Group1] = "Czech Dvorak xml (useful for extensive XML/HTML editing)";
+  name[Group1] = "Czech Dvorak ltgt (useful for text with lots of <>)";
 
   key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
   // spojovnik (soft hyphen)
@@ -278,7 +278,7 @@ xkb_symbols "xml" {
 xkb_symbols "writer" {
   include "czed(base)"
 
-  name[Group1] = "Czech Dvorak writer (useful for non-markup text editing)";
+  name[Group1] = "Czech Dvorak writer (useful for text with lower/upper UTF-8 double quotes)";
 
   // dolni, horni uvozovky
   key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};

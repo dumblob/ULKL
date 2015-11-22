@@ -4,7 +4,7 @@ Ever experienced problems like *slow typing* or *hand-pain* (wrist, carpal tunne
 
 This project offers you a solution which mitigates among others the above-mentioned issues by introducing an **easy-to-remember** and **easy-to-learn** way of having conceptually-uniform keyboard layout for each latin-based language.
 
-The layout design idea is thus: **put the nationalized characters at places, where your fingers expect them to be without any modifiers** (modifiers are keys like `Shift` `Ctrl` `Alt` etc.). In other words, typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quicky switch between layouts without the need to learn anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (xml variant) example.
+The layout design idea is thus: **put the nationalized characters at places, where your fingers expect them to be without any modifiers** (modifiers are keys like `Shift` `Ctrl` `Alt` etc.). In other words, typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quicky switch between layouts without the need to learn anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
 
 FIXME add here a colorful picture (animated gif?)
 
@@ -33,7 +33,7 @@ Example names:
 * `find` Finnish dvorak
 * `slod` Slovak dvorak
 
-Each layout has 2 variants - *xml* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly worse accessible `<` and `>` characters. The *xml* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *xml* is the default variant.
+Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly worse accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
 
 ## Usage
 
@@ -41,11 +41,13 @@ Each layout has 2 variants - *xml* and *writer*. The *writer* variant is allowed
 
 For testing purposes:
 
-`setxkbmap -print -I/path/to/a/layout/file -layout czed -variant xml | xkbcomp - "$DISPLAY"`
+`setxkbmap -layout czed -variant ltgt -print | xkbcomp "-I$HOME/ULKL/platform/x11" - $DISPLAY`
+
+(you can safely ignore the warnings *No symbols defined for...* and *Key ... not found in ...*, it's normal also for other layouts)
 
 Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`) and running:
 
-`setxkbmap czed -variant xml`
+`setxkbmap czed -variant ltgt`
 
 ### Mac OS X
 
@@ -106,6 +108,8 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 ## References
 
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
+
+[Creating custom keyboard layouts for X11 using XKB](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html)
 
 [huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose)
 
