@@ -61,6 +61,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
+* fix X11 layouts to not produce any characters when AltGr is pressed together with an arbitrary key
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
 * add versioning to the whole repository (not to each layout file nor to the whole platform)
