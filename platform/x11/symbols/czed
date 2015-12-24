@@ -12,7 +12,7 @@
 //     holding either of them)
 //   there are 2 variants which differ in placement and/or availability of
 //       characters ' " < > „ “ SHY
-//     in `xml', characters „ “ are not available and ' " < > are on their
+//     in `ltgt', characters „ “ are not available and ' " < > are on their
 //       original places and ! is duplicated for better reachability
 //     in `writer', all characters are available, but " < > are in
 //       the 3. level, thus less reachable
@@ -68,7 +68,7 @@
 //                            space
 //                            space
 
-// ----------- czech dvorak xml, 1. and 2. level
+// ----------- czech dvorak ltgt, 1. and 2. level
 //  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
 //  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
 //
@@ -84,15 +84,15 @@
 //                            NBSP
 //                            space
 
-// ----------- czech dvorak xml, 3. level
+// ----------- czech dvorak ltgt, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
-//              SHY !   §       :   7   8   9   [   ]   +   |
+//              SHY !   §       ,   7   8   9   [   ]   +   |
 //              SHY (soft hyphen)
 //              hyphen (spojovnik)
 //              non-breaking hyphen
 //
-//          @   °   €   `       ,   4   5   6   =   \
+//          @   °   €   `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
@@ -128,7 +128,7 @@
 //
 //                            NBSP
 
-// ----------- czech dvorak (xml|writer), 4. level
+// ----------- czech dvorak (ltgt|writer), 4. level
 // the same as 3. level
 
 //default                                  // wtf is this?
