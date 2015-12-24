@@ -29,11 +29,11 @@ Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.c
 Example names:
 * `czed` Czech dvorak
 * `gerd` German dvorak
-* `engd` English dvorak (yes, this is Dvorak, but with improvements for the 3. level as found in all other <lang>d layouts in this repository)
+* `engd` English dvorak (yes, this is Dvorak, but with improvements for the 3. level as found in all other `<lang>d` layouts in this repository)
 * `find` Finnish dvorak
 * `slod` Slovak dvorak
 
-Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly worse accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
+Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly less accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
 
 ## Usage
 
