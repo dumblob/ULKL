@@ -108,6 +108,8 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 
 ## References
 
+[French AZERTY layout is totally unusable in practice](http://arstechnica.com/tech-policy/2016/01/france-says-azerty-keyboards-fail-french-typists/)
+
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
 
 [Creating custom keyboard layouts for X11 using XKB](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html)
