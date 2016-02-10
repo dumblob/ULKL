@@ -12,7 +12,7 @@ Modifiers are keys like `Shift` `Ctrl` `Alt` etc. In other words, typing `č` wi
 
 FIXME add here a colorful picture (an animated gif?)
 
-On the other hand the goal was **not** to create one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that will by definition lead to unpleasant writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
+Please note, the goal is **not** to have one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that leads by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
 
 ## Supported features
 
@@ -28,7 +28,7 @@ Platforms supported include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *M
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
 
-Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages. Also considering the growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable layout solution for many years. Thus allowing us to teach this layout also at schools.
+Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages. Also considering the growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable layout solution for decades. Thus allowing us to teach this layout also at schools.
 
 Example names:
 * `czed` Czech dvorak
