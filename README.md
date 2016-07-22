@@ -69,6 +69,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/)
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
+* take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
 * add versioning to the whole repository (not to each layout file nor to the whole platform)
 * add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
@@ -93,7 +94,7 @@ In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | 
 
 ## Brief explanation of other reasons behind this idea
 
-(The following text is in Czech because of it\`s history. It'll be translated as soon as someone requests it.)
+(The following text is in Czech because of it's history. It'll be translated as soon as someone requests it.)
 
 Volim proto variantu, kdy uzivatel bezne pouziva vice jazykove-specifickych layoutu a mezi nimi se podle potreby prepina. Tim ovsem vznika otazka nauceni se mnoha layoutu. Resenim je zachovat kompatibilitu zakladnich znaku (napr. cele latinky) a vhodne menit pouze zbytek (lze napr. prohazet urovne, cimz se dosahne pozadovane efektivity) podle predem daneho jednoducheho vzoru.
 
