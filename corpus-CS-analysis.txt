@@ -1,0 +1,37 @@
+predelat podle meho navrhu, vychazejiciho z nize vytvorene studie
+  kazdemu znaku bude pridelena vaha
+  dulezite nealfa znaky budou ponechany tak, jak jsou na dvorak, zbytek bude
+    serazen podle dostupnosti a vzhledem k tomu budou prideleny znaky postupne
+    od nejvyssi vahy
+  co takhle cetnost digramu a trigramu (moc jich nemame)?
+
+zjistit cetnost
+  pismen ceskych + anglickych
+  znaku /=\-_'`,;:.?!+|" atd. vcetne enteru apod.
+  v dokumentech (cislice nas nezajimaji)
+  {{
+    sehnat nekde jiz hotove statistiky?? zeptat se ?Petra? Pithy (byvaly
+      ministr skolstvi)
+    chtel by nekdo tuto praci provest??
+      (nejaky student [filozofie? zurnalistiky? neceho jineho?],
+      agentura, spolecnost...)
+  }}
+  POZN: kde neni jinak uvedeno, predpokladaji se data z let 2006 - soucasnost
+        v potaz brat pouze dila s malo opakujicimi se frazemi!
+  kniha (beletrie) - musi byt delsi (min 200 stran A5)
+    1x 1980 - 1990
+    1x 1990 - 1995
+    1x 1995 - 2000
+    2x 2000 - 2005
+    3x 2005 - 2010
+  specialni, rozmanity a dlouhy (min 100 stran) text
+    fyzika (treba doktorska prace)
+    pocitace ( - || - )
+    biologie ( - || - )
+    humanologie ( - || - )
+  firma
+    50x dopis ruzne dlouhy
+      - predpokladana maximalni delka 2 stranky formatovaneho textu)
+    10x delsi dokumentace (min 10 stran) k cemukoliv
+  vytah ze socialnich siti (treba facebook)
+    - celkem vsak minimalne 200 stran NEformatovaneho textu

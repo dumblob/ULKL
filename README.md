@@ -24,7 +24,7 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 
 ## Available layouts
 
-Platforms supported include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
+Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
 
@@ -65,6 +65,21 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
+* evaluate following ideas for changes
+    * prohodit t_hacek a n_hacek
+    * cisla se musi psat spolu s
+        * `,.` desetinnou carkou + teckou (nesmi to byt zavisle na locale)
+        * `=` rovnitkem
+        * `*` nasobeni
+        * `/` deleni
+        * `e` nebo E jako *10^
+        * ` ` mezerou! (potrebuji oddelovat skupinky cisel!)
+    * CapsLock -> Esc
+    * pridat znaky_pro_fonetiku_v_anglictine
+    * pridat tvrdou mezeru a dalsi vychytavky z me ceske!
+    * vyzkouset prohazet cisla jako v puvodnim Dvorak navrhu!
+    * Shift+Backspace = Del
+    * !!! co takhle aby kazda klavesa mela Shift variantu a DoubleShift variantu?
 * fix X11 layouts to not produce any characters when AltGr is pressed together with an arbitrary key
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/)
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
@@ -76,6 +91,12 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * finally add `engd`
 * support more platforms (Blackberry, Android, ...)
 * rewrite and structure the "Brief explanation of other reasons behind this idea" part of this readme
+* write a general howto for creation of new language-specific ULKL layouts
+    * motto: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
+* email Jaroslav Zaviacic
+    * which layout uses Ms. Matouskova
+    * introduce ULKL, ask if they could test it, ULKL was created with analyses of the newest language corpus from CUNI in mind etc.
+    * http://www.interinfo.org/products/prijmeni-jmeno-i/
 
 ## Miscellaneous
 
@@ -92,7 +113,7 @@ to `"$HOME/.xmodmaprc"`.
 
 In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
-## Brief explanation of other reasons behind this idea
+## Motivation and reasoning for decisions made in ULKL
 
 (The following text is in Czech because of it's history. It'll be translated as soon as someone requests it.)
 
@@ -115,6 +136,10 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 ## References
 
 [French AZERTY layout is totally unusable in practice](http://arstechnica.com/tech-policy/2016/01/france-says-azerty-keyboards-fail-french-typists/)
+
+[French BÉPO](https://en.wikipedia.org/wiki/Keyboard_layout#B.C3.89PO ) - Dvorak-based layout
+
+[Swedish Dvorak layout](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Svorak )
 
 [Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
 
