@@ -28,7 +28,11 @@
 //  characters
 //    horni (U+201C) a spodni (U+201E) ceske uvozovky, euro,
 //    stupen celsia (degree sign), stupnove minuty
-//    spojovnik (pomlcku uz mam, minus se podle CSN nahrazuje pomlckou),
+//    pomlcka (minus se podle CSN nahrazuje pomlckou)
+//      NEpouzit soft hyphen (SHY), protoze v Unicode je neviditelny
+//      Chicago Manual of Style pouziva "en dash" namisto "hyphen" pro spojovani slov
+//      "en dash" je jediny (!) povoleny znak pro intervaly (ranges)
+//      manualni rozdelovani slov spojovnikem (hyphen) neni a nebude zapotrebi
 //    paragraf (section sign), ceske znaky, tvrda mezera
 //    !, @, %, *, (, ), ?, /, +, -, _, :, ;,   =
 //             ?           ?  ?  ?  ?     ?    ?
@@ -87,10 +91,10 @@
 // ----------- czech dvorak ltgt, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
-//              SHY !   §       ,   7   8   9   [   ]   +   |
-//              SHY (soft hyphen)
+//              nda !   §       ,   7   8   9   [   ]   +   |
 //              hyphen (spojovnik)
 //              non-breaking hyphen
+//              en dash
 //
 //          @   °   €   `       :   4   5   6   =   \
 //
@@ -102,10 +106,10 @@
 //  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
 //  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
 //
-//          “   SHY '   P   Y   F   G   C   R   L   ?   Ť   Ň
-//              SHY (soft hyphen)
+//          “   nda '   P   Y   F   G   C   R   L   ?   Ť   Ň
 //              hyphen (spojovnik)
 //              non-breaking hyphen
+//              en dash
 //          „   ,   .   p   y   f   g   c   r   l   /   ť   ň
 //
 //          A   O   E   U   I   D   H   T   N   S   _
@@ -208,7 +212,6 @@ xkb_symbols "base" {
   key <AC08> {[ t,        T,          5,          5          ]};
   key <AC09> {[ n,        N,          6,          6          ]};
   key <AC10> {[ s,        S,          equal,      equal      ]};
-  // pomlcka (= minus = dash)
   key <AC11> {[ minus,    underscore, backslash,  backslash  ]};
   // FIXME wtf is this key?
   //key <ENTR> {[ KP_Enter, KP_Enter,   KP_Enter,   KP_Enter   ]};
@@ -270,8 +273,8 @@ xkb_symbols "ltgt" {
   name[Group1] = "Czech Dvorak ltgt (useful for text with lots of <>)";
 
   key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
-  // spojovnik (soft hyphen)
-  key <AD02> {[ comma,      less,     U00AD,      U00AD      ]};
+  // pomlcka (en dash)
+  key <AD02> {[ comma,      less,     U2013,      U2013      ]};
   key <AD03> {[ period,     greater,  exclam,     exclam     ]};
 };
 
@@ -282,8 +285,8 @@ xkb_symbols "writer" {
 
   // dolni, horni uvozovky
   key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};
-  // spojovnik (soft hyphen)
-  key <AD02> {[ comma,  U00AD,      less,     less     ]};
+  // pomlcka (en dash)
+  key <AD02> {[ comma,  U2013,      less,     less     ]};
   key <AD03> {[ period, apostrophe, greater,  greater  ]};
 };
 
