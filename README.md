@@ -65,8 +65,9 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
+* **ADD Semver versioning**
 * evaluate following ideas for changes
-    * prohodit t_hacek a n_hacek
+    * prohodit t\_hacek a n\_hacek
     * cisla se musi psat spolu s
         * `,.` desetinnou carkou + teckou (nesmi to byt zavisle na locale)
         * `=` rovnitkem
@@ -75,7 +76,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
         * `e` nebo E jako *10^
         * ` ` mezerou! (potrebuji oddelovat skupinky cisel!)
     * CapsLock -> Esc
-    * pridat znaky_pro_fonetiku_v_anglictine
+    * pridat znaky\_pro\_fonetiku\_v\_anglictine?
     * pridat tvrdou mezeru a dalsi vychytavky z me ceske!
     * vyzkouset prohazet cisla jako v puvodnim Dvorak navrhu!
     * Shift+Backspace = Del
