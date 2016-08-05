@@ -17,9 +17,9 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 ## Supported features
 
 * the particular national alphabet
-* all non-alpha and non-numeric symbols from the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) (useful not only for IT people)
+* all non-alpha and non-numeric symbols from the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) ```~ ! @ # $ % ^ & * ( ) { } ` [ ] " < > ? + | ' , . / = \ _ - : ;``` (convenient also for IT specialists)
 * numbers
-* additional frequently used symbols like ```§ @ ° € ` non-breakable-space```
+* additional frequently used symbols like ```§ @ ° € non-breakable-space en-dash ```
 * nationalized punctuation like `„“` (always only the *writer* variant of the layout)
 
 ## Available layouts
