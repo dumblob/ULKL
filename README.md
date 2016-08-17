@@ -82,7 +82,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
     * Shift+Backspace = Del
     * !!! co takhle aby kazda klavesa mela Shift variantu a DoubleShift variantu?
 * fix X11 layouts to not produce any characters when AltGr is pressed together with an arbitrary key
-* get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/)
+* get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
 * take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
@@ -136,18 +136,20 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 
 ## References
 
-[French AZERTY layout is totally unusable in practice](http://arstechnica.com/tech-policy/2016/01/france-says-azerty-keyboards-fail-french-typists/)
+[French AZERTY layout is totally unusable in practice](http://arstechnica.com/tech-policy/2016/01/france-says-azerty-keyboards-fail-french-typists/ )
 
 [French BÉPO](https://en.wikipedia.org/wiki/Keyboard_layout#B.C3.89PO ) - Dvorak-based layout
 
 [Swedish Dvorak layout](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#Svorak )
 
-[Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap)
+[Ivan Pascal - xkb internals](http://pascal.tsu.ru/en/xkb/internals.html#wrap )
 
-[Creating custom keyboard layouts for X11 using XKB](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html)
+[Creating custom keyboard layouts for X11 using XKB](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html )
 
-[huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose)
+[huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose )
 
-[Ukrainian example of Ukelele layout (Mac OS X)](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian)
+[Ukrainian example of Ukelele layout (Mac OS X)](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian )
 
-[Apple documentation about Mac OS X layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html)
+[Apple documentation about Mac OS X layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html )
+
+[MessagEase mobile keyboard](https://www.exideas.com/ME )
