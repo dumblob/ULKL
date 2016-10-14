@@ -1,6 +1,6 @@
 # ULKL (Uniform Latin Keyboard Layouts)
 
-Ever experienced any of the following problems?
+Ever experienced any of the following issues?
 
 * *slow typing*
 * *hand-pain* (wrist, carpal tunnels etc.)
@@ -8,13 +8,13 @@ Ever experienced any of the following problems?
 * *tricky-accessible characters* (especially the national ones)
 * other issues with keyboard typing...
 
-This project offers you a solution which mitigates among others the above-mentioned issues by introducing an **easy-to-remember** and **easy-to-learn** way of having conceptually uniform keyboard layout for **each latin-based language**.
+ULKL mitigates these issues by introducing an **all-encompassing**, easy to remember & learn way of having a uniform keyboard layout for **each latin-based language**.
 
 The layout design idea is thus:
 
-> put the nationalized characters at places, where your fingers expect them to be **without pressing any modifiers**
+> put the nationalized characters at places, where your fingers expect them to be *without pressing any modifiers*
 
-Modifiers are keys like `Shift` `Ctrl` `Alt` etc. In other words, typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts without the need to learn anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
+Modifiers are keys like `Shift` `Ctrl` `Alt` etc. It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
 
 FIXME add here a colorful picture (an animated gif?)
 
