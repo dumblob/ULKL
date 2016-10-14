@@ -2,7 +2,7 @@
 
 Ever experienced problems like *slow typing* or *hand-pain* (wrist, carpal tunnels etc.) or *switching to another nationalized layout both in the head and the hand-memory* or *tricky-accessible characters* (especially the national ones)?
 
-This project offers you a solution which mitigates among others the above-mentioned issues by introducing an **easy-to-remember** and **easy-to-learn** way of having conceptually uniform keyboard layout for each latin-based language.
+This project offers you a solution which mitigates among others the above-mentioned issues by introducing an **easy-to-remember** and **easy-to-learn** way of having conceptually uniform keyboard layout for **each latin-based language**.
 
 The layout design idea is thus:
 
