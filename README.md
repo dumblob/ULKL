@@ -47,6 +47,12 @@ Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowe
 
 ## Usage
 
+### Windows
+
+1. Download binary from the `platform/win/` directory of this repository.
+1. Double-click the downloaded file and follow instructions (if any).
+1. Log out and log in to let the changes take effect.
+
 ### X11
 
 For testing purposes:
