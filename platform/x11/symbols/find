@@ -1,11 +1,26 @@
-// 2010-2014 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
-// FIXME
-//   "" „“
+// FIXME add ltgt & writer variants for compatibility reasons
+//   use ""„“ or other national-specific characters?
+//   change the concept description below accordingly
 
-// implemented concept of finnish dvorak
-//   see the comment in czd (czech dvorak)
+// The concept of this keyboard layout
+//   motto: be as much compatible with ISO dvorak as possible
+//   4. level is the same as 3. level
+//   2. level of ISO dvorak goes without modifications to the 3. level
+//   the whole national alphabet is accessible directly from 1. and 2. level
+//     without any exception
+//   3. level has some additional non-alphabet characters (e.g. numbers)
+//   3. level is accessible only by pressing both Shifts at once (and
+//     holding either of them)
+//   there are 2 variants which differ in placement and/or availability of
+//       characters ' " < > „ “ en_dash
+//     in `ltgt', characters „ “ are not available and ' " < > are at their
+//       original places and ! is duplicated for better reachability
+//     in `writer', all characters are available, but " < > are in
+//       the 3. level, thus less reachable
+
 
 // ----------- standard ISO dvorak, 1. and 2. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
@@ -42,10 +57,10 @@
 // ----------- finnish dvorak, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
-//              SHY !   §       ,   7   8   9   [   ]   +   |
-//              SHY (soft hyphen)
+//              nda !   §       ,   7   8   9   [   ]   +   |
 //              hyphen (spojovnik)
 //              non-breaking hyphen
+//              en dash
 //
 //          @   °   €   `       :   4   5   6   =   \
 //
@@ -81,8 +96,8 @@ xkb_symbols "base" {
   // ISO_Left_Tab
   key <TAB>  {[ Tab,        Tab,      Tab,          Tab          ]};
   key <AD01> {[ apostrophe, quotedbl, VoidSymbol,   VoidSymbol   ]};
-  // spojovnik (soft hyphen)
-  key <AD02> {[ comma,      less,     U00AD,        U00AD        ]};
+  // en dash (pomlcka)
+  key <AD02> {[ comma,      less,     U2013,        U2013        ]};
   key <AD03> {[ period,     greater,  exclam,       exclam       ]};
   key <AD04> {[ p,          P,        section,      section      ]};
   key <AD05> {[ y,          Y,        VoidSymbol,   VoidSymbol   ]};
@@ -92,8 +107,8 @@ xkb_symbols "base" {
   key <AD09> {[ r,          R,        9,            9            ]};
   key <AD10> {[ l,          L,        bracketleft,  bracketleft  ]};
   key <AD11> {[ slash,      question, bracketright, bracketright ]};
-  key <AD12> {[ tcaron,     Tcaron,   plus,         plus         ]};
-  key <BKSL> {[ ncaron,     Ncaron,   bar,          bar          ]};
+  key <AD12> {[ equal,      plus,     plus,         plus         ]};
+  key <BKSL> {[ backslash,  bar,      bar,          bar          ]};
 
   // home/middle row
 

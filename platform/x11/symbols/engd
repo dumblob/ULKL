@@ -1,7 +1,8 @@
-// 2010-2015 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
 // FIXME this will be improved and simplified in the future
+// FIXME add concept statement
 
 default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
