@@ -1,0 +1,222 @@
+// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
+// etaoin shrdlu!
+
+// The concept of this keyboard layout
+//   motto: be as much compatible with ISO dvorak as possible
+//   4. level is the same as 3. level
+//   2. level of ISO dvorak goes without modifications to the 3. level
+//   the whole national alphabet is accessible directly from 1. and 2. level
+//     without any exception
+//   3. level has some additional non-alphabet characters (e.g. numbers)
+//   3. level is accessible only by pressing both Shifts at once (and
+//     holding either of them)
+//   there are 2 variants which differ in placement and/or availability of
+//       characters ' " < > „ “ en_dash
+//     in `ltgt', characters „ “ are not available and ' " < > are at their
+//       original places and ! is duplicated for better reachability
+//     in `writer', all characters are available, but " < > are in
+//       the 3. level, thus less reachable
+
+// ----------- standard ISO dvorak, 1. and 2. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//  `   1   2   3   4   5   6   7   8   9   0   [   ]
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   +   |
+//          '   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            space
+//                            space
+
+// ----------- german dvorak ltgt, 1. and 2. level
+//          ä   Ö       Ü                       ß
+//          ä   ö       ü                       ß
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   +   |
+//          '   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            NBSP
+//                            space
+
+// ----------- german dvorak ltgt, 3. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//
+//              nda !   §       ,   7   8   9   [   ]   +   |
+//              hyphen (spojovnik)
+//              non-breaking hyphen
+//              en dash
+//
+//          @   °   €   `       :   4   5   6   =   \
+//
+//                              0   1   2   3   .
+//
+//                            NBSP
+
+// ----------- german dvorak writer, 1. and 2. level
+//          ä   Ö       Ü                       ß
+//          ä   ö       ü                       ß
+//
+//          “   nda '   P   Y   F   G   C   R   L   ?   +   |
+//              hyphen (spojovnik)
+//              non-breaking hyphen
+//              en dash
+//          „   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            NBSP
+//                            space
+
+// ----------- german dvorak writer, 3. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//
+//          "   <   >   §       ,   7   8   9   [   ]   +   |
+//
+//          @   °   €   `       :   4   5   6   =   \
+//
+//                              0   1   2   3   .
+//
+//                            NBSP
+
+// ----------- german dvorak (ltgt|writer), 4. level
+// the same as 3. level
+
+xkb_symbols "base" {
+  // topmost row
+
+  key <TLDE> {[ VoidSymbol, VoidSymbol, asciitilde,  asciitilde  ]};
+  key <AE01> {[ VoidSymbol, VoidSymbol, exclam,      exclam      ]};
+  key <AE02> {[ adiaeresis, Adiaeresis, at,          at          ]};
+  key <AE03> {[ odiaeresis, Odiaeresis, numbersign,  numbersign  ]};
+  key <AE04> {[ VoidSymbol, VoidSymbol, dollar,      dollar      ]};
+  key <AE05> {[ udiaeresis, Udiaeresis, percent,     percent     ]};
+  key <AE06> {[ VoidSymbol, VoidSymbol, asciicircum, asciicircum ]};
+  key <AE07> {[ VoidSymbol, VoidSymbol, ampersand,   ampersand   ]};
+  key <AE08> {[ VoidSymbol, VoidSymbol, asterisk,    asterisk    ]};
+  key <AE09> {[ VoidSymbol, VoidSymbol, parenleft,   parenleft   ]};
+  key <AE10> {[ VoidSymbol, VoidSymbol, parenright,  parenright  ]};
+  key <AE11> {[ ssharp,     U1E9E,      braceleft,   braceleft   ]};
+  key <AE12> {[ VoidSymbol, VoidSymbol, braceright,  braceright  ]};
+  // FIXME wtf is this key?
+  key <AE13> {[ VoidSymbol, VoidSymbol, VoidSymbol,  VoidSymbol  ]};
+  key <BKSP> {[ BackSpace,  BackSpace,  BackSpace,   BackSpace   ]};
+
+  // top row
+
+  // ISO_Left_Tab
+  key <TAB>  {[ Tab,    Tab,      Tab,          Tab          ]};
+  //key <AD01> see specific variants
+  //key <AD02> see specific variants
+  //key <AD03> see specific variants
+  key <AD04> {[ p,      P,        section,      section      ]};
+  key <AD05> {[ y,      Y,        VoidSymbol,   VoidSymbol   ]};
+  key <AD06> {[ f,      F,        comma,        comma        ]};
+  key <AD07> {[ g,      G,        7,            7            ]};
+  key <AD08> {[ c,      C,        8,            8            ]};
+  key <AD09> {[ r,      R,        9,            9            ]};
+  key <AD10> {[ l,      L,        bracketleft,  bracketleft  ]};
+  key <AD11> {[ slash,  question, bracketright, bracketright ]};
+  key <AD12> {[ equal,      plus,     plus,         plus         ]};
+  key <BKSL> {[ backslash,  bar,      bar,          bar          ]};
+
+  // home/middle row
+
+  key <CAPS> {[ Escape,   Escape,     Escape,     Escape     ]};
+  key <AC01> {[ a,        A,          at,         at         ]};
+  key <AC02> {[ o,        O,          degree,     degree     ]};
+  key <AC03> {[ e,        E,          EuroSign,   EuroSign   ]};
+  key <AC04> {[ u,        U,          grave,      grave      ]};
+  key <AC05> {[ i,        I,          VoidSymbol, VoidSymbol ]};
+  key <AC06> {[ d,        D,          colon,      colon      ]};
+  key <AC07> {[ h,        H,          4,          4          ]};
+  key <AC08> {[ t,        T,          5,          5          ]};
+  key <AC09> {[ n,        N,          6,          6          ]};
+  key <AC10> {[ s,        S,          equal,      equal      ]};
+  // pomlcka (= minus = dash)
+  key <AC11> {[ minus,    underscore, backslash,  backslash  ]};
+  key <RTRN> {[ Return,   Return,     Return,     Return     ]};
+
+  // bottom row
+
+  // Shift_Lock
+  key <LFSH> {[ Shift_L,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
+  // left bottom key, right from <LFSH>, which doesn't follow the kbd standard
+  key <LSGT> {[ VoidSymbol, VoidSymbol,       VoidSymbol,       VoidSymbol       ]};
+  key <AB01> {[ semicolon,  colon,            VoidSymbol,       VoidSymbol       ]};
+  key <AB02> {[ q,          Q,                VoidSymbol,       VoidSymbol       ]};
+  key <AB03> {[ j,          J,                VoidSymbol,       VoidSymbol       ]};
+  key <AB04> {[ k,          K,                VoidSymbol,       VoidSymbol       ]};
+  key <AB05> {[ x,          X,                VoidSymbol,       VoidSymbol       ]};
+  key <AB06> {[ b,          B,                0,                0                ]};
+  key <AB07> {[ m,          M,                1,                1                ]};
+  key <AB08> {[ w,          W,                2,                2                ]};
+  key <AB09> {[ v,          V,                3,                3                ]};
+  key <AB10> {[ z,          Z,                period,           period           ]};
+  // FIXME wtf is this key?
+  key <AB11> {[ VoidSymbol, VoidSymbol,       VoidSymbol,       VoidSymbol       ]};
+  key <RTSH> {[ Shift_R,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
+
+  // bottom-most row
+
+  key <LCTL> {[ Control_L,  Control_L,    Control_L,    Control_L    ]};
+  // SUPR
+  key <LWIN> {[ Super_L,    Super_L,      Super_L,      Super_L      ]};
+  // META
+  key <LALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
+              [ Alt_L,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  key <SPCE> {[ space,      nobreakspace, nobreakspace, nobreakspace ]};
+  // META
+  key <RALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
+              [ Alt_R,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  // SUPR
+  key <RWIN> {[ Super_R,    Super_R,      Super_R,      Super_R      ]};
+  key <MENU> {[ Menu,       VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
+  key <RCTL> {[ Control_R,  Control_R,    Control_R,    Control_R    ]};
+
+  // ISO_Next_Group
+  key <SCLK> {[ Scroll_Lock, Scroll_Lock, Scroll_Lock, Scroll_Lock ]};
+
+  // this could be useful for some window managers which utilize the
+  // Meta key, but it could have bad impact on level3 of some keys
+  //modifier_map Mod1 { ISO_Level3_Shift };
+};
+
+xkb_symbols "ltgt" {
+  include "gerd(base)"
+
+  name[Group1] = "German Dvorak ltgt (useful for text with lots of <>)";
+
+  key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
+  // en dash (pomlcka)
+  key <AD02> {[ comma,      less,     U2013,      U2013      ]};
+  key <AD03> {[ period,     greater,  exclam,     exclam     ]};
+};
+
+xkb_symbols "writer" {
+  include "gerd(base)"
+
+  name[Group1] = "German Dvorak writer (useful for text with lower/upper UTF-8 double quotes)";
+
+  // lower/upper UTF-8 double quotes
+  key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};
+  // en dash (pomlcka)
+  key <AD02> {[ comma,  U2013,      less,     less     ]};
+  key <AD03> {[ period, apostrophe, greater,  greater  ]};
+};
+
+// vim:syn=xkb
