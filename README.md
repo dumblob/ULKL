@@ -12,7 +12,7 @@ ULKL mitigates these issues by introducing an **all-encompassing**, easy to reme
 
 The layout design idea is thus:
 
-> put the nationalized characters at places, where your fingers expect them to be *without pressing any modifiers*
+> Put the nationalized characters at places, where your fingers expect them to be *without pressing any modifiers*.
 
 Modifiers are keys like `Shift` `Ctrl` `Alt` etc. It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
 
@@ -59,7 +59,7 @@ For testing purposes:
 
 `setxkbmap -layout czed -variant ltgt -print | xkbcomp "-I$HOME/ULKL/platform/x11" - $DISPLAY`
 
-(you can safely ignore the warnings *No symbols defined for...* and *Key ... not found in ...*, it's normal also for other layouts)
+(you can safely ignore the warnings *No symbols defined for...* and *Key ... not found in ...*, it's common also for non-ULKL layouts)
 
 Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`) and running:
 
@@ -78,24 +78,31 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 ## TODO
 
 * **ADD Semver versioning**
-* evaluate following ideas for changes
-    * prohodit t\_hacek a n\_hacek
-    * cisla se musi psat spolu s
-        * `,.` desetinnou carkou + teckou (nesmi to byt zavisle na locale)
-        * `=` rovnitkem
-        * `*` nasobeni
-        * `/` deleni
-        * `e` nebo E jako *10^
-        * ` ` mezerou! (potrebuji oddelovat skupinky cisel!)
-    * CapsLock -> Esc
-    * pridat znaky\_pro\_fonetiku\_v\_anglictine?
-    * pridat tvrdou mezeru a dalsi vychytavky z me ceske!
-    * vyzkouset prohazet cisla jako v puvodnim Dvorak navrhu!
-    * Shift+Backspace = Del
-    * !!! co takhle aby kazda klavesa mela Shift variantu a DoubleShift variantu?
-* fix X11 layouts to not produce any characters when AltGr is pressed together with an arbitrary key
+* add numerical and "middle" block key definitions
+* evaluate the following ideas for changes/additions
+    * add the per mille (U2030) character?
+    * Shift+Backspace as Del
+    * Shift+Enter as non-breakable LF (how much widespread is it?)
+    * should **each** key have both Shift and DoubleShift variants?
+    * exchange tcaron and ncaron in `czed`?
+    * take into consideration, that numbers are often written with
+        * `,.` comma and period (must be **independent** from locale)
+        * `=` equal
+        * `*` asterisk
+        * `/` slash
+        * `e` or `E` designating `*10^` ("times ten power")
+        * ` ` space (needed for splitting groups of numbers)
+    * add characters for phonetics written in English or make it a separate layout?
+    * try to change number character places like in the very original Dvorak design (it's expected to be inconvenient because of ordering semantics of numbers)
+    * pressing one Shift, then the other (disregarding in which order) and releasing **either** of the two pressed Shifts will switch temporarily to 3rd level for one non-Shift character
+    * pressing one Shift, then the other (disregarding in which order) and releasing **both** two pressed Shifts will switch permanently to 3rd level until any Shift is pressed (without the requirement to release it before proceeding; so this pressed Shift will permanently switch off the 3rd level and will activate 2nd level as usually)
+        * this 3rd level could turn on the CapsLock LED
+* fix X11 layouts
+    * do not produce any characters when AltGr is pressed together with an arbitrary key
+    * remove the need of cross-Shift press for switching to the 3. level
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
+* add (generated?) BFU help (mainly images) for each existing layout
 * take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
 * take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
 * add versioning to the whole repository (not to each layout file nor to the whole platform)
@@ -103,17 +110,20 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
 * finally add `engd`
 * support more platforms (Blackberry, Android, ...)
-* rewrite and structure the "Brief explanation of other reasons behind this idea" part of this readme
+* rewrite and structure the "Motivation and reasoning for decisions made in ULKL" of this README
 * write a general howto for creation of new language-specific ULKL layouts
-    * motto: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
+    * moment of enlightenment: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
 * email Jaroslav Zaviacic
     * which layout uses Ms. Matouskova
     * introduce ULKL, ask if they could test it, ULKL was created with analyses of the newest language corpus from CUNI in mind etc.
     * http://www.interinfo.org/products/prijmeni-jmeno-i/
+* national corpuses
+    * how about foreign languages (e.g. English) in national corpuses?
+    * add info about each national corpus to this repository?
 
-## Miscellaneous
+## Additional information
 
-#### Overwrite CapsLock by Escape
+#### How to overwrite CapsLock by Escape
 
 In *X11* either with `xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'` or by putting
 
@@ -126,7 +136,17 @@ to `"$HOME/.xmodmaprc"`.
 
 In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
-## Motivation and reasoning for decisions made in ULKL
+#### Dash, en dash, minus, hyphen, soft hyphen, non-breaking hyphen, ...
+
+Characters *minus* and *en dash* were chosen to be present instead of others based on the following information.
+
+* Soft hyphen (SHY) can't be used, because in Unicode it's invisible.
+* The widespread Chicago Manual of Style dictates use of *en dash* instead of *hyphen* for word joining.
+* The only allowed character for ranges in typography is *en dash*.
+* ČSN standard allows use of *minus* instead of *dash*. It became common practice already in 80s.
+* Manual word splitting with *hyphen* is not and will not be needed (all SW makes it automatically nowadays).
+
+#### Motivation and reasoning for decisions made in ULKL
 
 (The following text is in Czech because of it's history. It'll be translated as soon as someone requests it.)
 
@@ -158,6 +178,8 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 
 [Creating custom keyboard layouts for X11 using XKB](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html )
 
+X upstream: xkeyboard-config-2.10.1/rules/compat/layoutsMapping.lst
+
 [huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose )
 
 [Ukrainian example of Ukelele layout (Mac OS X)](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian )
@@ -165,3 +187,7 @@ Pri navrhu czd byla rovnou udelana reserse abeced pouzivajicich latinsky zaklad 
 [Apple documentation about Mac OS X layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html )
 
 [MessagEase mobile keyboard](https://www.exideas.com/ME )
+
+[Czech National Corpus](http://ucnk.ff.cuni.cz/syn2010.php ) (maintained by FFUK)
+
+[UCWCS X11 layout](http://kam.mff.cuni.cz/~pasky/dev/debian/lenny/ucwcs-xkb/ucwcs-xkb/README.CZ )

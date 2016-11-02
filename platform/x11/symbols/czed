@@ -1,60 +1,21 @@
-// 2010-2014 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
-// implemented concept of czech dvorak
+// The concept of this keyboard layout
 //   motto: be as much compatible with ISO dvorak as possible
 //   4. level is the same as 3. level
 //   2. level of ISO dvorak goes without modifications to the 3. level
-//   the whole czech alphabet is accessible directly from 1. and 2. level
+//   the whole national alphabet is accessible directly from 1. and 2. level
 //     without any exception
 //   3. level has some additional non-alphabet characters (e.g. numbers)
 //   3. level is accessible only by pressing both Shifts at once (and
 //     holding either of them)
 //   there are 2 variants which differ in placement and/or availability of
-//       characters ' " < > „ “ SHY
-//     in `ltgt', characters „ “ are not available and ' " < > are on their
+//       characters ' " < > „ “ en_dash
+//     in `ltgt', characters „ “ are not available and ' " < > are at their
 //       original places and ! is duplicated for better reachability
 //     in `writer', all characters are available, but " < > are in
 //       the 3. level, thus less reachable
-
-//FIXME
-//  Shift+Enter non-breakable LF
-//  X upstream
-//    xkeyboard-config-2.10.1/rules/compat/layoutsMapping.lst
-//  Cesky narodni korpus (FFUK)
-//    http://ucnk.ff.cuni.cz/syn2010.php
-//    co cizi jazyky (napr. anglictina) v nasem korpusu?
-//    informace pro kazdy oddil korpusu zvlast?
-//  characters
-//    horni (U+201C) a spodni (U+201E) ceske uvozovky, euro,
-//    stupen celsia (degree sign), stupnove minuty
-//    pomlcka (minus se podle CSN nahrazuje pomlckou)
-//      NEpouzit soft hyphen (SHY), protoze v Unicode je neviditelny
-//      Chicago Manual of Style pouziva "en dash" namisto "hyphen" pro spojovani slov
-//      "en dash" je jediny (!) povoleny znak pro intervaly (ranges)
-//      manualni rozdelovani slov spojovnikem (hyphen) neni a nebude zapotrebi
-//    paragraf (section sign), ceske znaky, tvrda mezera
-//    !, @, %, *, (, ), ?, /, +, -, _, :, ;,   =
-//             ?           ?  ?  ?  ?     ?    ?
-//                         8     2  5     166  1
-//    "d hacek" = "n hacek"  FIXME
-//    "t hacek" ? "n hacek" (to jenom pro zajimavost - menit to nebudu)
-//    "i carka" kam umistit? FIXME
-//  ideas
-//    http://kam.mff.cuni.cz/~pasky/dev/debian/lenny/ucwcs-xkb/ucwcs-xkb/README.CZ
-//    zmacknu jeden shift, pak druhy (je jedno v jakem poradi), nasledne
-//      pustim-li jenom jeden z shiftu a tuknu na nejakou jinou klavesu X
-//        (ruznou od toho pusteneho shiftu), bude to povazovano za
-//        docasne prepnuti do shiftLevel3, ktery se okamzite po
-//        stisknuti minimalne jedne X s naslednym pustenim drzeneho shiftu zase
-//        vypne a vrati do puvodniho stavu
-//      pustim-li jeden shift a nasledne ten druhy (je jedno v jakem poradi),
-//        bude to povazovano za toggle do rezimu shiftLevel3, ktery se ukonci
-//        stisknutim (a pripadnym drzenim) jakehokoliv shiftu - v pripade
-//        drzeni shiftu se uplne normalne prepne do puvodniho stavu a chova
-//        se to, jako kdyz je stisknuty normalni shift
-//    pri aktivnim rezimu toggle tretiho levelu se mi rozsviti nejaka
-//      ledka, napr. CapsLock
 
 // ----------- standard ISO dvorak, 1. and 2. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
@@ -92,8 +53,6 @@
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
 //              nda !   §       ,   7   8   9   [   ]   +   |
-//              hyphen (spojovnik)
-//              non-breaking hyphen
 //              en dash
 //
 //          @   °   €   `       :   4   5   6   =   \
@@ -107,8 +66,6 @@
 //  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
 //
 //          “   nda '   P   Y   F   G   C   R   L   ?   Ť   Ň
-//              hyphen (spojovnik)
-//              non-breaking hyphen
 //              en dash
 //          „   ,   .   p   y   f   g   c   r   l   /   ť   ň
 //
@@ -273,7 +230,7 @@ xkb_symbols "ltgt" {
   name[Group1] = "Czech Dvorak ltgt (useful for text with lots of <>)";
 
   key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
-  // pomlcka (en dash)
+  // en dash (pomlcka)
   key <AD02> {[ comma,      less,     U2013,      U2013      ]};
   key <AD03> {[ period,     greater,  exclam,     exclam     ]};
 };
@@ -285,7 +242,7 @@ xkb_symbols "writer" {
 
   // dolni, horni uvozovky
   key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};
-  // pomlcka (en dash)
+  // en dash (pomlcka)
   key <AD02> {[ comma,  U2013,      less,     less     ]};
   key <AD03> {[ period, apostrophe, greater,  greater  ]};
 };
