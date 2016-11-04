@@ -103,7 +103,9 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * add (generated?) BFU help (mainly images) for each existing layout
-* take a look at https://github.com/Koodimonni/OnniDvorak and maybe get into contact with the author
+* take a look at the following and maybe get into contact with authors
+    * https://github.com/Koodimonni/OnniDvorak
+    * http://dump.doomtech.net/NorskDvorakMac.zip
 * take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
 * add versioning to the whole repository (not to each layout file nor to the whole platform)
 * add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
