@@ -79,6 +79,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 * **ADD Semver versioning**
 * add numerical and "middle" block key definitions
+* test whether xorg.lst is still needed (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
 * evaluate the following ideas for changes/additions
     * add the per mille (U2030) character?
     * Shift+Backspace as Del
