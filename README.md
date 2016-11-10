@@ -77,7 +77,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
-* **ADD Semver versioning**
+* **ADD Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
 * add numerical and "middle" block key definitions
 * test whether xorg.lst is still needed (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
 * evaluate the following ideas for changes/additions
@@ -108,7 +108,6 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
     * https://github.com/Koodimonni/OnniDvorak
     * http://dump.doomtech.net/NorskDvorakMac.zip
 * take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
-* add versioning to the whole repository (not to each layout file nor to the whole platform)
 * add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
 * finally add `engd`
@@ -117,7 +116,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * write a general howto for creation of new language-specific ULKL layouts
     * moment of enlightenment: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
 * email Jaroslav Zaviacic
-    * which layout uses Ms. Matouskova
+    * which layout uses Ms. Matouskova?
     * introduce ULKL, ask if they could test it, ULKL was created with analyses of the newest language corpus from CUNI in mind etc.
     * http://www.interinfo.org/products/prijmeni-jmeno-i/
 * national corpuses
