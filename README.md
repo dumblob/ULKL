@@ -107,6 +107,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * take a look at the following and maybe get into contact with authors
     * https://github.com/Koodimonni/OnniDvorak
     * http://dump.doomtech.net/NorskDvorakMac.zip
+    * https://github.com/mitsuhiko/osx-keyboard-layouts
 * take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
 * add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
 * correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
@@ -115,6 +116,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * rewrite and structure the "Motivation and reasoning for decisions made in ULKL" of this README
 * write a general howto for creation of new language-specific ULKL layouts
     * moment of enlightenment: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
+    * Mac OS X has layouts in XML with DTD -> test the layout against the DTD
 * email Jaroslav Zaviacic
     * which layout uses Ms. Matouskova?
     * introduce ULKL, ask if they could test it, ULKL was created with analyses of the newest language corpus from CUNI in mind etc.
