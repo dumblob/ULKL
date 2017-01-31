@@ -77,7 +77,31 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
-* **ADD Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
+* **add Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
+* **add support for the `Compose`/`Multi_key`/`U+2384 COMPOSITION SYMBOL` key** for all non-ASCII characters from all latin alphabets
+    * list of symbols `/usr/share/X11/locale/*/Compose`
+    * think of a structured way how to logically compose characters
+        * as a tree of shape similarities (if ambiguous, then linquistically or in the worst case historically related)?
+            * ogonek
+            * dot above a character
+            * "roof" above a character
+        * should it be related to the dvorak layout?
+        * how much and how influential should be the frequency of the particular shapes/characters?
+        * how many of language agnostic typographical characters should be incorporated?
+            * U+002D HYPHEN-MINUS
+            * U+2013 EN DASH
+            * U+2192 RIGHTWARDS ARROW
+            * U+21D2 RIGHTWARDS DOUBLE ARROW
+            * upper and lower indexes (`^` `_`)
+            * U+2013 EN DASH
+            * U+2014 EM DASH
+            * U+2012 FIGURE DASH (for ranges? or just for numbers?)
+            * U+2010 HYPHEN
+            * U+2011 NON-BREAKING HYPHEN
+            * U+2015 HORIZONTAL BAR (semantically the same as a FRACTION SLASH)
+            * U+2044 FRACTION SLASH (basically the same as a plain slash)
+            * ...
+        * use a general "mode" (sometimes activated by `Ctrl + Shift + u`) for unicode character description input
 * add numerical and "middle" block key definitions
 * test whether xorg.lst is still needed (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
 * evaluate the following ideas for changes/additions
