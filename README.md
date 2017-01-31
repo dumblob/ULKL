@@ -2,13 +2,16 @@
 
 Ever experienced any of the following issues?
 
-* *slow typing*
-* *hand-pain* (wrist, carpal tunnels etc.)
-* *switching to another nationalized layout* (both in the head and the hand-memory)
-* *tricky-accessible characters* (especially the national ones)
-* other issues with keyboard typing...
+* A *slow typing* feeling.
+* *Tricky-accessible characters* (especially the national ones).
+* The need to *learn yet another* cryptic shortcut.
+* Pressing *large amount* of keys to write even the most basic characters.
+* The feeling everything is randomly scattered and destroying the integrity of inputting anything using a keyboard.
+* *Hand-pain* (wrist, carpal tunnels etc.).
+* *Switching to another nationalized layout* (both in the head and in the hand-memory).
+* Other issues with keyboard input...
 
-ULKL mitigates these issues by introducing an **all-encompassing**, easy to remember & learn way of having a uniform keyboard layout for **each latin-based language**.
+ULKL mitigates these issues by introducing an all-encompassing, fully **intuitive** way of having a uniform keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility.
 
 The layout design idea is thus:
 
@@ -16,7 +19,7 @@ The layout design idea is thus:
 
 Modifiers are keys like `Shift` `Ctrl` `Alt` etc. It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
 
-FIXME add here a colorful picture (an animated gif?)
+FIXME Add here a few colorful pictures (animated gifs?).
 
 Please note, the goal is **not** to have one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that leads by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
 
@@ -34,7 +37,7 @@ Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *M
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
 
-Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages. Also considering the growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable layout solution for decades. Thus allowing us to teach this layout also at schools.
+Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages while maintaining a relaxed feeling (compared to other layouts). Also considering the rapidly growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable solution for decades. This makes ULKL a perfect fit for teaching [touch typing](https://en.wikipedia.org/wiki/Touch_typing ) at schools.
 
 Example names:
 * `czed` Czech dvorak
