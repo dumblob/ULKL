@@ -46,7 +46,7 @@ Example names:
 * `find` Finnish dvorak
 * `slod` Slovak dvorak
 
-Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide about 4 characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly less accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
+Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide about 4 language-specific characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly less accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
 
 ## Usage
 
