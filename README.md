@@ -82,7 +82,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 * **add Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
 * **add support for the `Compose`/`Multi_key`/`U+2384 COMPOSITION SYMBOL` key** for all non-ASCII characters from all latin alphabets
-    * list of symbols `/usr/share/X11/locale/*/Compose`
+    * list of symbols: `/usr/share/X11/locale/*/Compose`, https://www.internationalphoneticassociation.org/sites/default/files/IPA_Doulos_2015.pdf
     * think of a structured way how to logically compose characters
         * as a tree of shape similarities (if ambiguous, then linquistically or in the worst case historically related)?
             * ogonek
