@@ -6,7 +6,7 @@ Ever experienced any of the following issues?
 * *Tricky-accessible characters* (especially the national ones).
 * The need to *learn yet another* cryptic shortcut.
 * Pressing *large amount* of keys to write even the most basic characters.
-* The feeling everything is randomly scattered and destroying the integrity of inputting anything using a keyboard.
+* The feeling *everything is randomly scattered* and destroying the integrity of inputting anything using a keyboard.
 * *Hand-pain* (wrist, carpal tunnels etc.).
 * *Switching to another nationalized layout* (both in the head and in the hand-memory).
 * Other issues with keyboard input...
