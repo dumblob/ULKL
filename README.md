@@ -58,15 +58,18 @@ Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowe
 
 ### X11
 
-For testing purposes:
+* Testing (without installation)
 
-`setxkbmap -layout czed -variant ltgt -print | xkbcomp "-I$HOME/ULKL/platform/x11" - $DISPLAY`
+    1. Run
 
-(you can safely ignore the warnings *No symbols defined for...* and *Key ... not found in ...*, it's common also for non-ULKL layouts)
+        `setxkbmap -layout czed -variant ltgt -print | xkbcomp "-I$HOME/ULKL/platform/x11" - $DISPLAY`
 
-Or system-wide by putting the layout files to `/usr/share/X11/xkb/symbols/` or creating appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`) and running:
+        (you can safely ignore the warnings `No symbols defined for...` and `Key ... not found in ...`, it's common also for non-ULKL layouts).
 
-`setxkbmap czed -variant ltgt`
+* System-wide installation
+
+    1. Put the layout files to `/usr/share/X11/xkb/symbols/` or create appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`).
+    1. Run `setxkbmap czed -variant ltgt`.
 
 ### Mac OS X
 
