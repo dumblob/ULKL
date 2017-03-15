@@ -9,7 +9,8 @@ Ever experienced any of the following issues?
 * The feeling *everything is randomly scattered* and destroying the integrity of inputting anything using a keyboard.
 * *Hand-pain* (wrist, carpal tunnels etc.).
 * *Switching to another nationalized layout* (both in the head and in the hand-memory).
-* Other issues with keyboard input...
+* *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
+* *Other issues* with keyboard input...
 
 ULKL mitigates these issues by introducing an all-encompassing, fully **intuitive** way of having a uniform keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility.
 
@@ -177,7 +178,7 @@ Characters *minus* and *en dash* were chosen to be present instead of others bas
 * Soft hyphen (SHY) can't be used, because in Unicode it's invisible.
 * The widespread Chicago Manual of Style dictates use of *en dash* instead of *hyphen* for word joining.
 * The only allowed character for ranges in typography is *en dash*.
-* ČSN standard allows use of *minus* instead of *dash*. It became common practice already in 80s.
+* The ČSN standard allows use of *minus* instead of *dash*. It became common practice already in 80s.
 * Manual word splitting with *hyphen* is not and will not be needed (all SW makes it automatically nowadays).
 
 #### Motivation and reasoning for decisions made in ULKL
