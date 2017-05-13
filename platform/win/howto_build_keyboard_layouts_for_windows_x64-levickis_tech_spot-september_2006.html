@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Igor Levicki" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+<link rel="home" href="http://levicki.net/" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/images/icons/favicon.ico" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://levicki.net/rss/" />
+<link rel="index" href="/sitemap.xml" />
+<link rel="stylesheet" href="/css/menu.css" type="text/css" />
+<link rel="stylesheet" href="/css/base.css" type="text/css" />
+<title>HOWTO: Build keyboard layouts for Windows x64 - Levicki's Tech Spot - levicki.net</title>
+<meta name="Keywords" content="howto,build,keyboard,layouts,for,windows,x64,msklc,michael,kaplan,vista" />
+</head>
+<body>
+<div id="container">
+<nav id="cssmenu">
+<ul>
+<li id="menu_home"><a href="/"><span>Home</span></a></li>
+<li id="menu_articles"><a href="/articles/"><span>Articles</span></a></li>
+<li id="menu_gallery"><a href="/gallery/"><span>Gallery</span></a></li>
+<li id="menu_downloads"><a href="/downloads/"><span>Downloads</span></a></li>
+<li id="menu_gear"><a href="/gear/"><span>Gear</span></a></li>
+<li id="menu_links"><a href="/links/"><span>Links</span></a></li>
+<li id="menu_about"><a href="/about/"><span>About</span></a></li>
+<li id="menu_contact"><a href="/contact/"><span>Contact</span></a></li>
+</ul>
+</nav>
+<div id="main" class="content">
+<div itemscope itemtype="http://schema.org/Article" id="content">
+<a itemprop="url" title="Permalink" style="text-decoration:none; outline: 0;" href="/articles/2006/09/29/HOWTO_Build_keyboard_layouts_for_Windows_x64.php">
+<h1 itemprop="name">HOWTO: Build keyboard layouts for Windows x64</h1>
+</a>
+<p class="intro">Published on <span itemprop="datePublished" content="2006-09-29">2006/09/29</span> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Igor Levicki</span></span></p>
+<span itemprop="articleBody">
+<p>I needed my custom keyboard layout "ported" to x64 edition of Windows and that is where the trouble started. MSKLC (Microsoft Keyboard Layout Creator) wasn't able to produce anything but 32-bit version of DLL which of course didn't work.</p>
+<p>I started digging around and figured out that MSKLC is actually just a front-end for a C compiler, resource compiler and a linker, which were distributed along with it in the i386 folder. I had my custom layout as a .klc file and I believed that there must be some way to translate it to C code. I was right, there was also a command line tool named kbdutool.exe. I ran it from command prompt and it said:</p>
+<pre>KbdTool v3.13 - convert keyboard text file to C file
+
+Usage: KbdUTool [-v] [-n] [-w] [-k] [-n] [-u|a] [-i|x] file
+
+	[-?] display this message
+	[-a] Uses non-Unicode source files (default)
+	[-i] Builds for IA64
+	[-m] Builds for AMD64
+	[-n] no logo or normal build information displayed
+	[-u] Uses Uncode source files
+	[-v] verbose diagnostics (and warnings, with -w)
+	[-w] display extended warnings
+	[-x] Builds for x86 (default)
+</pre>
+<p>Aha! There it is, and it even has an AMD64 as an option. Neat? Not exactly. I tried various combination of switches and some of them worked while others didn't. For example:</p>
+<pre>kbdutool.exe -u -x my_layout.klc</pre>
+<p>produced my_layout.dll without any apparent intermediate steps or files. Changing -x to -i for example gave the following error message:</p>
+<pre>Error 2008 ((null), line 0):
+Missing compiler CL.EXE (expected at 'C:\MSKLC\bin\i386\win64\cl.exe'). Please check your configuration.</pre>
+<p>It was clear that it was looking for IA64 cross-compiler but it couldn't find it since it wasn't shipped with it. But what about AMD64 you say? I tried using -m instead of -x and -i and the tool wrote out several files and exited.</p>
+<p>I find it curious that kbdutool.exe has not complained about missing cl.exe for AMD64 this time like it did for IA64, but instead it produced the following files:</p>
+<pre>
+my_layout.C
+my_layout.DEF
+my_layout.H
+my_layout.RC
+</pre>
+<p>Great, I have the source. Now just to figure out how to compile it correctly. That turned out to be the hardest part. It wasn't hard to obtain the right compiler and linker, they are part of the Platform SDK, but what are the correct compiler and linker options? After a bit of experimenting and not getting anywhere because .DLL I got refused to load I wrote a cl.exe, rc.exe and link.exe replacement (actually just one program which I renamed) that just opens a file in the root of drive C: named after the corresponding tool and containing the command line passed by the kbdutool.exe. So I ran kbdutool.exe again with -u -x and to cut the long story short I got the following commands:</p>
+<pre>
+C:\MSKLC\bin\i386\rc.exe -r -iC:\MSKLC\inc -DSTD_CALL -DCONDITION_HANDLING=1 -DNT_UP=1 -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0502 /DWINVER=0x0502 -D_WIN32_IE=0x0600 -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -DFPO=1 -DNDEBUG -l 409 -FoC:\TEMP\my_layout.res C:\my_layout\my_layout.rc
+
+C:\MSKLC\bin\amd64\cl.exe -nologo -IC:\MSKLC\inc -DNOGDICAPMASKS -DNOWINMESSAGES -DNOWINSTYLES -DNOSYSMETRICS -DNOMENUS -DNOICONS -DNOSYSCOMMANDS -DNORASTEROPS -DNOSHOWWINDOW -DOEMRESOURCE -DNOATOM -DNOCLIPBOARD -DNOCOLOR -DNOCTLMGR -DNODRAWTEXT -DNOGDI -DNOKERNEL -DNONLS -DNOMB -DNOMEMMGR -DNOMETAFILE -DNOMINMAX -DNOMSG -DNOOPENFILE -DNOSCROLL -DNOSERVICE -DNOSOUND -DNOTEXTMETRIC -DNOWINOFFSETS -DNOWH -DNOCOMM -DNOKANJI -DNOHELP -DNOPROFILER -DNODEFERWINDOWPOS -DNOMCX -DWIN32_LEAN_AND_MEAN -DRoster -DSTD_CALL -D_WIN32_WINNT=0x0502 /c /Zp8 /Gy /W3 /WX /Gz /Gm- /EHs-c- /GR- /GF -Z7 /Zl /Oxs -FoC:\TEMP\my_layout64.obj C:\my_layout\my_layout.C
+
+C:\MSKLC\bin\i386\link.exe -nologo -base:0x5FFE0000 -merge:.edata=.data -merge:.rdata=.data -merge:.text=.data -merge:.bss=.data -section:.data,re -MERGE:_PAGE=PAGE -MERGE:_TEXT=.text -MACHINE:AMD64 -SECTION:INIT,d -OPT:REF -OPT:ICF -IGNORE:4039,4078 -noentry -dll -subsystem:native,5.2 -merge:.rdata=.text -PDBPATH:NONE -STACK:0x40000,0x1000 /opt:nowin98 -debugtype:cv,fixup -debug -osversion:5.2 -version:5.2 /release -def:C:\my_layout\my_layout.DEF -out:C:\my_layout\amd64\my_layout.dll C:\TEMP\my_layout.res C:\TEMP\my_layout64.obj
+</pre>
+<p>And that's it. Note that what you see above is the fixed version. I did have to change few things, and here is what I had to change:</p>
+<p>
+<ul class="circle">
+<li><span class="code">-D_WIN32_WINNT</span> and <span class="code">-DWINVER</span> from <span class="code">0x0501</span> to <span class="code">0x0502</span></li>
+<li>In <span class="code">C:\MSKLC\inc\winnt.h</span> I had to comment out lines <span class="code">1860</span> and <span class="code">1861</span></li>
+<li>I fixed a few deprecated <span class="code">cl.exe</span> and <span class="code">link.exe</span> switches</li>
+<li>I found actual <span class="code">-base:0x5FFE0000</span> by disassembling one of the existing layouts</li>
+<li><span class="code">-subsystem, -osversion</span> and <span class="code">-version</span> from <span class="code">5.1</span> to <span class="code">5.2</span></li>
+<li><span class="code">-MACHINE:IX86</span> to <span class="code">-MACHINE:AMD64</span></li>
+</ul>
+</p>
+<p>Of course you have to use AMD64 or x86_AMD64 version of cl.exe with the above commands so make amd64 folder next to the i386 folder and put the compiler files there. Here is the list of files needed for cl.exe:</p>
+<pre>
+C:\MSKLC\bin\amd64\1033\clui.dll
+C:\MSKLC\bin\amd64\c1.dll
+C:\MSKLC\bin\amd64\c1xx.dll
+C:\MSKLC\bin\amd64\c2.dll
+C:\MSKLC\bin\amd64\cl.exe
+C:\MSKLC\bin\amd64\mspdb80.dll
+</pre>
+<p>Now you are able to build your keyboard layout for x64 without having to resort to that clumsy DDK.</p>
+<p><b>UPDATE 29.09.2006:</b></p>
+<p>While I was doing all this I have stumbled upon this <a class="external" href="http://blogs.msdn.com/michkap/default.aspx" target="_blank" rel="nofollow">MSDN blog</a> where <a class="external" href="http://blogs.msdn.com/michkap/archive/2005/06/17/430391.aspx" target="_blank" rel="nofollow">MSKLC and its inability to produce keyboard layouts for x64 were mentioned</a>. I suspected that the blog author has to do something with the tool since he got asked about x64 compatibility a lot. Therefore, I contacted Michael S. Kaplan, the Technical Lead from Globalization Infrastructure, Fonts, and Tools at Microsoft to let him know what I did here.</p>
+<p>I wasn't expecting a response, I just thought it might be usefull for him to send the impatient people here so they can at least try to help themselves while waiting for the updated version of the tool. I was pleasantly surprised to find out that he actually posted about it!</p>
+<p><a class="external" href="http://blogs.msdn.com/michkap/archive/2006/09/28/774957.aspx" target="_blank" rel="nofollow">If you just don't think you can hold it (64-bit style!)</a></p>
+<p>After reading his post in which he commended my efforts (thank you Michael!), this part drew my attention:</p>
+<blockquote>Now of course the real support plan will include the real setup, and will also include the WOW64 dll as well (Mr Levicki's does not, which will cause some headaches for 32-bit applications running on 64-bit).</blockquote>
+<p>After contacting him again I realized that I have unconciously solved that problem too, only I forgot to write about it here because it didn't seem relevant. Actually, without making additional 32-bit DLL your layout wouldn't work at all for 32-bit applications and at the time of this writing 64-bit Word still didn't exist.</p>
+<p>So, here is the missing part people. You need to make 32-bit version of DLL but it is a special one so it takes an extra step which makes it different from the 32-bit DLL MSKLC produces by default. Here are the commands to use:</p>
+<pre>
+C:\MSKLC\bin\i386\cl.exe -nologo -IC:\MSKLC\inc -DBUILD_WOW6432 -DNOGDICAPMASKS -DNOWINMESSAGES -DNOWINSTYLES -DNOSYSMETRICS -DNOMENUS -DNOICONS -DNOSYSCOMMANDS -DNORASTEROPS -DNOSHOWWINDOW -DOEMRESOURCE -DNOATOM -DNOCLIPBOARD -DNOCOLOR -DNOCTLMGR -DNODRAWTEXT -DNOGDI -DNOKERNEL -DNONLS -DNOMB -DNOMEMMGR -DNOMETAFILE -DNOMINMAX -DNOMSG -DNOOPENFILE -DNOSCROLL -DNOSERVICE -DNOSOUND -DNOTEXTMETRIC -DNOWINOFFSETS -DNOWH -DNOCOMM -DNOKANJI -DNOHELP -DNOPROFILER -DNODEFERWINDOWPOS -DNOMCX -DWIN32_LEAN_AND_MEAN -DRoster -DSTD_CALL -D_WIN32_WINNT=0x0502 /c /Zp8 /Gy /W3 /WX /Gz /Gm- /EHs-c- /GR- /GF -Z7 /Zl /Oxs -FoC:\TEMP\my_layout32.obj C:\my_layout\my_layout.C
+
+C:\MSKLC\bin\i386\link.exe -nologo -base:0x5FFF0000 -merge:.edata=.data -merge:.rdata=.data -merge:.text=.data -merge:.bss=.data -section:.data,re -MERGE:_PAGE=PAGE -MERGE:_TEXT=.text -MACHINE:IX86 -SECTION:INIT,d -OPT:REF -OPT:ICF -IGNORE:4039,4078 -noentry -dll -subsystem:native,5.2 -merge:.rdata=.text -PDBPATH:NONE -STACK:0x40000,0x1000 /opt:nowin98 -debugtype:cv,fixup -debug -osversion:5.2 -version:5.2 /release -def:C:\my_layout\my_layout.DEF -out:C:\my_layout\i386\my_layout.dll C:\TEMP\my_layout.res C:\TEMP\my_layout32.obj
+</pre>
+<p>What is different here from the 64-bit build?</p>
+<p>
+<ul class="circle">
+<li>We use 32-bit compiler again.</li>
+<li>Additional macro <span class="code">BUILD_WOW6432</span> is defined for compilation</li>
+<li>Base address is <span class="code">0x5FFF0000</span> instead of <span class="code">0x5FFE0000</span></li>
+<li>Machine type is <span class="code">IX86</span> again.</li>
+</ul>
+</p>
+<p>So how did I figure out that I need BUILD_WOW6432?</p>
+<p>While researching this I noticed that the assembler code for the function exported from 32-bit DLL which resides in WINDOWS\SYSWOW64 folder differs from the one in the 32-bit DLL produced by MSKLC:</p>
+<pre>.data:5FFF2188 ; __stdcall KbdLayerDescriptor()
+.data:5FFF2188                 public _KbdLayerDescriptor@0
+.data:5FFF2188 _KbdLayerDescriptor@0 proc near
+.data:5FFF2188                 mov     eax, offset off_5FFF2090
+<b>.data:5FFF218D                 cdq</b>
+.data:5FFF218E                 retn
+.data:5FFF218E _KbdLayerDescriptor@0 endp
+</pre>
+<p>It had one instruction more &mdash; <abbr title="Convert Double to Quad">CDQ</abbr>. CDQ means &quot;Convert Double(Word) to Quad(Word)&quot; meaning that the function returns its return value in EDX:EAX instead just in EAX &mdash; it returns 64-bit pointer. So I patched my DLL, fixed its checksum, put it in SYSWOW64 and forgot about it until I read Michael's post.</p>
+<p>After he wrote that my solution is incomplete and after realizing that I have fixed it unconciously just for me, I wanted to find the right way of getting the same result without the need for hex editing. So I checked the <span>KbdLayoutDescriptor()</span> function definition in my_layout.C file:</p>
+<pre><b>PKBDTABLES</b> KbdLayerDescriptor(VOID)
+{
+	return &amp;KbdTables;
+}
+</pre>
+<p>Then I searched the include directory for <span>PKBDTABLES</span> and I found the structure in kbd.h:</p>
+<pre>typedef struct tagKbdLayer {
+	...
+} KBDTABLES, *<b>KBD_LONG_POINTER</b> PKBDTABLES;
+</pre>
+<p>Another search but this time for <span>KBD_LONG_POINTER</span> led me to the final solution:</p>
+<pre>#if defined(<b>BUILD_WOW6432</b>)
+	<b>#define KBD_LONG_POINTER __ptr64</b>
+#else
+	#define KBD_LONG_POINTER
+#endif
+</pre>
+<p>And that about sums it up. But what to do with the files? After you get your DLLs in C:\my_layout\i386 and C:\my_layout\amd64, you have to put them into the right place.</p>
+<p>Remember that you can't use 32-bit file managers like Total Commander for example because they get redirected from SYSTEM32 to SYSWOW64 so you won't be able to put 64-bit DLL into the right folder.</p>
+<p>Use the Windows Explorer instead and put the DLL from C:\my_layout\i386 to \WINDOWS\SYSWOW64 and the DLL from C:\my_layout\amd64 to \WINDOWS\SYSTEM32.</p>
+<p>I will leave the details of how to activate the new layout to you. In my case, I just modified a registry key to point to my DLL instead to the system default DLL for my language because I am currently not aware of any better way to do it.</p>
+<p>So there you are, now you have it all. What are you waiting for?</p>
+<p><b>UPDATE 01.08.2007:</b></p>
+<p>As of January 30, 2007 this tip has purely educational value because <a class="external" href="http://www.microsoft.com/globaldev/tools/msklc.mspx" target="_blank" rel="nofollow">MSKLC 1.4</a> is now available for download, and you can use it to build keyboard layouts for all recent Microsoft operating systems including Windows Vista.</p>
+</span>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="footer">
+<div class="copyright">
+<p>Copyright &copy; 2003-2017 Igor Levicki. All rights reserved.</p>
+<ul class="piped">
+<li><a class="first" href="/legal/">Terms of use</a></li>
+<li><a href="/privacy/">Privacy policy</a></ul>
+</div>
+</div>
+</div>
+</body>
+</html>
