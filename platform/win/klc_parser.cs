@@ -1448,3 +1448,5 @@ namespace Microsoft.Globalization.Tools.KeyboardLayoutCreator
     }
   }
 }
+
+// vim: set wrap:
