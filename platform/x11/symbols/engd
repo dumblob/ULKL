@@ -1,8 +1,39 @@
-// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2017 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
 // FIXME this will be improved and simplified in the future
-// FIXME add concept statement
+
+// The concept of this keyboard layout
+//   motto: be as much compatible with ISO dvorak as possible
+//   4. level is the same as 3. level
+//   2. level of ISO dvorak goes without modifications to the 3. level
+//   the whole national alphabet is accessible directly from 1. and 2. level
+//     without any exception
+//   3. level has some additional non-alphabet characters (e.g. numbers)
+//   3. level is accessible only by pressing both Shifts at once (and
+//     holding either of them)
+//   there are 2 variants which differ in placement and/or availability of
+//       characters ' " < > „ “ en_dash
+//     in `ltgt`, characters „ “ are not available and ' " < > are at their
+//       original dvorak places and ! is duplicated for better reachability
+//     in `writer`, all characters are available, but " < > are in
+//       the 3. level, thus less reachable
+
+// ----------- standard ISO dvorak, 1. and 2. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//  `   1   2   3   4   5   6   7   8   9   0   [   ]
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   +   |
+//          '   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            space
+//                            space
 
 default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {

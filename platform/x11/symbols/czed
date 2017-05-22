@@ -1,4 +1,4 @@
-// 2010-2016 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2017 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
 // The concept of this keyboard layout
@@ -12,9 +12,9 @@
 //     holding either of them)
 //   there are 2 variants which differ in placement and/or availability of
 //       characters ' " < > „ “ en_dash
-//     in `ltgt', characters „ “ are not available and ' " < > are at their
-//       original places and ! is duplicated for better reachability
-//     in `writer', all characters are available, but " < > are in
+//     in `ltgt`, characters „ “ are not available and ' " < > are at their
+//       original dvorak places and ! is duplicated for better reachability
+//     in `writer`, all characters are available, but " < > are in
 //       the 3. level, thus less reachable
 
 // ----------- standard ISO dvorak, 1. and 2. level
@@ -240,7 +240,7 @@ xkb_symbols "writer" {
 
   name[Group1] = "Czech Dvorak writer (useful for text with lower/upper UTF-8 double quotes)";
 
-  // dolni, horni uvozovky
+  // lower/upper UTF-8 double quotes
   key <AD01> {[ U201E,  U201C,      quotedbl, quotedbl ]};
   // en dash (pomlcka)
   key <AD02> {[ comma,  U2013,      less,     less     ]};
