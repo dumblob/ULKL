@@ -12,7 +12,7 @@ Ever experienced any of the following issues?
 * *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
 * *Other issues* with keyboard input...
 
-ULKL mitigates these issues by introducing an all-encompassing, fully **intuitive** way of having a uniform keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility.
+ULKL mitigates these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved by high uniformity).
 
 The layout design idea is thus:
 
