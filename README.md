@@ -38,6 +38,7 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 * **fourth level layout** and any **higher level layout** is guaranteed exactly the same as the third level layout
 
 <sup>**1**</sup>it's recommended to press first the shift under the hand which in the end is going to press the desired key
+
 <sup>**2**</sup>in x11 there is a bug and the **first** pressed shift (not **either** of the two shifts) must be released to press the desired key
 
 ## Available layouts
