@@ -55,7 +55,7 @@
 //              nda !   §       ,   7   8   9   [   ]   +   |
 //              en dash
 //
-//          @   °   €   `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
@@ -83,7 +83,7 @@
 //
 //          "   <   >   §       ,   7   8   9   [   ]   +   |
 //
-//          @   °   €   `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
@@ -161,7 +161,7 @@ xkb_symbols "base" {
   key <CAPS> {[ Escape,   Escape,     Escape,     Escape     ]};
   key <AC01> {[ a,        A,          at,         at         ]};
   key <AC02> {[ o,        O,          degree,     degree     ]};
-  key <AC03> {[ e,        E,          EuroSign,   EuroSign   ]};
+  key <AC03> {[ e,        E,          VoidSymbol, VoidSymbol ]};
   key <AC04> {[ u,        U,          grave,      grave      ]};
   key <AC05> {[ i,        I,          VoidSymbol, VoidSymbol ]};
   key <AC06> {[ d,        D,          colon,      colon      ]};

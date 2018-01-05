@@ -118,7 +118,7 @@ xkb_symbols "intl" {
     key <AE02> { [	   2,         at,   twosuperior, dead_doubleacute ] };
     key <AE03> { [	   3, numbersign, threesuperior,      dead_macron ] };
     key <AE04> { [	   4,     dollar,      currency,         sterling ] };
-    key <AE05> { [	   5,    percent,      EuroSign,     dead_cedilla ] };
+    key <AE05> { [	   5,    percent,      VoidSymbol,   dead_cedilla ] };
     key <AE06> { [    6, dead_circumflex,    onequarter,      asciicircum ] };
     key <AE07> { [	   7,  ampersand,       onehalf,	dead_horn ] };
     key <AE08> { [	   8,   asterisk, threequarters,      dead_ogonek ] };
@@ -205,14 +205,14 @@ xkb_symbols "alt-intl" {
   include "us"
 
   key <TLDE> { [ dead_grave, dead_tilde,    grave,	      asciitilde    ] };
-  key <AE05> { [          5, percent,	    EuroSign			    ] };
+  key <AE05> { [          5, percent,	    VoidSymbol	    ] };
   key <AE06> { [	  6, dead_circumflex, asciicircum,    asciicircum   ] };
   key <AE09> { [	  9, parenleft, leftsinglequotemark,  dead_breve ] };
   key <AE10> { [	  0, parenright, rightsinglequotemark, dead_abovering ] };
   key <AE11> { [      minus, underscore,    dead_macron,      dead_belowdot ] };
   key <AE12> { [      equal, plus,	    dead_doubleacute, dead_horn	    ] };
 
-  key <AD03> { [          e, E,		     EuroSign,         cent	    ] };
+  key <AD03> { [          e, E,		     VoidSymbol,       cent	    ] };
 
   key <AC10> { [  semicolon, colon,	     dead_ogonek,   dead_diaeresis  ] };
   key <AC11> { [ dead_acute, dead_diaeresis, apostrophe,    quotedbl	    ] };
@@ -304,7 +304,7 @@ xkb_symbols "dvorak-intl" {
     key <AE02> { [	   2,         at,   twosuperior, dead_doubleacute ] };
     key <AE03> { [	   3, numbersign, threesuperior,      dead_macron ] };
     key <AE04> { [	   4,     dollar,      currency,         sterling ] };
-    key <AE05> { [	   5,    percent,      EuroSign,     dead_cedilla ] };
+    key <AE05> { [	   5,    percent,      VoidSymbol,   dead_cedilla ] };
     key <AE06> { [    6, dead_circumflex,    onequarter,      asciicircum ] };
     key <AE07> { [	   7,  ampersand,       onehalf,	dead_horn ] };
     key <AE08> { [	   8,   asterisk, threequarters,      dead_ogonek ] };
@@ -377,7 +377,7 @@ xkb_symbols "dvorak-alt-intl" {
 
     include "us(dvorak)"
 
-    key <AE04> { [         4,  dollar,    EuroSign ] };
+    key <AE04> { [         4,  dollar,    VoidSymbol] };
 
     key <AD02> { [     comma,    less,  adiaeresis,       dead_caron ] };
     key <AD03> { [    period, greater, ecircumflex,   periodcentered	] };
@@ -596,7 +596,7 @@ xkb_symbols "dvp" {
     key <AE02> { [ bracketleft,     7,              currency                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AE03> { [ braceleft,       5,              cent                        ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AE04> { [ braceright,      3,              yen                         ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
-    key <AE05> { [ parenleft,       1,              EuroSign                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
+    key <AE05> { [ parenleft,       1,              VoidSymbol                  ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AE06> { [ equal,           9,              sterling                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
 
     // symbols row, right side
@@ -709,7 +709,7 @@ xkb_symbols "mac" {
     key <LSGT> { [   section,  plusminus,       section,        plusminus ] };
     key <TLDE> { [     grave, asciitilde,    dead_grave,        dead_horn ] };
     key <AE01> { [	   1,     exclam,    exclamdown,            U2044 ] };
-    key <AE02> { [	   2,         at,     trademark,         EuroSign ] };
+    key <AE02> { [	   2,         at,     trademark,        VoidSymbol] };
     key <AE03> { [	   3, numbersign,      sterling,            U2039 ] };
     key <AE04> { [	   4,     dollar,          cent,            U203A ] };
     key <AE05> { [	   5,    percent,      infinity,            UFB01 ] };
@@ -776,7 +776,7 @@ xkb_symbols "colemak" {
     key <AE02> { [            2,           at,       masculine,      twosuperior ] };
     key <AE03> { [            3,   numbersign,     ordfeminine,    threesuperior ] };
     key <AE04> { [            4,       dollar,            cent,         sterling ] };
-    key <AE05> { [            5,      percent,        EuroSign,              yen ] };
+    key <AE05> { [            5,      percent,        VoidSymbol,            yen ] };
     key <AE06> { [            6,  asciicircum,         hstroke,          Hstroke ] };
     key <AE07> { [            7,    ampersand,             eth,              ETH ] };
     key <AE08> { [            8,     asterisk,           thorn,            THORN ] };
@@ -1064,7 +1064,7 @@ xkb_symbols "olpc" {
    key <AC03>  { [         d,          D,         eth,              ETH ] };
    key <AC04>  { [         f,          F,       thorn,            THORN ] };
    key <AC06>  { [         h,          H,    sterling,         sterling ] };
-   key <AC07>  { [         j,          J,    EuroSign,         EuroSign ] };
+   key <AC07>  { [         j,          J,    VoidSymbol,       VoidSymbol]};
    key <AC10>  { [ semicolon,      colon,   masculine,      ordfeminine ] };
    key <AC11>  { [ apostrophe,  quotedbl,    currency,         currency ] };
    key <AC12>  { [ backslash,        bar,      section,         section ] };
@@ -1127,7 +1127,7 @@ xkb_symbols "olpcm" {
    key <AC03>  { [         d,          D,         eth,              ETH ] };
    key <AC04>  { [         f,          F,       thorn,            THORN ] };
    key <AC06>  { [         h,          H,    sterling,         sterling ] };
-   key <AC07>  { [         j,          J,    EuroSign,         EuroSign ] };
+   key <AC07>  { [         j,          J,    VoidSymbol,       VoidSymbol]};
    key <AC10>  { [ semicolon,      colon,   masculine,      ordfeminine ] };
    // no AC11 or AC12 on olpcm
 
@@ -1222,7 +1222,7 @@ xkb_symbols "hbs" {
   key <AC09> { [ l, L, U1C9, U1C8 ] };
   key <AB06> { [ n, N, U1CC, U1CB ] };
   key <AB01> { [ z, Z, U1C6, U1C5 ] };
-  key <AD03> { [ e, E, EuroSign, cent ] };
+  key <AD03> { [ e, E, VoidSymbol, cent ] };
   key <AC03> { [ d, D, dstroke, Dstroke ] };
   key <AC11> { [ dead_acute, quotedbl, apostrophe, apostrophe ] };
   key <SPCE> { [ space, space, nobreakspace, nobreakspace ] };
@@ -1243,7 +1243,7 @@ xkb_symbols "htcdream" {
         key <AD02> { [ w, W, grave, grave ] };
         key <AD03> { [ e, E, underscore, underscore ] };
         key <AD04> { [ r, R, sterling, sterling ] };
-        key <AD05> { [ t, T, EuroSign, EuroSign ] };
+        key <AD05> { [ t, T, VoidSymbol, VoidSymbol ] };
         key <AD06> { [ y, Y, division, division ] };
         key <AD07> { [ u, U, multiply, multiply ] };
         key <AD08> { [ i, I, minus, minus ] };
@@ -1386,7 +1386,7 @@ xkb_symbols "cz_sk_de" {
     key <AE11>	{ [minus,   underscore, ssharp,     0x1001E9E	] };
     key <AE12>	{ [equal,	  plus, dead_acute, dead_caron  ] };
     
-    key <AD03>	{ [         e,          E,     EuroSign,     Eacute ]	};
+    key <AD03>	{ [         e,          E,     VoidSymbol,     Eacute ]	};
 
     key <AD11>	{ [bracketleft, braceleft,   udiaeresis,   Udiaeresis ]	};
     key <AC10>	{ [ semicolon,      colon,   odiaeresis,   Odiaeresis ]	};

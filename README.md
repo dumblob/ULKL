@@ -12,31 +12,39 @@ Ever experienced any of the following issues?
 * *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
 * *Other issues* with keyboard input...
 
-ULKL mitigates these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved by high uniformity).
+ULKL mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
 
 The layout design idea is thus:
 
-> Put the nationalized characters at places, where your fingers expect them to be *without pressing any modifiers*.
+> Put the nationalized characters at places, where your fingers expect them to be **without** pressing any modifiers.
 
-Modifiers are keys like `Shift` `Ctrl` `Alt` etc. It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol enough logical to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) example.
+(modifiers are in general keys like `Shift` `Ctrl` `Alt` etc.)
 
-FIXME Add here a few colorful pictures (animated gifs?).
+It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol logical enough to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) layout.
+
+FIXME add here a few shiny pictures (animated gifs?)
 
 Please note, the goal is **not** to have one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that leads by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
 
 ## Supported features
 
-* the particular national alphabet
+* the particular national alphabet fully accessible without any modifier (so called **first level layout**)
 * all non-alpha and non-numeric symbols from the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) ```~ ! @ # $ % ^ & * ( ) { } ` [ ] " < > ? + | ' , . / = \ _ - : ;``` (convenient also for IT specialists)
 * numbers
-* additional frequently used symbols like ```§ @ ° € non-breakable-space en-dash ```
+* additional frequently used symbols like ```§ @ ° non-breakable-space en-dash```
 * nationalized punctuation like `„“` (always only the *writer* variant of the layout)
+* **second level layout** accessible through the modifier "left shift" or through the modifier "right shift"
+* **third level layout** accessible through the modifier combination "left shift and right shift"<sup>**1**</sup> (i.e. both must be pressed at the same time and either of them then released to press a different key<sup>**2**</sup>)
+* **fourth level layout** and any **higher level layout** is guaranteed exactly the same as the third level layout
+
+<sup>**1**</sup>it's recommended to press first the shift under the hand which in the end is going to press the desired key
+<sup>**2**</sup>in x11 there is a bug and the **first** pressed shift (not **either** of the two shifts) must be released to press the desired key
 
 ## Available layouts
 
 Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
 
-The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) layout.
+The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` (as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard ) layout).
 
 Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages while maintaining a relaxed feeling while typing (compared to other layouts). Also considering the rapidly growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable solution for decades. This makes ULKL a perfect fit for teaching [touch typing](https://en.wikipedia.org/wiki/Touch_typing ) at schools.
 
@@ -94,13 +102,21 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
             * "roof" above a character
         * should it be related to the dvorak layout?
         * how much and how influential should be the frequency of the particular shapes/characters?
-        * how many of language agnostic typographical characters should be incorporated?
+    * which typographical characters will be incorporated
+        * use a general "mode" (sometimes activated by `Ctrl + Shift + u`) for unicode character description input?
+        * most/all currencies
+            * $ (USD, US Dollar; yes, dollar as well - just to maintain consistency over duplication avoidance)
+            * € (EUR, Euro)
+            * ¥ U+00A5 (Chinese Yen)
+            * (GBP, British Pound)
+            * (JPY, Japanese Yen)
+            * '₹' (INR, Indian Rupee)
+            * ...
+        * maybe language agnostic ones?
+            * per mille (U+2030) character
             * U+002D HYPHEN-MINUS
-            * U+2013 EN DASH
             * U+2192 RIGHTWARDS ARROW
             * U+21D2 RIGHTWARDS DOUBLE ARROW
-            * upper and lower indexes (`^` `_`)
-            * U+2013 EN DASH
             * U+2014 EM DASH
             * U+2012 FIGURE DASH (for ranges? or just for numbers?)
             * U+2010 HYPHEN
@@ -108,15 +124,15 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
             * U+2015 HORIZONTAL BAR (semantically the same as a FRACTION SLASH)
             * U+2044 FRACTION SLASH (basically the same as a plain slash)
             * ...
-        * use a general "mode" (sometimes activated by `Ctrl + Shift + u`) for unicode character description input
+        * definitely not
+            * U+2013 EN DASH
+            * upper and lower indexes (`^` `_`)
 * add numerical and "middle" block key definitions
-* test whether xorg.lst is still needed (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
+* check whether xorg.lst is still necessary (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
 * evaluate the following ideas for changes/additions
-    * add the per mille (U2030) character?
     * Shift+Backspace as Del
     * Shift+Enter as non-breakable LF (how much widespread is it?)
     * should **each** key have both Shift and DoubleShift variants?
-    * exchange tcaron and ncaron in `czed`?
     * take into consideration, that numbers are often written with
         * `,.` comma and period (must be **independent** from locale)
         * `=` equal
@@ -135,7 +151,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
 * add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 * add (generated?) BFU help (mainly images) for each existing layout
-* take a look at the following and maybe get into contact with authors
+* take a look at the following and maybe get in touch with authors
     * https://github.com/Koodimonni/OnniDvorak
     * http://dump.doomtech.net/NorskDvorakMac.zip
     * https://github.com/mitsuhiko/osx-keyboard-layouts
