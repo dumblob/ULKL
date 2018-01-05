@@ -10,6 +10,7 @@ Ever experienced any of the following issues?
 * *Hand-pain* (wrist, carpal tunnels etc.).
 * *Switching to another nationalized layout* (both in the head and in the hand-memory).
 * *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
+* Impossibility to type a character into a password field or a security app (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
 * *Other issues* with keyboard input...
 
 ULKL mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
@@ -29,6 +30,7 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 ## Supported features
 
 * the particular national alphabet fully accessible without any modifier (so called **first level layout**)
+    * the absence of a modifier prevents majority of issues with password and other trusted inputs
 * all non-alpha and non-numeric symbols from the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) ```~ ! @ # $ % ^ & * ( ) { } ` [ ] " < > ? + | ' , . / = \ _ - : ;``` (convenient also for IT specialists)
 * numbers
 * additional frequently used symbols like ```§ @ ° non-breakable-space en-dash```
