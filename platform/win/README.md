@@ -4,7 +4,7 @@
 
     * https://github.com/rubo77/Portable-Keyboard-Layout (see also the [updated version of the klc2ini.pl](https://github.com/amire80/msklc_reader ) script)
 
-1. [MSKLC]() - does require administrator priviliges to install the resulting compiled DLL layouts and everything is closed source
+1. [MSKLC](https://www.microsoft.com/en-us/download/details.aspx?id=22339 ) - does require administrator priviliges to install the resulting compiled DLL layouts and everything is closed source
 
     * [Virtual-Key Codes](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx ) (see [Appendix 1](https://reactos.org/wiki/Create_a_keyboard_layout ) for hints which key is which on a HW keyboard)
     * [.klc format](https://pastebin.com/UXc1ub4V ) parser in C# (disassembled from MSKLC)
@@ -21,3 +21,4 @@
 * http://www.sensefulsolutions.com/2010/08/how-to-fix-keyboard-shortcuts-in-klc-eg.html
 * http://www.klm32.com/KbdEdit.html
 * http://ahkscript.org/
+* [dverty](https://github.com/chid/dvorak-qwerty/tree/master/dverty ) with simple regedit register files for better locale settings

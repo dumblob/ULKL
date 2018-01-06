@@ -10,7 +10,7 @@ Ever experienced any of the following issues?
 * *Hand-pain* (wrist, carpal tunnels etc.).
 * *Switching to another nationalized layout* (both in the head and in the hand-memory).
 * *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
-* Impossibility to type a character into a password field or a security app (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
+* Impossibility to type a character into a *password field or a security app* (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
 * *Other issues* with keyboard input...
 
 ULKL mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
@@ -23,7 +23,7 @@ The layout design idea is thus:
 
 It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol logical enough to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) layout.
 
-FIXME add here a few shiny pictures (animated gifs?)
+FIXME add a few shiny pictures (animated gifs?) depicting among other things differences between czed and engd to demonstrate compatibility and the easy-to-learn property
 
 Please note, the goal is **not** to have one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that leads by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
 
@@ -37,21 +37,24 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 * nationalized punctuation like `„“` (always only the *writer* variant of the layout)
 * **second level layout** accessible through the modifier "left shift" or through the modifier "right shift"
 * **third level layout** accessible through the modifier combination "left shift and right shift"<sup>**1**</sup> (i.e. both must be pressed at the same time and either of them then released to press a different key<sup>**2**</sup>)
-* **fourth level layout** and any **higher level layout** is guaranteed exactly the same as the third level layout
+* **fourth level layout** and any **higher level layout** is guaranteed being exactly the same as the third level layout
 
 <sup>**1**</sup>it's recommended to press first the shift under the hand which in the end is going to press the desired key
 
 <sup>**2**</sup>in x11 there is a bug and the **first** pressed shift (not **either** of the two shifts) must be released to press the desired key
 
+FIXME add FSM depicting the work with Shifts (mainly the third level) and later with other modifiers (probably just the compose key)
+
 ## Available layouts
 
-Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *MacOSX*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
+Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *Mac OS*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` (as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard ) layout).
 
 Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages while maintaining a relaxed feeling while typing (compared to other layouts). Also considering the rapidly growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable solution for decades. This makes ULKL a perfect fit for teaching [touch typing](https://en.wikipedia.org/wiki/Touch_typing ) at schools.
 
-Example names:
+Example layout names:
+
 * `czed` Czech dvorak
 * `gerd` German dvorak
 * `engd` English dvorak (yes, this is Dvorak, but with improvements for the 3. level as found in all other `<lang>d` layouts in this repository)
@@ -83,9 +86,7 @@ Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowe
     1. Put the layout files to `/usr/share/X11/xkb/symbols/` or create appropriate symlinks (e.g. `/usr/share/X11/xkb/symbols/find`).
     1. Run `setxkbmap czed -variant ltgt`.
 
-### Mac OS X
-
-Instructions stolen from http://osxnotes.net/keylayout-files-and-ukelele.html .
+### Mac OS
 
 1. Move the keyboard layout to `/Library/Keyboard Layouts/`. Keyboard layouts in `~/Library/Keyboard Layouts/` cannot be selected in password dialogs or in the login screen.
 2. Restart to apply the changes. Logging out and back in is not enough.
@@ -96,16 +97,21 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 ## TODO
 
 * **add Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
-* **add support for the `Compose`/`Multi_key`/`U+2384 COMPOSITION SYMBOL` key** for all non-ASCII characters from all latin alphabets
+* organize packages for easy installation (win -> msi/exe; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
+* fix various mistakes in the layouts
+    * remove all the unnecessary symbols left from the original dvorak layout file in `platform/osx/czed.keylayout`
+    * in x11 layouts do not produce any characters when AltGr is pressed together with an arbitrary key
+    * in x11 layouts remove the need of cross-Shift press for switching to the 3. level
+* **add support for the `Compose`/`Multi_key`/`U+2384 COMPOSITION SYMBOL` key** for many (all?) non-ASCII characters from all supported latin alphabets
     * list of symbols: `/usr/share/X11/locale/*/Compose`, https://www.internationalphoneticassociation.org/sites/default/files/IPA_Doulos_2015.pdf
-    * think of a structured way how to logically compose characters
+    * use some existing structured method how to logically compose characters
         * as a tree of shape similarities (if ambiguous, then linquistically or in the worst case historically related)?
             * ogonek
             * dot above a character
             * "roof" above a character
         * should it be related to the dvorak layout?
         * how much and how influential should be the frequency of the particular shapes/characters?
-    * which typographical characters will be incorporated
+    * which **typographical characters** will be incorporated at first
         * use a general "mode" (sometimes activated by `Ctrl + Shift + u`) for unicode character description input?
         * most/all currencies
             * $ (USD, US Dollar; yes, dollar as well - just to maintain consistency over duplication avoidance)
@@ -113,9 +119,12 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
             * ¥ U+00A5 (Chinese Yen)
             * (GBP, British Pound)
             * (JPY, Japanese Yen)
-            * '₹' (INR, Indian Rupee)
+            * ₹ (INR, Indian Rupee)
             * ...
-        * maybe language agnostic ones?
+        * all characters already present in the **3 levels** of the layout (because someone might prefer the compose method to switching between different layouts)
+            * U+2013 EN DASH
+            * upper and lower indexes (`^` `_`)
+        * everything else
             * per mille (U+2030) character
             * U+002D HYPHEN-MINUS
             * U+2192 RIGHTWARDS ARROW
@@ -127,11 +136,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
             * U+2015 HORIZONTAL BAR (semantically the same as a FRACTION SLASH)
             * U+2044 FRACTION SLASH (basically the same as a plain slash)
             * ...
-        * definitely not
-            * U+2013 EN DASH
-            * upper and lower indexes (`^` `_`)
 * add numerical and "middle" block key definitions
-* check whether xorg.lst is still necessary (if yes, update `xorg.lst` in this repository - currently there is only the old "czd" instead of `czed` etc.)
 * evaluate the following ideas for changes/additions
     * Shift+Backspace as Del
     * Shift+Enter as non-breakable LF (how much widespread is it?)
@@ -142,38 +147,27 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
         * `*` asterisk
         * `/` slash
         * `e` or `E` designating `*10^` ("times ten power")
-        * ` ` space (needed for splitting groups of numbers)
+        * ` ` space or non-breakable-space (needed for splitting groups of numbers)
     * add characters for phonetics written in English or make it a separate layout?
-    * try to change number character places like in the very original Dvorak design (it's expected to be inconvenient because of ordering semantics of numbers)
     * pressing one Shift, then the other (disregarding in which order) and releasing **either** of the two pressed Shifts will switch temporarily to 3rd level for one non-Shift character
     * pressing one Shift, then the other (disregarding in which order) and releasing **both** two pressed Shifts will switch permanently to 3rd level until any Shift is pressed (without the requirement to release it before proceeding; so this pressed Shift will permanently switch off the 3rd level and will activate 2nd level as usually)
-        * this 3rd level could turn on the CapsLock LED
-* fix X11 layouts
-    * do not produce any characters when AltGr is pressed together with an arbitrary key
-    * remove the need of cross-Shift press for switching to the 3. level
+        * this 3rd level could turn on the CapsLock LED (or maybe not to prevent confusion?)
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
-* add a gif picture showing differences between czed and engd to demonstrate compatibility and the easy-to-learn property
-* add (generated?) BFU help (mainly images) for each existing layout
+* generate GIF with the 3 levels for each layout
 * take a look at the following and maybe get in touch with authors
     * https://github.com/Koodimonni/OnniDvorak
     * http://dump.doomtech.net/NorskDvorakMac.zip
     * https://github.com/mitsuhiko/osx-keyboard-layouts
-* take a look at https://github.com/chid/dvorak-qwerty/tree/master/dverty and finish the Windows version
-* add packages for easy installation (win -> msi; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
-* correct mistakes in `platform/osx/czed.keylayout` (remove all the unnecessary symbols left from the original dvorak layout file)
-* finally add `engd`
 * support more platforms (Blackberry, Android, ...)
-* rewrite and structure the "Motivation and reasoning for decisions made in ULKL" of this README
 * write a general howto for creation of new language-specific ULKL layouts
     * moment of enlightenment: computer is there to serve us and we are there not to serve computer (we, humans, will **not** learn unnatural movements, because we can easily choose a better option)
-    * Mac OS X has layouts in XML with DTD -> test the layout against the DTD
+    * Mac OS has layouts in XML with DTD -> test the layout against the DTD
+* add right and left hand variants for each layout
 * email Jaroslav Zaviacic
     * which layout uses Ms. Matouskova?
-    * introduce ULKL, ask if they could test it, ULKL was created with analyses of the newest language corpus from CUNI in mind etc.
+    * introduce ULKL, ask if they could test it (ULKL is harmonized with the current language corpus analysis etc.)
     * http://www.interinfo.org/products/prijmeni-jmeno-i/
-* national corpuses
-    * how about foreign languages (e.g. English) in national corpuses?
-    * add info about each national corpus to this repository?
+* analyse/... corpuses of other languages/nationalities/alphabets
 
 ## Additional information
 
@@ -236,9 +230,11 @@ X upstream: xkeyboard-config-2.10.1/rules/compat/layoutsMapping.lst
 
 [huge XCompose configuration](https://github.com/rrthomas/pointless-xcompose )
 
-[Ukrainian example of Ukelele layout (Mac OS X)](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian )
+[Ukelele key layout instructions for Mac OS](http://osxnotes.net/keylayout-files-and-ukelele.html )
 
-[Apple documentation about Mac OS X layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html )
+[Ukrainian example of an Ukelele layout for Mac OS](https://github.com/palmerc/Ukrainian-Russian/blob/master/Ukrainian )
+
+[Apple documentation about Mac OS layouts](https://developer.apple.com/library/mac/technotes/tn2056/_index.html )
 
 [MessagEase mobile keyboard](https://www.exideas.com/ME )
 
