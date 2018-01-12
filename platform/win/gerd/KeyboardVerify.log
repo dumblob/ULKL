@@ -1,0 +1,3 @@
+    WARNING: + (U+002b) is already defined more than once on the keyboard (on VK_OEM_PLUS, ShiftState 'Ctrl' and VK_OEM_PLUS, ShiftState 'Shift').
+    WARNING: \ (U+005c) is already defined more than once on the keyboard (on VK_OEM_5, ShiftState 'Base' and VK_OEM_MINUS, ShiftState 'Ctrl').
+    WARNING: | (U+007c) is already defined more than once on the keyboard (on VK_OEM_5, ShiftState 'Ctrl' and VK_OEM_5, ShiftState 'Shift').

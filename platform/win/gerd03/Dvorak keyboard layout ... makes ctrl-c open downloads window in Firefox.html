@@ -1,0 +1,3034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head><meta property="og:type" content="website">
+<meta property="og:image" content="https://bugzilla.mozilla.org/extensions/OpenGraph/web/moz-social-bw-rgb-32x32.png">
+<meta property="og:title" content="434737 - Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window">
+<meta property="og:url" content="https://bugzilla.mozilla.org/show_bug.cgi?id=434737">
+
+    <meta name="bugzilla-global" content="dummy"
+        id="bugzilla-global" data-bugzilla="{&quot;api_token&quot;:&quot;&quot;,&quot;string&quot;:{&quot;short_desc_required&quot;:&quot;You must enter a Summary for this bug&quot;,&quot;description_required&quot;:&quot;You must enter a Description for this bug&quot;,&quot;version_required&quot;:&quot;You must select a Version for this bug&quot;,&quot;component_required&quot;:&quot;You must select a Component for this bug&quot;,&quot;attach_desc_required&quot;:&quot;You must enter a Description for this attachment.&quot;},&quot;constant&quot;:{&quot;COMMENT_COLS&quot;:&quot;80&quot;},&quot;param&quot;:{&quot;maxusermatches&quot;:&quot;50&quot;,&quot;cookiepath&quot;:&quot;/&quot;}}">
+    <title>434737 - Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="Top" href="https://bugzilla.mozilla.org/">
+
+  
+
+
+  
+    <link rel="Show" title="Dependency Tree"
+          href="showdependencytree.cgi?id=434737&amp;hide_resolved=1">
+      <link rel="Show" title="Dependency Graph"
+            href="showdependencygraph.cgi?id=434737">
+
+      <link rel="Show" title="Bug Activity"
+            href="show_activity.cgi?id=434737">
+      <link rel="Show" title="Printer-Friendly Version"
+            href="show_bug.cgi?format=multiple&amp;id=434737">
+
+
+<link href="data/assets/25f4b6b957df2ba5d3df7b9835b9c69f.css?1494941799" rel="stylesheet" type="text/css">
+
+<link href="data/assets/3b9233965ed73cbbf732ad926f303cde.css?1494941799" rel="stylesheet" type="text/css">
+
+      
+
+    
+<script nonce="FSClu44lSosoLQWtpc6LjHWDtXz2miT63CYtRcpASj2iDilo" type="text/javascript" src="data/assets/b760738f66bf94f888d5fcc0b7e27411.js?1494941799"></script>
+
+    
+    
+      <script nonce="FSClu44lSosoLQWtpc6LjHWDtXz2miT63CYtRcpASj2iDilo">
+          YAHOO.namespace('bugzilla');
+          if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+              YAHOO.util.Event._simpleRemove(window, "unload",
+                                             YAHOO.util.Event._unload);
+          }
+
+  
+    var tracking_flags_str = "{\"types\":[\"tracking\"],\"flags\":{\"tracking\":{\"cf_blocking_fennec\":\"---\",\"cf_tracking_firefox53\":\"---\",\"cf_tracking_firefox57\":\"---\",\"cf_status_firefox_esr45\":\"---\",\"cf_status_thunderbird_esr52\":\"---\",\"cf_tracking_firefox55\":\"---\",\"cf_status_firefox53\":\"---\",\"cf_status_firefox56\":\"---\",\"cf_tracking_firefox_esr45\":\"---\",\"cf_status_firefox55\":\"---\",\"cf_status_firefox_esr52\":\"---\",\"cf_status_firefox54\":\"---\",\"cf_blocking_fx\":\"---\",\"cf_tracking_firefox54\":\"---\",\"cf_status_firefox57\":\"---\",\"cf_tracking_firefox_esr52\":\"---\",\"cf_tracking_thunderbird_esr52\":\"---\",\"cf_tracking_thunderbird_esr45\":\"---\",\"cf_status_thunderbird_esr45\":\"---\",\"cf_tracking_firefox_relnote\":\"---\",\"cf_tracking_firefox56\":\"---\",\"cf_platform_rel\":\"---\"}},\"comments\":{\"cf_tracking_firefox_esr45\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox53\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox57\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox54\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox_esr52\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox55\":{\"?\":\"[Tracking Requested - why for this release]:\"},\"cf_tracking_firefox_relnote\":{\"?\":\"Release Note Request (optional, but appreciated)\\n[Why is this notable]:\\n[Affects Firefox for Android]:\\n[Suggested wording]:\\n[Links (documentation, blog post, etc)]:\"},\"cf_tracking_firefox56\":{\"?\":\"[Tracking Requested - why for this release]:\"}}}";
+    var TrackingFlags = $.parseJSON(tracking_flags_str);
+
+  
+
+  
+  BUGZILLA.bug_id = 434737;
+  BUGZILLA.bug_title = '434737 - Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window';
+  BUGZILLA.user = {
+    id: 0,
+    login: '',
+    is_insider: false,
+    is_timetracker: false,
+    can_tag: false,
+    settings: {
+      quote_replies: 'quoted_reply',
+      zoom_textareas: true,
+      remember_collapsed: true
+    }
+  };
+
+  BUGZILLA.bug_secure = false;
+      </script>
+<script nonce="FSClu44lSosoLQWtpc6LjHWDtXz2miT63CYtRcpASj2iDilo" type="text/javascript" src="data/assets/5c28254b41747e1ee1f88345ffac5c99.js?1494941799"></script>
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla@Mozilla" href="./search_plugin.cgi">
+    <meta name="referrer" content="origin-when-crossorigin"><link rel="shortcut icon" href="extensions/BMO/web/images/favicon.ico">
+<link id="shorturl" rev="canonical" href="https://bugzil.la/434737"><meta name="robots" content="noarchive">
+  </head>
+
+
+
+  <body
+        class="bugzilla-mozilla-org
+               skin-Mozilla bug_modal yui-skin-sam">
+
+
+
+<div id="header">
+
+  <div class="wrapper">
+    <table border="0" cellspacing="0" cellpadding="0" id="titles">
+    <tr>
+      <td id="title">
+        <a href="./" title="Home">Bugzilla@Mozilla</a>
+      </td>
+      <td>
+      </td>
+      <td id="moz_login">
+          <ul class="login-links">
+              <li id="moz_new_account_container_top"><a href="createaccount.cgi">New&nbsp;Account</a>
+              </li>
+
+                <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="https://bugzilla.mozilla.org/show_bug.cgi?id=434737&amp;GoAheadAndLogIn=1"
+     class='show_mini_login_form' data-qs-suffix="_top">Log In</a>
+<span id="github_mini_login_top" class="bz_default_hidden mini_login_top">
+    <form method="post" action="https://bugzilla.mozilla.org/github.cgi">
+      <input type="hidden" name="github_secret" value="4eWI2O56eXTPS34i">
+      <input type="hidden" name="target_uri" value="https://bugzilla.mozilla.org/show_bug.cgi?id=434737">
+      <input type="image" src="extensions/GitHubAuth/web/images/sign_in.png" height="22" width="75" align="absmiddle"
+             alt="Sign in with GitHub"
+             title="Sign in with GitHub"> or
+    </form>
+  </span>
+  
+  <form action="https://bugzilla.mozilla.org/show_bug.cgi?id=434737" method="POST" 
+        class="mini_login bz_default_hidden "
+        id="mini_login_top"
+        data-qs-suffix="_top"
+  >
+    
+    <input id="Bugzilla_login_top" 
+           class="bz_login"
+           name="Bugzilla_login"
+           title="Login"
+           placeholder="email address"
+    >
+    <input class="bz_password"
+           id="Bugzilla_password_top" 
+           name="Bugzilla_password"
+           type="password"
+           title="Password"
+    >
+    <input class="bz_password bz_default_hidden bz_mini_login_help" type="text" 
+           id="Bugzilla_password_dummy_top" value="password"
+           title="Password"
+    >
+      <input type="checkbox" id="Bugzilla_remember_top" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+                 checked>
+      <label for="Bugzilla_remember_top">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+           class="check_mini_login_fields"
+            id="log_in_top">
+    <a href="#" id="hide_mini_login_top" 
+       class="hide_mini_login_form" data-qs-suffix="_top">[x]</a>
+  </form>
+</li>
+<li id="forgot_container_top">
+  <span class="separator">| </span>
+  <a id="forgot_link_top" href="https://bugzilla.mozilla.org/show_bug.cgi?id=434737&amp;GoAheadAndLogIn=1#forgot"
+     class='show_forgot_form'
+     data-qs-suffix="_top">Forgot Password</a>
+  <form action="token.cgi" method="post" id="forgot_form_top"
+        class="mini_forgot bz_default_hidden">
+    <label for="login_top">Login:</label>
+    <input type="text" name="loginname" size="20" id="login_top">
+    <input id="forgot_button_top" value="Reset Password" 
+           type="submit">
+    <input type="hidden" name="a" value="reqpw">
+    <input type="hidden" id="token_top" name="token" value="1496145598-43ba5818eaf25395195144a76e1d0cef">
+    <a href="#" class="hide_forgot_form" data-qs-suffix="_top">[x]</a>
+  </form>
+</li>
+          </ul>
+      </td>
+      <td id="moz_tab">
+        <a href="https://www.mozilla.org/" title="Mozilla - Home of the Mozilla Project">
+          <img src="skins/contrib/Mozilla/tabzilla.png" border="0" height="42" width="154"></a>
+      </td>
+    </tr>
+    </table>
+
+    
+<ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form quicksearch_form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+      class='quicksearch_check_empty'>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_top"></form>
+    [<a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">help</a>]
+  </li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+<li><span class="separator"> | </span><a href="page.cgi?id=productdashboard.html">Product Dashboard</a></li>
+
+</ul>
+
+  </div>
+
+
+</div> 
+
+<div id="bugzilla-body"><div id="xhr-error" style="display:none"></div>
+<div id="floating-message" style="display:none">
+  <div id="floating-message-text"></div>
+</div>
+<section class="module"
+>
+  <div class="module-content"
+  >
+  <div id="summary-container">
+    <div class="field indent"
+>
+
+  
+    <div class=" container">
+      <div id="field-value-bug_id">
+        <a id="this-bug" href="show_bug.cgi?id=434737">Bug 434737</a>
+      </div>
+    </div>
+
+  
+</div><div class="field indent edit-hide"
+>
+
+  
+    <div class=" container">
+      <h1 id="field-value-short_desc">Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window</h1>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-alias" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#alias" id="alias-help-link" class="help">Alias:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-alias">
+        ---
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-short_desc" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#short_desc" id="short_desc-help-link" class="help">Summary:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-short_desc">
+            Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window
+
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field indent edit-hide" id="field-status_summary"
+>
+
+  
+    <div class="value">
+        <span id="field-value-status_summary">
+      <b>NEW
+        
+      </b>
+        <div id="status-assignee">Assigned to <div class="vcard vcard_34283" ><a class="email " href="user_profile?user_id=34283" > <span class="fna">masayuki</span></a>
+</div>
+        </div>
+        </span>
+    </div>
+
+  
+</div>
+  </div>
+
+  
+
+  <div id="mode-container">
+    <div>
+    </div>
+    <div class="button-row">
+      <div class="dropdown">
+        <button type="button" id="action-menu-btn" aria-haspopup="true" aria-label="Actions Menu"
+          aria-expanded="false" aria-controls="action-menu" class="dropdown-button minor">&#9662;</button>
+        <ul class="dropdown-content" id="action-menu" role="menu" style="display:none;">
+          <li role="presentation">
+            <a id="action-reset" role="menuitem" tabindex="-1">Reset Sections</a>
+          </li>
+          <li role="presentation">
+            <a id="action-expand-all" role="menuitem" tabindex="-1">Expand All Sections</a>
+          </li>
+          <li class="dropdown-separator" role="presentation">
+            <a id="action-collapse-all" role="menuitem" tabindex="-1">Collapse All Sections</a>
+          </li>
+          <li class="dropdown-separator" role="presentation">
+            <a id="action-last-comment" role="menuitem" tabindex="-1">Last Comment</a>
+          </li>
+          <li role="presentation">
+            <a id="action-history" role="menuitem" tabindex="-1">History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="user-guide">
+      <a title="User guide for Bugzilla" href="https://wiki.mozilla.org/BMO/UserGuide">Get help with this page</a>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<section class="module" id="module-status"
+>
+    <header id="module-status-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse Status section"
+           data-label-collapsed="Expand Status section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-status-content"
+             aria-expanded="true"
+             aria-labeledby="module-status-title"
+             aria-describedby="module-status-subtitle"></div>
+        <h2 class="module-title" id="module-status-title">Status</h2>
+          <h3 class="module-subtitle" id="module-status-subtitle">
+            (<span id="readable-bug-status" data-readable-bug-status="{&quot;cf_blocking_fennec&quot;:&quot;---&quot;,&quot;cf_tracking_firefox53&quot;:&quot;---&quot;,&quot;priority&quot;:&quot;P5&quot;,&quot;cf_tracking_firefox57&quot;:&quot;---&quot;,&quot;status&quot;:&quot;NEW&quot;,&quot;cf_status_firefox_esr45&quot;:&quot;---&quot;,&quot;cf_status_thunderbird_esr52&quot;:&quot;---&quot;,&quot;cf_tracking_firefox55&quot;:&quot;---&quot;,&quot;keywords&quot;:[],&quot;cf_status_firefox53&quot;:&quot;---&quot;,&quot;id&quot;:&quot;434737&quot;,&quot;cf_status_firefox56&quot;:&quot;---&quot;,&quot;cf_tracking_firefox_esr45&quot;:&quot;---&quot;,&quot;cf_status_firefox_esr52&quot;:&quot;---&quot;,&quot;flags&quot;:[],&quot;cf_status_firefox55&quot;:&quot;---&quot;,&quot;dupe_of&quot;:null,&quot;cf_blocking_fx&quot;:&quot;---&quot;,&quot;cf_status_firefox54&quot;:&quot;---&quot;,&quot;cf_tracking_firefox54&quot;:&quot;---&quot;,&quot;cf_tracking_firefox_esr52&quot;:&quot;---&quot;,&quot;cf_status_firefox57&quot;:&quot;---&quot;,&quot;cf_tracking_thunderbird_esr52&quot;:&quot;---&quot;,&quot;cf_tracking_thunderbird_esr45&quot;:&quot;---&quot;,&quot;cf_status_thunderbird_esr45&quot;:&quot;---&quot;,&quot;cf_tracking_firefox_relnote&quot;:&quot;---&quot;,&quot;resolution&quot;:&quot;&quot;,&quot;target_milestone&quot;:&quot;---&quot;,&quot;cf_tracking_firefox56&quot;:&quot;---&quot;,&quot;cf_platform_rel&quot;:&quot;---&quot;}"></span>)
+          </h3>
+      </div>
+    </header>
+  <div class="module-content" id="module-status-content"
+  ><div class="fields-lhs">
+
+    <div class="field" id="field-product"
+>
+    <div class="name">
+        <a href="describecomponents.cgi?product=Core" id="product-help-link" class="help">Product:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-product">
+      <span aria-owns="product-name product-latch">
+        <span role="button" aria-label="show product information" aria-expanded="false" tabindex="0"
+              class="spin-latch" id="product-latch" data-latch="product" data-for="product">&#9656;</span>
+        <div title="show product information" tabindex="0" class="spin-toggle"
+             id="product-name" data-latch="product" data-for="product">Core
+        </div>
+        <div id="product-info" style="display:none">Shared components used by Firefox and other Mozilla software, including handling of Web content; Gecko, HTML, CSS, layout, DOM, scripts, images, networking, etc. Issues with web page layout probably go here, while Firefox user interface issues belong in the <a href="https://bugzilla.mozilla.org/editproducts.cgi?action=edit&amp;product=Firefox">Firefox</a> product. (<a href="https://wiki.mozilla.org/Modules/All#Core">More info</a>)
+        </div>
+      </span>
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field" id="field-component"
+>
+    <div class="name">
+        <a href="describecomponents.cgi?product=Core&component=Widget%3A%20Win32#Widget%3A%20Win32" id="component-help-link" class="help">Component:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-component">
+      <span aria-owns="component-name component-latch">
+        <span role="button" aria-label="show component description" aria-expanded="false" tabindex="0"
+              class="spin-latch" id="component-latch" data-latch="component" data-for="component">&#9656;</span>
+        <div title="show component information" tabindex="0" class="spin-toggle" id="component-name"
+             data-latch="#component-latch" data-for="component">Widget: Win32
+        </div>
+        <div id="component-info" style="display:none">
+          <div>Mapping of cross platform widget interfaces to Win32 platform APIs.</div>
+          <a href="buglist.cgi?component=Widget%3A%20Win32&amp;product=Core&amp;bug_status=__open__" target="_blank">Other Bugs</a>
+        </div>
+      </span>
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#priority" id="-help-link" class="help">
+        <label for="priority">Importance:
+        </label>
+        </a>
+    </div>
+
+  
+    <div class=" container"><div class="field inline" id="field-priority"
+>
+
+  
+    <div class="value">
+        <span id="field-value-priority">
+            P5
+
+        </span>
+    </div>
+
+  
+</div><div class="field indent inline" id="field-bug_severity"
+>
+
+  
+    <div class="value">
+        <span id="field-value-bug_severity">
+            enhancement
+
+        </span>
+    </div>
+
+  
+</div>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-hide" id="field-status-view"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugStatuses" id="status-view-help-link" class="help">
+        <label for="bug_status">Status:
+        </label>
+        </a>
+    </div>
+
+  
+    <div class=" container">
+        <span id="field-value-status-view">NEW
+        
+        </span>
+    </div>
+
+  
+</div>
+</div><div class="fields-rhs">
+
+    <div class="field" id="field-creation_ts"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#creation_ts" id="creation_ts-help-link" class="help">Reported:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-creation_ts"><span class="rel-time" title="2008-05-20 06:00 PDT" data-time="1211288444">9 years ago</span>
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field" id="field-delta_ts"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#delta_ts" id="delta_ts-help-link" class="help">Modified:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-delta_ts"><span class="rel-time" title="2017-02-12 20:10 PST" data-time="1486959008">4 months ago</span>
+        </span>
+    </div>
+
+  
+</div>
+</div>
+
+  <div class="field edit-show" id="field-status-edit" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugStatuses" id="status-edit-help-link" class="help">Status:
+        </a>
+    </div>
+
+  
+    <div class=" container">
+        <span id="field-value-status-edit"><div class="field inline" id="field-bug_status"
+>
+
+  
+    <div class="value">
+        <span id="field-value-bug_status">
+            NEW
+
+        </span>
+    </div>
+
+  
+</div><div class="field indent inline" id="field-resolution"
+>
+
+  
+    <div class="value">
+        <span id="field-value-resolution">
+        ---
+        </span>
+    </div>
+
+  
+</div>
+    <div id="assigned-container" style="display:none">
+      <button type="button" class="minor" id="mark-as-assigned-btn">
+        Mark as Assigned
+      </button>
+    </div>
+        </span>
+    </div>
+
+  
+</div>
+  </div>
+</section>
+
+
+
+<section class="module" id="module-people"
+>
+    <header id="module-people-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse People section"
+           data-label-collapsed="Expand People section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-people-content"
+             aria-expanded="false"
+             aria-labeledby="module-people-title"
+             aria-describedby="module-people-subtitle"></div>
+        <h2 class="module-title" id="module-people-title">People</h2>
+          <h3 class="module-subtitle" id="module-people-subtitle">
+            (Reporter: Peter Hamberg, Assigned: masayuki)
+          </h3>
+      </div>
+    </header>
+  <div class="module-content" id="module-people-content" style="display:none"
+  ><div class="fields-lhs">
+
+    <div class="field edit-hide" id="field-assigned_to"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#assigned_to" id="assigned_to-help-link" class="help">Assignee:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-assigned_to"><div class="vcard vcard_34283" ><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+        </span>
+    </div>
+
+  
+</div><div class="field edit-show" id="field-assigned_to" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#assigned_to" id="assigned_to-help-link" class="help">Assignee:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-assigned_to">
+      <div class="set-default-container" style="display:none">
+        <input type="checkbox" id="set-default-assignee" name="set_default_assignee" class="set-default"
+          value="1" data-for="assigned_to">
+        <label for="set-default-assignee">Reset Assignee to default</label>
+      </div>
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-bug_mentors" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_mentor" id="bug_mentors-help-link" class="help">Mentors:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-bug_mentors">---
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-qa_contact" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#qa_contact" id="qa_contact-help-link" class="help">QA Contact:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-qa_contact">
+      <div class="set-default-container" style="display:none">
+        <input type="checkbox" id="set-default-qa-contact" name="set_default_qa_contact" class="set-default"
+          value="1" data-for="qa_contact">
+        <label for="set-default-qa-contact">Reset QA Contact to default</label>
+      </div>
+        </span>
+    </div>
+
+  
+</div>
+</div><div class="fields-rhs">
+
+    <div class="field" id="field-reporter"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#reporter" id="reporter-help-link" class="help">Reporter:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-reporter">
+            <div class="vcard vcard_310495" ><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field" id="field-triage_owner"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#triage_owner" id="triage_owner-help-link" class="help">Triage Owner:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-triage_owner">
+            <div class="vcard vcard_279663" ><a class="email " href="user_profile?user_id=279663" > <span class="fna">Jim Mathies [:jimm]</span></a>
+</div>
+
+        </span>
+    </div>
+
+  
+</div>
+
+    
+
+    <div class="field"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#cc" id="-help-link" class="help">CC:
+        </a>
+    </div>
+
+  
+    <div class=" container">
+
+
+        <span aria-owns="cc-summary cc-latch">
+          <span role="button" tabindex="0" id="cc-summary" data-count="14">14 people
+          </span>
+        </span>
+
+
+        <div id="cc-list" style="display:none"></div>
+    </div>
+
+  
+</div>
+</div>
+  </div>
+</section>
+
+
+<section class="module" id="module-tracking"
+>
+    <header id="module-tracking-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse Tracking section"
+           data-label-collapsed="Expand Tracking section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-tracking-content"
+             aria-expanded="true"
+             aria-labeledby="module-tracking-title"
+             aria-describedby="module-tracking-subtitle"></div>
+        <h2 class="module-title" id="module-tracking-title">Tracking</h2>
+      </div>
+    </header>
+  <div class="module-content" id="module-tracking-content"
+  ><div class="fields-lhs">
+
+    <div class="field" id="field-version"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#version" id="version-help-link" class="help">Version:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-version">
+            Trunk
+
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field" id="field-target_milestone"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#target_milestone" id="target_milestone-help-link" class="help">Target:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-target_milestone">
+            ---
+
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#rep_platform" id="-help-link" class="help">
+        <label for="rep_platform">Platform:
+        </label>
+        </a>
+    </div>
+
+  
+    <div class=" container"><div class="field inline" id="field-rep_platform"
+>
+
+  
+    <div class="value">
+        <span id="field-value-rep_platform">
+            x86
+
+        </span>
+    </div>
+
+  
+</div><div class="field indent inline" id="field-op_sys"
+>
+
+  
+    <div class="value">
+        <span id="field-value-op_sys">
+            Windows Vista
+
+        </span>
+    </div>
+
+  
+</div><div class="field indent inline"
+>
+
+  
+    <div class=" container">
+    </div>
+
+  
+</div>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-keywords" style="display:none"
+>
+    <div class="name">
+        <a href="describekeywords.cgi" id="keywords-help-link" class="help">Keywords:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-keywords">---
+        </span>
+    </div>
+
+  
+</div>
+<div class="field edit-show" id="field-cf_fx_iteration" style="display:none"
+>
+    <div class="name">Iteration:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_fx_iteration">
+            ---
+
+        </span>
+    </div>
+
+  
+</div>
+<div class="field" id="field-cf_fx_points"
+>
+    <div class="name">Points:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_fx_points">
+            ---
+
+        </span>
+    </div>
+
+  
+</div>
+
+</div><div class="fields-rhs">
+
+    <div class="field edit-show" id="field-dependson" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#dependson" id="dependson-help-link" class="help">Depends on:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-dependson">
+        ---
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-blocked" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#blocks" id="blocked-help-link" class="help">Blocks:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-blocked">
+        ---
+        </span>
+    </div>
+
+  
+</div>
+
+
+    <div class="field edit-hide"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#duplicates" id="-help-link" class="help">Duplicates:
+        </a>
+    </div>
+
+  
+    <div class="value">
+            <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED DUPLICATE - Annoying Shortcut Problem: Here is how to reproduce it! (Shortcuts like CTRL+C, CTRL+V don't work anymore in FF RC1, Dvorak Type II keyboard layout used)"
+   href="show_bug.cgi?id=436752">436752</a>
+
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-bug_flags" style="display:none"
+>
+    <div class="name">Bug Flags:
+    </div>
+
+  
+    <div class=" container">
+        <span id="field-value-bug_flags"><div id="bug-flags" class="flags">
+  <table class="layout-table">
+    <tbody class="edit-show" style="display:none"><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="This flag used to ask the accessibility team to look over a bug. Typically used if a bug has the potential to affect accessibility, regresses accessibility, and/or is a new user facing feature." for="flag_type-835">a11y&#8209;review</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-835-dirty">
+      <select id="flag_type-835" name="flag_type-835"
+        title="This flag used to ask the accessibility team to look over a bug. Typically used if a bug has the potential to affect accessibility, regresses accessibility, and/or is a new user facing feature."
+        class="bug-flag">
+          <option value="X"></option>
+            <option value="?" >?</option>
+            <option value="+" >+</option>
+            <option value="-" >-</option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Bugs in Core components that affect (and will improve) web compatibility
+
+? - Needs prioritization
++ - Is a high-priority compatibility/interop bug or feature request
+- - Is either a low-priority compatibility/interop bug or feature request, meaning it should be treated as a regular bug or feature request. OR not considered to be a compat issue." for="flag_type-916">webcompat</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-916-dirty">
+      <select id="flag_type-916" name="flag_type-916"
+        title="Bugs in Core components that affect (and will improve) web compatibility
+
+? - Needs prioritization
++ - Is a high-priority compatibility/interop bug or feature request
+- - Is either a low-priority compatibility/interop bug or feature request, meaning it should be treated as a regular bug or feature request. OR not considered to be a compat issue."
+          disabled
+        class="bug-flag">
+          <option value="X"></option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Flag tracking inclusion in the desktop Firefox product backlog." for="flag_type-846">firefox&#8209;backlog</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-846-dirty">
+      <select id="flag_type-846" name="flag_type-846"
+        title="Flag tracking inclusion in the desktop Firefox product backlog."
+          disabled
+        class="bug-flag">
+          <option value="X"></option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Used to ask the security team to look over a feature or bug." for="flag_type-791">sec&#8209;review</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-791-dirty">
+      <select id="flag_type-791" name="flag_type-791"
+        title="Used to ask the security team to look over a feature or bug."
+          disabled
+        class="bug-flag">
+          <option value="X"></option>
+      </select>
+    </td>
+
+      <td class="flag-requestee">
+        <div id="requestee_type-791-container" style="display:none"><input
+    name="requestee_type-791"
+    value="" class="requestee bz_autocomplete_user"  id="requestee_type-791" 
+  >
+        </div>
+      <td>
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Flag is used to track security bug bounty nominations. Mail security(at)mozilla.org to nominate a bug." for="flag_type-803">sec&#8209;bounty</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-803-dirty">
+      <select id="flag_type-803" name="flag_type-803"
+        title="Flag is used to track security bug bounty nominations. Mail security(at)mozilla.org to nominate a bug."
+        class="bug-flag">
+          <option value="X"></option>
+            <option value="?" >?</option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Flag is used to track whether the bug report is eligible for inclusion in the Bug Bounty Hall of Fame." for="flag_type-913">sec&#8209;bounty&#8209;hof</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-913-dirty">
+      <select id="flag_type-913" name="flag_type-913"
+        title="Flag is used to track whether the bug report is eligible for inclusion in the Bug Bounty Hall of Fame."
+          disabled
+        class="bug-flag">
+          <option value="X"></option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Whether the bug has a testcase in the qa test suite or not. Set it to &quot;in-qa-testsuite?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-qa-testsuite+&quot; if the bug has an appropriate testcase, and set it to &quot;in-qa-testsuite-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword." for="flag_type-787">in&#8209;qa&#8209;testsuite</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-787-dirty">
+      <select id="flag_type-787" name="flag_type-787"
+        title="Whether the bug has a testcase in the qa test suite or not. Set it to &quot;in-qa-testsuite?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-qa-testsuite+&quot; if the bug has an appropriate testcase, and set it to &quot;in-qa-testsuite-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword."
+        class="bug-flag">
+          <option value="X"></option>
+            <option value="?" >?</option>
+            <option value="+" >+</option>
+            <option value="-" >-</option>
+      </select>
+    </td>
+
+      <td class="flag-requestee">
+        <div id="requestee_type-787-container" style="display:none"><input
+    name="requestee_type-787"
+    value="" class="requestee bz_autocomplete_user"  id="requestee_type-787" 
+  >
+        </div>
+      <td>
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Whether the bug has a testcase in the test suite or not. Set it to &quot;in-testsuite?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-testsuite+&quot; if the bug has an appropriate testcase, and set it to &quot;in-testsuite-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword." for="flag_type-37">in&#8209;testsuite</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-37-dirty">
+      <select id="flag_type-37" name="flag_type-37"
+        title="Whether the bug has a testcase in the test suite or not. Set it to &quot;in-testsuite?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-testsuite+&quot; if the bug has an appropriate testcase, and set it to &quot;in-testsuite-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword."
+        class="bug-flag">
+          <option value="X"></option>
+            <option value="?" >?</option>
+            <option value="+" >+</option>
+            <option value="-" >-</option>
+      </select>
+    </td>
+
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="Whether the bug has a testcase in the MozTrap test suite or not. Set it to &quot;in-moztrap?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-moztrap+&quot; if the bug has an appropriate MozTrap testcase, and set it to &quot;in-moztrap-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword." for="flag_type-781">in&#8209;moztrap</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-781-dirty">
+      <select id="flag_type-781" name="flag_type-781"
+        title="Whether the bug has a testcase in the MozTrap test suite or not. Set it to &quot;in-moztrap?&quot; if the bug needs a testcase (only set this if the bug actually *needs* a testcase - not all bugs do, even layout bugs!), set it to &quot;in-moztrap+&quot; if the bug has an appropriate MozTrap testcase, and set it to &quot;in-moztrap-&quot; if the bug doesn't need an explicit testcase (e.g. for code cleanup bugs). Only QA actively working on test cases in the component should use this keyword."
+        class="bug-flag">
+          <option value="X"></option>
+            <option value="?" >?</option>
+            <option value="+" >+</option>
+            <option value="-" >-</option>
+      </select>
+    </td>
+
+      <td class="flag-requestee">
+        <div id="requestee_type-781-container" style="display:none"><input
+    name="requestee_type-781"
+    value="" class="requestee bz_autocomplete_user"  id="requestee_type-781" 
+  >
+        </div>
+      <td>
+
+  </tr><tr>
+    <td class="flag-setter">
+    </td>
+
+    <td class="flag-name">
+      <label title="QA verification tracking." for="flag_type-864">qe&#8209;verify</label>
+    </td>
+
+    <td class="flag-value">
+      <input type="hidden" id="flag_type-864-dirty">
+      <select id="flag_type-864" name="flag_type-864"
+        title="QA verification tracking."
+          disabled
+        class="bug-flag">
+          <option value="X"></option>
+      </select>
+    </td>
+
+
+  </tr>
+    </tbody>
+  </table>
+</div>
+        </span>
+    </div>
+
+  
+</div>
+</div>
+  </div>
+</section>
+
+
+  
+<section class="module" id="module-firefox-tracking-flags"
+>
+    <header id="module-firefox-tracking-flags-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse Firefox Tracking Flags section"
+           data-label-collapsed="Expand Firefox Tracking Flags section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-firefox-tracking-flags-content"
+             aria-expanded="false"
+             aria-labeledby="module-firefox-tracking-flags-title"
+             aria-describedby="module-firefox-tracking-flags-subtitle"></div>
+        <h2 class="module-title" id="module-firefox-tracking-flags-title">Firefox Tracking Flags</h2>
+          <h3 class="module-subtitle" id="module-firefox-tracking-flags-subtitle">
+            (Not tracked)
+          </h3>
+      </div>
+    </header>
+  <div class="module-content" id="module-firefox-tracking-flags-content" style="display:none"
+  ><div class="fields-lhs">
+
+        <p class="edit-hide">
+          This bug is not currently tracked.
+        </p>
+
+        <div class="field edit-show" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide#Tracking_Flags" id="-help-link" class="help">Tracking Flags:
+        </a>
+    </div>
+
+  
+    <div class=" container"><div class="flags edit-show" style="display:none">
+  <table class="layout-table tracking-flags">
+      <tr>
+        <th></th>
+        <th>Tracking</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">platform-rel</td>
+          <td class="tracking-flag-tracking"></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_platform_rel-dirty">
+  <select id="cf_platform_rel" name="cf_platform_rel">
+        <option value="---"
+          id="v2875_cf_platform_rel" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox53</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox53-dirty">
+  <select id="cf_tracking_firefox53" name="cf_tracking_firefox53">
+        <option value="---"
+          id="v2996_cf_tracking_firefox53" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox53-dirty">
+  <select id="cf_status_firefox53" name="cf_status_firefox53">
+        <option value="---"
+          id="v3001_cf_status_firefox53" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox54</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox54-dirty">
+  <select id="cf_tracking_firefox54" name="cf_tracking_firefox54">
+        <option value="---"
+          id="v3036_cf_tracking_firefox54" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox54-dirty">
+  <select id="cf_status_firefox54" name="cf_status_firefox54">
+        <option value="---"
+          id="v3041_cf_status_firefox54" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox55</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox55-dirty">
+  <select id="cf_tracking_firefox55" name="cf_tracking_firefox55">
+        <option value="---"
+          id="v3173_cf_tracking_firefox55" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox55-dirty">
+  <select id="cf_status_firefox55" name="cf_status_firefox55">
+        <option value="---"
+          id="v3178_cf_status_firefox55" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox56</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox56-dirty">
+  <select id="cf_tracking_firefox56" name="cf_tracking_firefox56">
+        <option value="---"
+          id="v3271_cf_tracking_firefox56" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox56-dirty">
+  <select id="cf_status_firefox56" name="cf_status_firefox56">
+        <option value="---"
+          id="v3276_cf_status_firefox56" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox57</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox57-dirty">
+  <select id="cf_tracking_firefox57" name="cf_tracking_firefox57">
+        <option value="---"
+          id="v3286_cf_tracking_firefox57" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox57-dirty">
+  <select id="cf_status_firefox57" name="cf_status_firefox57">
+        <option value="---"
+          id="v3291_cf_status_firefox57" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox-esr45</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox_esr45-dirty">
+  <select id="cf_tracking_firefox_esr45" name="cf_tracking_firefox_esr45">
+        <option value="---"
+          id="v2524_cf_tracking_firefox_esr45" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox_esr45-dirty">
+  <select id="cf_status_firefox_esr45" name="cf_status_firefox_esr45">
+        <option value="---"
+          id="v2544_cf_status_firefox_esr45" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">firefox-esr52</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_firefox_esr52-dirty">
+  <select id="cf_tracking_firefox_esr52" name="cf_tracking_firefox_esr52">
+        <option value="---"
+          id="v3103_cf_tracking_firefox_esr52" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_firefox_esr52-dirty">
+  <select id="cf_status_firefox_esr52" name="cf_status_firefox_esr52">
+        <option value="---"
+          id="v3132_cf_status_firefox_esr52" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">blocking-fx</td>
+          <td class="tracking-flag-tracking"></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_blocking_fx-dirty">
+  <select id="cf_blocking_fx" name="cf_blocking_fx">
+        <option value="---"
+          id="v505_cf_blocking_fx" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">relnote-firefox</td>
+          <td class="tracking-flag-tracking"></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_tracking_firefox_relnote-dirty">
+  <select id="cf_tracking_firefox_relnote" name="cf_tracking_firefox_relnote">
+        <option value="---"
+          id="v539_cf_tracking_firefox_relnote" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">fennec</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_blocking_fennec-dirty">
+  <select id="cf_blocking_fennec" name="cf_blocking_fennec">
+        <option value="---"
+          id="v655_cf_blocking_fennec" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">thunderbird_esr45</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_thunderbird_esr45-dirty">
+  <select id="cf_tracking_thunderbird_esr45" name="cf_tracking_thunderbird_esr45">
+        <option value="---"
+          id="v2719_cf_tracking_thunderbird_esr45" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_thunderbird_esr45-dirty">
+  <select id="cf_status_thunderbird_esr45" name="cf_status_thunderbird_esr45">
+        <option value="---"
+          id="v2740_cf_status_thunderbird_esr45" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+      <tr>
+        <td class="tracking-flag-name">thunderbird_esr52</td>
+          <td class="tracking-flag-tracking"><input type="hidden" id="cf_tracking_thunderbird_esr52-dirty">
+  <select id="cf_tracking_thunderbird_esr52" name="cf_tracking_thunderbird_esr52">
+        <option value="---"
+          id="v3065_cf_tracking_thunderbird_esr52" selected
+        >---
+        </option>
+  </select></td>
+        <td class="tracking-flag-status"><input type="hidden" id="cf_status_thunderbird_esr52-dirty">
+  <select id="cf_status_thunderbird_esr52" name="cf_status_thunderbird_esr52">
+        <option value="---"
+          id="v3087_cf_status_thunderbird_esr52" selected
+        >---
+        </option>
+  </select></td>
+      </tr>
+  </table>
+</div>
+    </div>
+
+  
+</div>
+</div><div class="fields-rhs">
+
+
+</div>
+  </div>
+</section>
+
+
+
+<section class="module" id="module-details"
+>
+    <header id="module-details-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse Details section"
+           data-label-collapsed="Expand Details section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-details-content"
+             aria-expanded="false"
+             aria-labeledby="module-details-title"
+             aria-describedby="module-details-subtitle"></div>
+        <h2 class="module-title" id="module-details-title">Details</h2>
+          <h3 class="module-subtitle" id="module-details-subtitle">
+            (Whiteboard: [key hell][tpi:+])
+          </h3>
+      </div>
+    </header>
+  <div class="module-content" id="module-details-content" style="display:none"
+  ><div class="fields-lhs">
+
+    <div class="field" id="field-status_whiteboard"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/Whiteboard" id="status_whiteboard-help-link" class="help">Whiteboard:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-status_whiteboard">[key hell][tpi:+]
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#votes" id="-help-link" class="help">Votes:
+        </a>
+    </div>
+
+  
+    <div class=" container">7
+        votes
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-cf_qa_whiteboard" style="display:none"
+>
+    <div class="name">QA Whiteboard:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_qa_whiteboard">
+        ---
+        </span>
+    </div>
+
+  
+</div><div class="field edit-show" id="field-cf_has_regression_range" style="display:none"
+>
+    <div class="name">Has Regression Range:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_has_regression_range">
+            ---
+
+        </span>
+    </div>
+
+  
+</div><div class="field edit-show" id="field-cf_has_str" style="display:none"
+>
+    <div class="name">Has STR:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_has_str">
+            ---
+
+        </span>
+    </div>
+
+  
+</div>
+</div><div class="fields-rhs">
+
+    <div class="field edit-show" id="field-bug_file_loc" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_file_loc" id="bug_file_loc-help-link" class="help">URL:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-bug_file_loc"><a href="" target="_blank"
+     rel="noreferrer" title=""
+     class="bug-url" data-safe="0"
+  ></a>
+        </span>
+    </div>
+
+  
+</div>
+
+    <div class="field edit-show" id="field-see_also" style="display:none"
+>
+    <div class="name">
+        <a href="https://wiki.mozilla.org/BMO/UserGuide/BugFields#see_also" id="see_also-help-link" class="help">See Also:
+        </a>
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-see_also">
+        ---
+        </span>
+    </div>
+
+  
+</div>
+</div>
+
+  <div class="field edit-show" id="field-cf_crash_signature" style="display:none"
+>
+    <div class="name">Crash Signature:
+    </div>
+
+  
+    <div class="value">
+        <span id="field-value-cf_crash_signature">
+        </span>
+    </div>
+
+  
+</div>
+  </div>
+</section>
+
+
+<section class="module edit-show" style="display:none" id="module-security"
+>
+    <header id="module-security-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse Security section"
+           data-label-collapsed="Expand Security section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-security-content"
+             aria-expanded="false"
+             aria-labeledby="module-security-title"
+             aria-describedby="module-security-subtitle"></div>
+        <h2 class="module-title" id="module-security-title">Security</h2>
+          <h3 class="module-subtitle" id="module-security-subtitle">
+            (public)
+          </h3>
+      </div>
+    </header>
+  <div class="module-content" id="module-security-content" style="display:none"
+  ><div class="groups edit-hide">
+    This bug is publicly visible.
+</div>
+
+<div class="groups edit-show" style="display:none">
+
+
+</div>
+  </div>
+</section>
+
+
+<section class="module edit-show" style="display:none" id="module-user-story" data-non-stick="1"
+>
+    <header id="module-user-story-header" class="module-header">
+      <div class="module-latch"
+           data-label-expanded="Collapse User Story section"
+           data-label-collapsed="Expand User Story section">
+        <div class="module-spinner" role="button" tabindex="0"
+             aria-controls="module-user-story-content"
+             aria-expanded="false"
+             aria-labeledby="module-user-story-title"
+             aria-describedby="module-user-story-subtitle"></div>
+        <h2 class="module-title" id="module-user-story-title">User Story</h2>
+      </div>
+    </header>
+  <div class="module-content" id="module-user-story-content" style="display:none"
+  >
+    <pre id="user-story"></pre>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script nonce="FSClu44lSosoLQWtpc6LjHWDtXz2miT63CYtRcpASj2iDilo">
+  init_module_visibility();
+</script>
+
+
+
+
+
+
+<div id="comment-actions">
+    <button type="button" id="bottom-btn" class="minor">Bottom &darr;</button>
+  <div class="dropdown">
+    <button type="button" id="comment-tags-btn" arai-haspopup="true" aria-label="Tags Menu"
+      aria-expanded="false" aria-controls="comment-tags-menu" class="dropdown-button minor">Tags &#9662;</button>
+    <ul id="comment-tags-menu" role="menu" tabindex="0" class="dropdown-content" style="display:none">
+      <li class="dropdown-separator" role="presentation">
+        <a role="menuitem" tabindex="-1" data-comment-tag="">Reset</a>
+      </li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button type="button" id="view-menu-btn" arai-haspopup="true" aria-label="View Menu"
+      aria-expanded="false" aria-controls="view-menu" class="dropdown-button minor">View &#9662;</button>
+    <ul id="view-menu" role="menu" tabindex="0" class="dropdown-content" style="display:none">
+      <li class="dropdown-separator" role="presentation">
+        <a id="view-reset" role="menuitem" tabindex="-1">Reset</a>
+      </li>
+      <li role="presentation">
+        <a id="view-collapse-all" role="menuitem" tabindex="-1">Collapse All</a>
+      </li>
+      <li role="presentation">
+        <a id="view-expand-all" role="menuitem" tabindex="-1">Expand All</a>
+      </li>
+      <li class="dropdown-separator" role="presentation">
+        <a id="view-comments-only" role="menuitem" tabindex="-1">Comments Only</a>
+      </li>
+      <li role="presentation">
+        <a id="view-toggle-cc" role="menuitem" tabindex="-1">Show CC Changes</a>
+      </li>
+    </ul>
+   </div>
+</div>
+<div class="change-set" id="c0"><div class="comment" data-id="3628863" data-no="0">
+    
+    <table class="layout-table change-head reporter" id="ch-0">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310495" ><img src="https://secure.gravatar.com/avatar/bfb31074f5a4887b51f201015c2bb59b?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_310495" ><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+            <span class="user-role">(Reporter)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-0">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-0" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c0">Description</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-05-20 06:00 PDT" data-time="1211288444">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-0">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-0">User-Agent:       Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9) Gecko/2008051206 Firefox/3.0
+Build Identifier: Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9) Gecko/2008051206 Firefox/3.0
+
+When using the dvorak layout, instead of copying text, ctrl-c opens the download manager*. Expected behavior is 'copying text'. This behavior is new in 3.0rc1 afaik.
+
+This is probably because in dvorak the c key on the physical keyboard is remapped to mean a 'j'.
+
+The weird part is that ctrl-j on physical keyboard also opens the download window. (Which is the normal behavior. The new keyboard layout only remaps the normal keypresses and the shift modifyer. Ctrl and Alt modifiers are usually kept the way they are.)
+
+Reproducible: Always
+
+Steps to Reproduce:
+1. Reinstall firefox 3 rc 1
+2. switch to US/dvorak keyboard layout using vista control panel
+3. open firefox in safe mode
+4. go to any web page.
+5. try to copy text from that page using the standard keyboard shortcut (ctrl-c)
+
+Actual Results:  
+Instead of copying text, the download window is opened.
+
+
+Expected Results:  
+Copied text. That was what happened in beta 5.</pre></div><div class="change-set" id="a1026171_29552"><div class="change" id="aa1026171_29552">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_29552" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/dd45b9f6f663a1a2e85983c1f2cf5792?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_29552" id="a1026171_29552"><a class="email " href="user_profile?user_id=29552" > <span class="fna">Jo Hermans</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a1026171_29552">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a1026171_29552">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a1026171_29552">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-01 03:03 PDT" data-time="1212314615">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity cc-only" style="display:none"><div class="change">CC: tgj63rfisp</div></div><div class="activity"><div class="change">Duplicate of this bug: <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED DUPLICATE - Annoying Shortcut Problem: Here is how to reproduce it! (Shortcuts like CTRL+C, CTRL+V don't work anymore in FF RC1, Dvorak Type II keyboard layout used)"
+   href="show_bug.cgi?id=436752">436752</a></div></div></div><div class="change-set" id="c2"><div class="comment" data-id="3647634" data-no="2">
+    
+    <table class="layout-table change-head " id="ch-2">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_312303" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/2cc0a656b4c8657e55219cd4810a4ebe?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_312303" id="a1026171_29552"><a class="email " href="user_profile?user_id=312303" > <span class="fna">David Adams</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-2">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-2" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c2">Comment 2</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-04 10:10 PDT" data-time="1212599421">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-2">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-2">I'm seeing the same issue in 3.0RC1. I am using a modified Dvorak mapping where keys combined with CTRL revert to standard QWERTY (so that conventional copy, paste, etc., are maintained). This is set using the language bar in Windows XP.
+
+Interestingly, other CTRL combinations work as expected, such as CTRL-T to open a new tab, or CTRL-N to open a new browser window. In these cases I'm hitting the standard QWERTY key.
+
+What should register as CTRL-C, however, is being interpreted as CTRL-J, and opening the downloads window. Seems Firefox is here respecting the Dvorak mapping, but ignoring the CTRL-key override. Very frustrating.
+
+I also notice this happens within the browser window, but all works properly in the location and search bars.</pre><div class="activity cc-only" style="display:none"><div class="change">CC: daveysnack-moz</div></div></div><div class="change-set" id="c3"><div class="comment" data-id="3665323" data-no="3">
+    
+    <table class="layout-table change-head " id="ch-3">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_313906" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/833125d737a431b33de665a4acbe4196?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_313906" id="a1026171_29552"><a class="email " href="user_profile?user_id=313906" > <span class="fna">Viktor B</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-3">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-3" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c3">Comment 3</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-17 15:09 PDT" data-time="1213740572">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-3">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-3">I have the same issue (together with a number of friends),using the Swedish Dvorak layout; Svorak.</pre><div class="activity cc-only" style="display:none"><div class="change">CC: zjX5wZQcdMG3zicj</div></div></div><div class="change-set" id="c4"><div class="comment" data-id="3673796" data-no="4">
+    
+    <table class="layout-table change-head " id="ch-4">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_307100" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/68721a93d4b925ef064496a07b705b96?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_307100" id="a1026171_29552"><a class="email " href="user_profile?user_id=307100" > <span class="fna">Andy</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-4">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-4" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c4">Comment 4</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-22 01:49 PDT" data-time="1214124569">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-4">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-4">This bug has been reported for Firefox 3 RC1 
+and in Firefox 3.0 final this bug still exists!! 
+WTF?? 
+Fix this bug already! 
+How long have we to wait for it? 
+All people using dvorak keyboard layout cannot use Firefox since RC1.
+
+In FF 3 Beta 5 everything is working fine. 
+I'll keep using Beta 5 until this *extremely annoying* bug is fixed. 
+Fix it NOW in the final release!!! </pre></div><div class="change-set" id="c5"><div class="comment" data-id="3673801" data-no="5">
+    
+    <table class="layout-table change-head " id="ch-5">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_307100" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/68721a93d4b925ef064496a07b705b96?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_307100" id="a1026171_29552"><a class="email " href="user_profile?user_id=307100" > <span class="fna">Andy</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-5">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-5" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c5">Comment 5</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-22 01:55 PDT" data-time="1214124951">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-5">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-5">&quot;Assigned To: Nobody&quot; - Great! 
+It is still assigned to &quot;nobody&quot;. 
+And why is the status still &quot;UNCONFIRMED&quot;??? 
+It has been confirmed since RC1 already!!! 
+The keyboard shortcuts with dvorak keyboard layout only work properly in form fields. 
+Outside form fields keyboard shortcuts (CTRL+C and all the others) do NOT work. 
+WTF?
+Fix it now! 
+Set the status to CONFIRMED! 
+Everyone with dvorak has confirmed it! 
+</pre></div><div class="change-set" id="c6"><div class="comment" data-id="3673804" data-no="6">
+    
+    <table class="layout-table change-head " id="ch-6">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_307100" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/68721a93d4b925ef064496a07b705b96?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_307100" id="a1026171_29552"><a class="email " href="user_profile?user_id=307100" > <span class="fna">Andy</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-6">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-6" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c6">Comment 6</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-22 02:04 PDT" data-time="1214125469">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-6">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-6">Quote: 
+***
+Status UNCONFIRMED means: 
+This bug has recently been added to the database. Nobody has validated that this bug is true. Users who have the &quot;canconfirm&quot; permission set may confirm this bug, changing its state to NEW.
+*** 
+
+So, people, everyone who is reading this, 
+mail the hell out of everyone! 
+Spam this bug to every Mozilla email address you can get hands on! 
+We have to get a use with the &quot;canconfirm&quot; permission to finally CONFIRM 
+this **** and extremely annoying bug!!! 
+
+Mail now! Everyone!!! 
+</pre></div><div class="change-set" id="c7"><div class="comment" data-id="3673933" data-no="7">
+    
+    <table class="layout-table change-head " id="ch-7">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_15223" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/e4a0566b254d665aa267b7874726fbbf?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_15223" id="a1026171_29552"><a class="email " href="user_profile?user_id=15223" > <span class="fna">timeless</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-7">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-7" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c7">Comment 7</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-22 06:45 PDT" data-time="1214142305">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-7">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-7"><a rel="nofollow" href="https://bugzilla.mozilla.org/page.cgi?id=etiquette.html">https://bugzilla.mozilla.org/page.cgi?id=etiquette.html</a></pre><div class="activity"><div class="change">Status: UNCONFIRMED &rarr; RESOLVED</div><div class="change">Last Resolved: <span class="rel-time" title="2008-06-21 23:45 PDT" data-time="1214117105">9 years ago</span></div><div class="change">Resolution: --- &rarr; INVALID</div></div></div><div class="change-set" id="c8"><div class="comment" data-id="3674236" data-no="8">
+    
+    <table class="layout-table change-head reporter" id="ch-8">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310495" id="a1026171_29552"><img src="https://secure.gravatar.com/avatar/bfb31074f5a4887b51f201015c2bb59b?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_310495" id="a1026171_29552"><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+            <span class="user-role">(Reporter)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-8">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-8" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c8">Comment 8</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-06-22 13:51 PDT" data-time="1214167860">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-8">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-8">To whoever set this as invalid,
+Please realize this issue is a deal-breaker for anyone using a dvorak based layout.
+</pre></div><div class="change-set" id="a7337486_310495"><div class="change" id="aa7337486_310495">
+    <table class="layout-table change-head reporter">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310495" id="a7337486_310495"><img src="https://secure.gravatar.com/avatar/bfb31074f5a4887b51f201015c2bb59b?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_310495" id="a7337486_310495"><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+            <span class="user-role">(Reporter)</span>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a7337486_310495">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a7337486_310495">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a7337486_310495">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2008-08-13 04:12 PDT" data-time="1218625930">9 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">Resolution: INVALID &rarr; DUPLICATE</div></div><div class="activity"><div class="change">Duplicate of bug: <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - Keyboard shortcuts with alternate keyboard layouts (including colemak) are missmapped; they are mapped for qwerty."
+   href="show_bug.cgi?id=439815">439815</a></div></div></div><div class="change-set" id="c10"><div class="comment" data-id="3949048" data-no="10">
+    
+    <table class="layout-table change-head assignee" id="ch-10">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a7337486_310495"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a7337486_310495"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-10">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-10" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c10">Comment 10</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2009-01-28 01:52 PST" data-time="1233136330">8 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-10">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-10">This should not be a dup of <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - Keyboard shortcuts with alternate keyboard layouts (including colemak) are missmapped; they are mapped for qwerty."
+   href="show_bug.cgi?id=439815">bug 439815</a>, because that is a bug of cod of Mac widget.
+
+But I cannot confirm this bug. I added Dvorak keyboard layout from text service settings, however, Ctrl+J of Dvorak keyboard layout doesn't work as Ctrl+C on other native applications, e.g., IE and notepad. Can this bug be reproduced only on customized keyboard layout or third party's keyboard layout?</pre><div class="activity"><div class="change">Status: RESOLVED &rarr; UNCONFIRMED</div><div class="change cc-only" style="display:none">CC: masayuki</div><div class="change">Resolution: DUPLICATE &rarr; ---</div></div></div><div class="change-set cc-only" id="a27268238_274246" style="display:none"><div class="change" id="aa27268238_274246">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_274246" id="a27268238_274246"><img src="https://secure.gravatar.com/avatar/15d034eb5ed480cb10a8a9e41e8b9f13?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_274246" id="a27268238_274246"><a class="email " href="user_profile?user_id=274246" > <span class="fna">Karl Tomlinson (:karlt)</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a27268238_274246">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a27268238_274246">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a27268238_274246">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2009-03-31 20:31 PDT" data-time="1238556682">8 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">CC: mozbugz</div></div></div><div class="change-set" id="c11"><div class="comment" data-id="4572148" data-no="11">
+    
+    <table class="layout-table change-head " id="ch-11">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_375328" id="a27268238_274246"><img src="https://secure.gravatar.com/avatar/70bdda2d01263f1a3dcfca343ab7ecc5?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_375328" id="a27268238_274246"><a class="email " href="user_profile?user_id=375328" > <span class="fna">Zac</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-11">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-11" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c11">Comment 11</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2010-03-07 18:34 PST" data-time="1268015656">7 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-11">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-11">For those suffering from this problem:
+
+I was using Microsoft Keyboard Layout Creator to create my layouts and was suffering from this problem. I after searching around I discovered Keyboard Layout Manager <a rel="nofollow" href="http://www.klm32.com/KbdEdit.html">http://www.klm32.com/KbdEdit.html</a> . 
+
+In the link above youll find a section called &quot;Resolve VKs&quot; which says:
+
+This button does automatic Virtual Key assignment. This feature is useful when moving a key to a new location. For instance, if you move the character 'c' to the new key, you expect that when you press Ctrl + 'new_key' the computer performs the 'copy' function. If you do not press this button after moving the character, the computer performs the 'copy' function only in response to the Ctrl + 'old_key' combination being pressed.
+This feature just 'follows' new key assignments and tries to put corresponding Ctrl + key combinations in the right place.
+
+So create a keyboard layout and then press Resolve VKs and it should work, it did for me anyway. There is a free version that offers mapping of standard EN characters -- and hopefully that will be all you need. Otherwise it costs money.
+
+Note: To save your keyboard layouts so that you dont have to use Keyboard Layout Manger every time that you want to install a layout you can find the dlls by searching for them (the name is given in the edit mode) and saving the registry key located at:
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts\
+
+The keys youve created should be at the bottom.</pre><div class="activity cc-only" style="display:none"><div class="change">CC: filter</div></div></div><div class="change-set" id="c12"><div class="comment" data-id="4931988" data-no="12">
+    
+    <table class="layout-table change-head " id="ch-12">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310130" id="a27268238_274246"><img src="https://secure.gravatar.com/avatar/fd5f9e00e6109e12cfb9bb3765eb7999?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_310130" id="a27268238_274246"><a class="email " href="user_profile?user_id=310130" > <span class="fna">Tyler Downer [:Tyler]</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-12">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-12" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c12">Comment 12</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2010-09-11 17:38 PDT" data-time="1284251921">7 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-12">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-12">Reporter, are you still seeing this issue with Firefox 3.6.9 or later in safe mode? If not, please close. These links can help you in your testing.
+<a rel="nofollow" href="http://support.mozilla.com/kb/Safe+Mode">http://support.mozilla.com/kb/Safe+Mode</a>
+<a rel="nofollow" href="http://support.mozilla.com/kb/Managing+profiles">http://support.mozilla.com/kb/Managing+profiles</a></pre><div class="activity"><div class="change cc-only" style="display:none">CC: tyler.downer</div><div class="change">Whiteboard: [CLOSEME 2010-10-01]</div><div class="change">Version: unspecified &rarr; 3.0 Branch</div></div></div><div class="change-set" id="c13"><div class="comment" data-id="4932044" data-no="13">
+    
+    <table class="layout-table change-head reporter" id="ch-13">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310495" id="a27268238_274246"><img src="https://secure.gravatar.com/avatar/bfb31074f5a4887b51f201015c2bb59b?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_310495" id="a27268238_274246"><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+            <span class="user-role">(Reporter)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-13">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-13" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c13">Comment 13</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2010-09-11 18:05 PDT" data-time="1284253543">7 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-13">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-13">Bug still present in both 3.6.9 and 4.0 beta 5.</pre></div><div class="change-set" id="a72965431_310130"><div class="change" id="aa72965431_310130">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310130" id="a72965431_310130"><img src="https://secure.gravatar.com/avatar/fd5f9e00e6109e12cfb9bb3765eb7999?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_310130" id="a72965431_310130"><a class="email " href="user_profile?user_id=310130" > <span class="fna">Tyler Downer [:Tyler]</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a72965431_310130">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a72965431_310130">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a72965431_310130">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2010-09-11 18:11 PDT" data-time="1284253875">7 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">Component: General &rarr; Keyboard Navigation</div><div class="change">QA Contact: general &rarr; keyboard.navigation</div><div class="change">Whiteboard: <span class="activity-deleted">[CLOSEME 2010-10-01]</span></div><div class="change">Version: 3.0 Branch &rarr; Trunk</div></div></div><div class="change-set" id="c14"><div class="comment" data-id="5246558" data-no="14">
+    
+    <table class="layout-table change-head assignee" id="ch-14">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a72965431_310130"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a72965431_310130"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-14">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-14" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c14">Comment 14</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2011-02-01 23:07 PST" data-time="1296630442">6 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-14">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-14">I'm still not sure this is our bug.
+
+By the STR in <a href="show_bug.cgi?id=434737#c0">comment 0</a>, I can copy the test by Ctrl+I of QWERTY (Ctrl+C of Dvorak) but not so by Ctrl+C of QWERTY (Ctrl+J of Dvorak) on other applications too. So, I don't see any difference between Fx and other applications.
+
+If you *hope* the old Fx's behavior should be back rather than respecting the platform's behavior (i.e., other applications' behavior), it's a request for new feature even if the old our produce did so.
+
+If Ctrl key remaps the keyboard layout to QWERTY during it's pressed by someone, that should work correctly like <a href="show_bug.cgi?id=434737#c2">comment 2</a>. If you can reproduce this bug and you have Spy++, please write the message logs of WM_KEYDOWN, WM_CHAR and WM_KEYUP here with following operation:
+
+1. launch firefox and change keyboard layout to Dvorak
+2. Press C of QWERTY layout
+3. Release C of QWERTY layout
+4. Press Ctrl
+5. Press C of QWERTY layout
+6. Release C of QWERTY layout
+7. Release Ctrl
+
+On my environment, the log is:
+
+WM_KEYDOWN nVirtualKey: 'J'
+WM_CHAR chCharCode: '106'
+WM_KEYUP nVirtualKey: 'J'
+WM_KEYDOWN nVirtualKey: VK_CONTROL
+WM_KEYDOWN nVirtualKey: 'J'
+WM_CHAR chCharCode: '10'
+WM_KEYUP nVirtualKey: 'J'
+WM_KEYUP nVirtualKey: VK_CONTROL
+
+So, the messages said the pressed key is 'J', not 'C' even if Ctrl key is pressed.</pre></div><div class="change-set" id="c15"><div class="comment" data-id="6309182" data-no="15">
+    
+    <table class="layout-table change-head " id="ch-15">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_442301" id="a72965431_310130"><img src="https://secure.gravatar.com/avatar/f23e718a8de61d0458bc80a783c42fed?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_442301" id="a72965431_310130"><a class="email " href="user_profile?user_id=442301" > <span class="fna">netcat</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-15">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-15" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c15">Comment 15</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-15 09:04 PDT" data-time="1337097874">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-15">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-15">I'm not entirely sure, whether my circumstances are the same as the reporter's ones, I'll just list them, though, as they surely overlap:
+
+I'm using the dvorak-layout with qwerty virtual keys I created for myself with the Microsoft Keyboard Layout Creator 1.4.
+It pretty much works like a charm, however, there are some exceptions: Adobe Reader and NetBeans for example seem to work differently and don't use the virtual keys, so my Ctrl+J (its virtual key is still set to C) gets actually interpreted as Ctrl+J instead of Ctrl+C. 95% of the time (means like almost every other application) it gets interpreted as Ctrl+C, so when I'm typing it's dvorak and when I'm using Ctrl it's qwerty.
+
+In Firefox, however, it seems a little buggy:
+Ctrl+, (its VK is W) closes the tab (as expected)
+Ctrl+K (its VK is V) pastes the clipboard content (as expected)
+Ctrl+U (its VK is F) openes the search-panel (as expected)
+Ctrl+J (its VK is C) openes the download list (not expected!)
+Ctrl+H (its VK is J) openes the download list (as expected)
+
+Spy++ reports the following when pressing J (VK: C):
+WM_KEYDOWN nVirtKey: 'C' ScanCode: 2E
+WM_CHAR chCharCode: 'j' ScanCode: 2E
+WM_KEYUP nVirtKey: 'C' ScanCode 2E
+
+And this when pressing Ctrl+J (which should get mapped to Ctrl+C):
+WM_KEYDOWN nVirtKey: VK_CONTROL ScanCode: 1D
+WM_KEYDOWN nVirtKey: 'C' ScanCode: 2E
+WM_CHAR chCharCode: (3) ScanCode: 2E
+WM_KEYUP nVirtKey: VK_CONTROL ScanCode: 1D
+WM_KEYUP nVirtKey: 'C' ScanCode 2E
+
+
+How to reproduce:
+1. Create a new qwerty keyboard with Microsoft Keyboard Layout Creator
+2. Save it and open the *.klc in notepad
+3. Now modify the fourth and fifth column of the entry with a ScanCode (SC) of 2e to 'j' and 'J'
+4. Open it again in MKLC, click &quot;Build DLL and Setup Package&quot; and install the new keyboard
+5. Now you can use your qwerty C-key to write a J, Ctrl+C, however, will still work as Ctrl+C and not as Ctrl+J
+6. Open Firefox and try to use Ctrl+C
+
+Alternative to 1-4:
+<a rel="nofollow" href="http://sites.google.com/site/send2adtc/dvqwmod">http://sites.google.com/site/send2adtc/dvqwmod</a>
+Didn't test it, though.</pre><div class="activity cc-only" style="display:none"><div class="change">CC: netcat</div></div></div><div class="change-set" id="c16"><div class="comment" data-id="6311198" data-no="16">
+    
+    <table class="layout-table change-head assignee" id="ch-16">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a72965431_310130"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a72965431_310130"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-16">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-16" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c16">Comment 16</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-15 19:24 PDT" data-time="1337135082">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-16">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-16">Thank you, it's a really good hint.
+
+We're using ::ToUnicodeEx() for getting what character should be inputted by the VK with modifiers. However, it seems the custom keyboard layout overrides the code at dispatching WM_CHAR message. If Ctrl key isn't pressed, we're using WM_CHAR, therefore, it must work fine. However, if Ctrl key is pressed, we're using above API. Then, we dispatch 'C' key event. I think that this is a bug of the keyboard layout creator.
+
+We should look for a way to avoiding this bug.</pre><div class="activity"><div class="change">Status: UNCONFIRMED &rarr; NEW</div><div class="change cc-only" style="display:none">CC: jmathies</div><div class="change">Ever confirmed: true</div></div></div><div class="change-set" id="a125846681_34283"><div class="change" id="aa125846681_34283">
+    <table class="layout-table change-head assignee">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_34283" id="a125846681_34283"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a125846681_34283">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a125846681_34283">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a125846681_34283">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-15 19:25 PDT" data-time="1337135125">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">Severity: normal &rarr; enhancement</div><div class="change">Component: Keyboard Navigation &rarr; Widget: Win32</div><div class="change">Product: Firefox &rarr; Core</div><div class="change">QA Contact: keyboard.navigation &rarr; win32</div></div></div><div class="change-set" id="c17"><div class="comment" data-id="6311206" data-no="17">
+    
+    <table class="layout-table change-head assignee" id="ch-17">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a125846681_34283"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-17">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-17" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c17">Comment 17</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-15 19:31 PDT" data-time="1337135509">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-17">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-17">Oops, I misunderstood. The reporter said that Ctrl+J in the customized Dvorak should work as Ctrl+C. Hmm, according to the dispatched DOM keypress event, it should work as so, though. On the other hand, <a href="show_bug.cgi?id=434737#c15">comment 15</a> said that Ctrl+J in the customized Dvorak should work as Ctrl+J. I feel that the latter is better, though.</pre><div class="activity"><div class="change">Summary: dvorak keyboard layout makes ctrl-c open downloads window &rarr; Dvorak keyboard layout which is made by Keyboard Layout Creator makes ctrl-c open downloads window</div></div></div><div class="change-set" id="c18"><div class="comment" data-id="6311226" data-no="18">
+    
+    <table class="layout-table change-head assignee" id="ch-18">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a125846681_34283"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-18">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-18" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c18">Comment 18</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-15 19:48 PDT" data-time="1337136487">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-18">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-18">O.K. According to the notepad behavior, Ctrl+J in Dvorak should work as Ctrl+C. It's the manners of Windows application.</pre></div><div class="change-set" id="c19"><div class="comment" data-id="6312075" data-no="19">
+    
+    <table class="layout-table change-head " id="ch-19">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_442301" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/f23e718a8de61d0458bc80a783c42fed?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_442301" id="a125846681_34283"><a class="email " href="user_profile?user_id=442301" > <span class="fna">netcat</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-19">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-19" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c19">Comment 19</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-16 06:23 PDT" data-time="1337174639">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-19">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-19">I can't seem to follow..
+
+For clarification:
+When I use the regular Dvorak-Layout (Win7 x64) by going into Control Panel-&gt;Regional and Language Settings, adding US/Dvorak and using Alt+Shift to switch between layouts, Ctrl+C, Ctrl+V, etc. still work as they should, those keys just happen to be on different positions then.
+So if I open the notepad, I can copy with Ctrl+C (Dvorak's C is Qwerty's I), trying to use the Qwerty Shortcut for copying (means left pinky on Ctrl and left index finger on C) results in Ctrl+J which does not copy.
+So everything still works, keys are just reordered.
+When using Firefox Nightly 15.0a1 with the normal Dvorak-Layout, Ctrl+C successfully copies stuff (as above: Dvorak's C is in the upper right corner, it's on the same position as Qwerty's I), while Ctrl+J (J is on the position of Qwerty's C, so pressing Ctrl+J on Dvorak is the same move as pressing Ctrl+C on Qwerty) successfully opens the downloads-list.
+Means that, for me, everything works as it should when using Windows' default Dvorak-Layout.
+
+Now, I wanted to type using Dvorak, but keep the Qwerty Shortcuts, as (like written above) Dvorak's C is in the upper right corner making you have to use both of your hands to do a Ctrl+C for copying. So I modified the virtual keys that they correspond to the Qwerty-Layout, leaving the char-component in Dvorak-Layout. Means, when I open notepad and press the Copy Shortcut, I use Ctrl+J which wouldn't copy with the default Dvorak because the shortcut still only responds to Ctrl+C, but as my J-key has a virtual key value of 'C' it gets intepreted as Ctrl+C.
+
+So apparently, as I just tested it, with the normal Dvorak-Layout everything seems to work as it should. With modified virtual keys, however, the Ctrl+C shortcut simply vanishes.
+As Ctrl+J (which is Ctrl+C when interpreting the virtual keys) opens the downloads-list, but Ctrl+H (which is Ctrl+J when interpreting the virtual keys) does so as well.
+
+With the normal Dvorak, Ctrl+J stays Ctrl+J and Ctrl+C stays Ctrl+C, just with other positions, so pressing Ctrl+C on Dvorak is the same move like pressing Ctrl+I on Qwerty, however, it's still Ctrl+C and works accordingly for me.
+
+Note: Microsoft Keyboard Layout Creator is a tool by Microsoft which can create keyboard layouts in native format (.dll) just like the already installed layouts. So it's not e.g. a script which runs in the background and translates your keys or something similar.
+It's uses Windows' default implementation for keyboard layouts.
+
+Sorry, this might be an unnecessary post and I repeated myself many times, but I got a little confused and I thought I might try to clarify the situation.</pre></div><div class="change-set" id="c20"><div class="comment" data-id="6317344" data-no="20">
+    
+    <table class="layout-table change-head assignee" id="ch-20">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_34283" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/900caab146bc7a489b3854cf10acf93f?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_34283" id="a125846681_34283"><a class="email " href="user_profile?user_id=34283" > <span class="fna">Masayuki Nakano [:masayuki] (JST, +0900) (PTO: 5/26)</span></a>
+</div>
+            <span class="user-role">(Assignee)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-20">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-20" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c20">Comment 20</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-17 16:12 PDT" data-time="1337296368">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-20">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-20">This is bad news. We cannot fix this bug completely under current design.
+
+It seems that Windows native applications refer the virtual keycode for shortcut keys, but refer unmodified character for access key. We need to add something tricky way in nsKeyEvent and the methods in nsContentUtils.
+
+netcat:
+
+Thank you for your explanation, your result is same as my conclusion. We've never expected that different alphabet is inputted by VK_A - VK_Z keys. Therefore, alternative key list in our internal event has both &quot;j&quot; and &quot;c&quot; and hit the download manager's handler first, probably.</pre><div class="activity"><div class="change">Assignee: nobody &rarr; masayuki</div><div class="change">Whiteboard: [key hell]</div></div></div><div class="change-set" id="c21"><div class="comment" data-id="6317697" data-no="21">
+    
+    <table class="layout-table change-head " id="ch-21">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_442301" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/f23e718a8de61d0458bc80a783c42fed?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_442301" id="a125846681_34283"><a class="email " href="user_profile?user_id=442301" > <span class="fna">netcat</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-21">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-21" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c21">Comment 21</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-17 18:33 PDT" data-time="1337304817">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-21">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-21">Well, this was actually the reason which kept me from using Firefox back when I decided to switch my keyboard layout.
+I don't know myself how Windows actually handles the char- and the virtual key-component of layouts, but in 95% of the applications dvorak-layout is used when typing normally and qwerty-layout is used, when holding the control-key (due to the modified virtual keys), making it effectively Dvorak with Qwerty shortcuts.
+
+As said earlier, those Qwerty shortcuts actually work with Firefox, too. Ctrl+E-key (which is equal to Ctrl+VK_D) bookmarks the page, Ctrl+O-key (which is equal to Ctrl+VK_S) saves it, Ctrl+A-key (which is equal to Ctrl+VK_A (dvorak's and qwerty's A overlap)) marks everything, etc.
+So actually almost everything seems to work like in every other application, except for Ctrl+J-key (which is equal to Ctrl+VK_C) which should copy but opens the download list instead and thus functions exactly like Ctrl+H-key (which is equal to Ctrl+VK_J).
+Means there is a duplicate shortcut for opening the downloadslist, but there is none for copying.
+
+When using the copy shortcut in edit-boxes within Firefox, which are the Windows-default ones I assume, it actually works. Whether it's the one used for searching, the addressbar's or some editbox within a website, Ctrl+VK_C copies stuff which gets pasted with Ctrl+VK_V correctly between the editboxes.
+
+As far as I can tell, my circumstances are not the same as the reporter's. The problem, that the copy shortcut does not copy but opens the downloadslist, however, seems to be the same.
+
+Btw. &quot;We've never expected that different alphabet is inputted by VK_A - VK_Z keys.&quot;
+I'm not quite sure if this is actually the case. When I press Ctrl+J-key, then Ctrl+VK_C gets sent (as written above, copied from spy++), so what should be wrong with that? VK_C gets sent and VK_C was meant to be sent. Also every other shortcut (find, bookmark, downloadslist, history, etc.) works, it's just the copy shortcut which is broken.</pre></div><div class="change-set" id="c22"><div class="comment" data-id="6317722" data-no="22">
+    
+    <table class="layout-table change-head " id="ch-22">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_442301" id="a125846681_34283"><img src="https://secure.gravatar.com/avatar/f23e718a8de61d0458bc80a783c42fed?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_442301" id="a125846681_34283"><a class="email " href="user_profile?user_id=442301" > <span class="fna">netcat</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-22">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-22" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c22">Comment 22</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-05-17 18:50 PDT" data-time="1337305830">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-22">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-22">Edit:
+&quot;As far as I can tell, my circumstances are not the same as the reporter's.&quot;
+
+I reread the reporter's bug report and he wrote the following:
+
+&quot;The new keyboard layout only remaps the normal keypresses and the shift modifyer. Ctrl and Alt modifiers are usually kept the way they are.&quot;
+
+Which would mean, that my circumstances actually are the same as the reporter's.
+On Windows 7 the default dvorak layout has its virtual key in dvorak-style, too, but the reporter was using vista back then and maybe this one actually had qwerty virtual keys.
+
+I'm really sorry that I'm repeating myself this many times, my English is just so awful that I don't manage to express myself..
+
+&#64;Masayuki Nakano:
+Should I just upload a dvorak-layout with qwerty virtual keys so you can try it out yourself in windows applications like the windows explorer and notepad and after that in firefox, so you'll see that everything but Ctrl+VK_C works? Maybe you could even debug it when having a layout installed which reproduces the bug..</pre></div><div class="change-set cc-only" id="a139456622_17203" style="display:none"><div class="change" id="aa139456622_17203">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_17203" id="a139456622_17203"><img src="https://secure.gravatar.com/avatar/011737f94b61f527bd869eb54d735f57?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_17203" id="a139456622_17203"><a class="email " href="user_profile?user_id=17203" > <span class="fna">Michal 'hramrach' Suchanek</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a139456622_17203">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a139456622_17203">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a139456622_17203">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-10-20 07:57 PDT" data-time="1350745066">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">CC: hramrach</div></div></div><div class="change-set" id="c23"><div class="comment" data-id="6762667" data-no="23">
+    
+    <table class="layout-table change-head reporter" id="ch-23">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_310495" id="a139456622_17203"><img src="https://secure.gravatar.com/avatar/bfb31074f5a4887b51f201015c2bb59b?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_310495" id="a139456622_17203"><a class="email " href="user_profile?user_id=310495" > <span class="fna">Peter Hamberg</span></a>
+</div>
+            <span class="user-role">(Reporter)</span>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-23">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-23" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c23">Comment 23</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2012-10-25 05:44 PDT" data-time="1351169052">5 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-23">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-23">&#64;netcat
+Hi. I read your <a href="show_bug.cgi?id=434737#c19">comment #19</a>, #21 &amp; #22 and yes, your description perfectly describes this bug. It is the exact same problem I had when I created this bugentry.
+
+If it helps the keyboard layout I use can be found here <a rel="nofollow" href="https://github.com/Zazcallabah/PSvorak/blob/master/bin/windows/PSvorak_1.1.zip">https://github.com/Zazcallabah/PSvorak/blob/master/bin/windows/PSvorak_1.1.zip</a></pre></div><div class="change-set" id="c24"><div class="comment" data-id="9230861" data-no="24">
+    
+    <table class="layout-table change-head " id="ch-24">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_515664" id="a139456622_17203"><img src="https://secure.gravatar.com/avatar/dc5d64fe12146262da76f7c9842c84b6?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_515664" id="a139456622_17203"><a class="email " href="user_profile?user_id=515664" > <span class="fna">Thanh Phú</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-24">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-24" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c24">Comment 24</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2014-08-26 09:36 PDT" data-time="1409070973">3 years ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-24">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-24">To anyone who is still interested in this bug, I found a partial workaround
+
+1. Install this extension <a rel="nofollow" href="http://forums.mozillazine.org/viewtopic.php?t=72994">http://forums.mozillazine.org/viewtopic.php?t=72994</a> (warning: very old, but still works). The newer extension <a rel="nofollow" href="https://addons.mozilla.org/en-US/firefox/addon/customizable-shortcuts/">https://addons.mozilla.org/en-US/firefox/addon/customizable-shortcuts/</a> doesn't allow you to disable shortcuts so it won't work
+2. Restart
+3. Disable the downloads shortcut (Ctrl + J)
+4. Use your favorite Qwerty shortcuts for Undo/Cut/Copy/Paste normally!
+
+The downside? Some other shortcuts are still mapped to Dvorak layout so this is not really a fix, I just found myself frustrated with Ctrl+C and this solves the problem</pre><div class="activity cc-only" style="display:none"><div class="change">CC: nvtphu</div></div></div><div class="change-set" id="c25"><div class="comment" data-id="11446563" data-no="25">
+    
+    <table class="layout-table change-head " id="ch-25">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_572526" id="a139456622_17203"><img src="https://secure.gravatar.com/avatar/728f61a31b21fbe87ded9ca5945223c2?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+
+        <td class="change-author"><div class="vcard vcard_572526" id="a139456622_17203"><a class="email " href="user_profile?user_id=572526" > <span class="fna">hani</span></a>
+</div>
+        </td>
+
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="cs-25">-</button>
+        </td>
+      </tr>
+
+      <tr id="cr-25" >
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#c25">Comment 25</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2016-05-28 22:33 PDT" data-time="1464499987">a year ago</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr id="ctag-25">
+        <td colspan="2" class="comment-tags">
+        </td>
+      </tr>
+    </table>
+
+    
+  </div><pre class="comment-text " id="ct-25">Just want to confirm that the bug still exists in the latest Firefox version.</pre><div class="activity cc-only" style="display:none"><div class="change">CC: hani</div></div></div><div class="change-set" id="a259727560_18566"><div class="change" id="aa259727560_18566">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_18566" id="a259727560_18566"><img src="https://secure.gravatar.com/avatar/1631ba4f6361209682dc6fc099cc10b7?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_18566" id="a259727560_18566"><a class="email " href="user_profile?user_id=18566" > <span class="fna">Tracy Walker [:tracy]</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a259727560_18566">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a259727560_18566">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a259727560_18566">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2016-08-12 08:33 PDT" data-time="1471016004">10 months ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change cc-only" style="display:none">CC: twalker</div><div class="change">Priority: -- &rarr; P5</div><div class="change">Whiteboard: [key hell] &rarr; [key hell][tipi:+]</div></div></div><div class="change-set" id="a259733267_18566"><div class="change" id="aa259733267_18566">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_18566" id="a259733267_18566"><img src="https://secure.gravatar.com/avatar/1631ba4f6361209682dc6fc099cc10b7?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_18566" id="a259733267_18566"><a class="email " href="user_profile?user_id=18566" > <span class="fna">Tracy Walker [:tracy]</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a259733267_18566">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a259733267_18566">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a259733267_18566">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2016-08-12 10:08 PDT" data-time="1471021711">10 months ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">Whiteboard: [key hell][tipi:+] &rarr; [key hell][tpi:+]</div></div></div><div class="change-set cc-only" id="a275670564_386573" style="display:none"><div class="change" id="aa275670564_386573">
+    <table class="layout-table change-head ">
+      <tr>
+        <td rowspan="2" class="change-gravatar"><div class="vcard vcard_386573" id="a275670564_386573"><img src="https://secure.gravatar.com/avatar/fb9ea78c443bde2f157f5b20c14e9479?d=mm&amp;size=64" class="gravatar" width="32" height="32">
+</div>
+        </td>
+        <td class="change-author"><div class="vcard vcard_386573" id="a275670564_386573"><a class="email " href="user_profile?user_id=386573" > <span class="fna">szupie</span></a>
+</div>
+        </td>
+        <td class="comment-actions">
+          <button type="button" class="change-spinner minor" id="as-a275670564_386573">-</button>
+        </td>
+      </tr>
+      <tr id="ar-a275670564_386573">
+        <td colspan="2">
+          <h3 class="change-name">
+            <a href="show_bug.cgi?id=434737#a275670564_386573">Updated</a>
+          </h3>
+          &bull;
+          <div class="change-time"><span class="rel-time" title="2017-02-12 20:10 PST" data-time="1486959008">4 months ago</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div><div class="activity"><div class="change">CC: szupie</div></div></div><div id="new-comment-notice">
+          You need to <a href="show_bug.cgi?id=434737&amp;GoAheadAndLogIn=1">log in</a>
+          before you can comment on or make changes to this bug.
+        </div>
+
+
+
+<div id="bottom-actions">
+  <div id="bottom-right-actions">
+    <button type="button" id="top-btn" class="minor">Top &uarr;</button>
+    <div class="dropdown">
+      <button type="button" id="format-btn" aria-haspopup="true" aria-label="Format Bug Menu"
+        aria-expanded="false" aria-controls="format-menu" class="dropdown-button minor">Format Bug &#9652;</button>
+      <ul class="dropdown-content menu-up" id="format-menu" role="menu" style="display:none;">
+        <li role="presentation">
+          <a href="show_bug.cgi?format=multiple&amp;id=434737" role="menuitem" tabindex="-1">For Printing</a>
+        </li>
+        <li role="presentation">
+          <a href="show_bug.cgi?ctype=xml&amp;id=434737" role="menuitem" tabindex="-1">XML</a>
+        </li>
+        <li role="presentation">
+          <a href="show_bug.cgi?format=default&amp;id=434737" role="menuitem" tabindex="-1">Legacy</a>
+        </li>
+          <li role="presentation">
+            <a href="rest/bug/434737" role="menuitem" tabindex="-1">JSON</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+
+
+
+<div id="footer">
+  <div class="intro"></div>
+
+
+
+
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form quicksearch_form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+      class='quicksearch_check_empty'>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_bottom"></form>
+    [<a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">help</a>]
+  </li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+<li><span class="separator"> | </span><a href="page.cgi?id=productdashboard.html">Product Dashboard</a></li>
+
+</ul>
+  </li>
+
+  
+    
+
+  
+
+
+  
+</ul>
+
+  <div class="outro"><div id="policy_links">
+  <ul>
+    <li id="privacy_notice">
+      <a href="https://www.mozilla.org/privacy/websites/" target="_blank">Privacy Notice</a> |
+    </li>
+    <li id="legal_terms">
+      <a href="https://www.mozilla.org/about/legal/terms/mozilla" target="_blank">Legal Terms</a>
+    </li>
+  </ul>
+</div></div>
+</div>
+
+
+</body>
+</html>

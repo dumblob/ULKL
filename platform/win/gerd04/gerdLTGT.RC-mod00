@@ -1,0 +1,50 @@
+#include "winver.h"
+ 1 VERSIONINFO
+ FILEVERSION       1,0,3,40
+ PRODUCTVERSION    1,0,3,40
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT2_DRV_KEYBOARD
+BEGIN
+   BLOCK "StringFileInfo"
+   BEGIN
+       BLOCK "000004B0"
+       BEGIN
+           VALUE "CompanyName",     "Please contribute on https:\0"
+           VALUE "FileDescription", "German Dvorak ltgt (useful for text with Keyboard Layout\0"
+           VALUE "FileVersion",     "1, 0, 3, 40\0"
+           VALUE "InternalName",    "gerdltgt (3.40)\0"
+           VALUE "ProductName","Created by MSKLC 1.4\0"
+           VALUE "Release Information","Created by MSKLC 1.4\0"
+           VALUE "LegalCopyright",  "MIT license\0"
+           VALUE "OriginalFilename","gerdltgt\0"
+           VALUE "ProductVersion",  "1, 0, 3, 40\0"
+       END
+   END
+   BLOCK "VarFileInfo"
+   BEGIN
+       VALUE "Translation", 0x0000, 0x04B0
+   END
+END
+  
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1200    "de-DE"
+END
+
+
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1000    "German Dvorak ltgt (useful for text with lots of <>)"
+END
+
+
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1100    "German or related (all locations world-wide)"
+END
