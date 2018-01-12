@@ -96,7 +96,8 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
-* **add Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
+* a tiny "manual" (just a paragraph in README.md?) how to setup the ULKL **including** a standardized cross-platform way of switching between ULKL layouts
+* **Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
 * organize packages for easy installation (win -> msi/exe; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
 * fix various mistakes in the layouts
     * remove all the unnecessary symbols left from the original dvorak layout file in `platform/osx/czed.keylayout`
