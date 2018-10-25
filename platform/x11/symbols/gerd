@@ -1,4 +1,4 @@
-// 2010-2017 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2018 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
 // The concept of this keyboard layout
@@ -55,7 +55,7 @@
 //              nda !   §       ,   7   8   9   [   ]   +   |
 //              en dash
 //
-//          @   °   €   `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
@@ -83,14 +83,11 @@
 //
 //          "   <   >   §       ,   7   8   9   [   ]   +   |
 //
-//          @   °   €   `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
 //                            NBSP
-
-// ----------- german dvorak (ltgt|writer), 4. level
-// the same as 3. level
 
 xkb_symbols "base" {
   // topmost row

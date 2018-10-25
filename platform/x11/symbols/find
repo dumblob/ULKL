@@ -1,4 +1,4 @@
-// 2010-2017 Jan Pacner <pacnerjan@volny.cz>
+// 2010-2018 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
 // FIXME add ltgt & writer variants for compatibility reasons
@@ -37,7 +37,7 @@
 //                            space
 //                            space
 
-// ----------- finnish dvorak, 1. and 2. level
+// ----------- finnish dvorak ltgt, 1. and 2. level
 //      Å   Ä   Ö                               Š
 //      å   ä   ö                               š
 //
@@ -53,20 +53,45 @@
 //                            NBSP
 //                            space
 
-// ----------- finnish dvorak, 3. level
+// ----------- finnish dvorak ltgt, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
 //              nda !   §       ,   7   8   9   [   ]   +   |
 //              en dash
 //
-//          @   °   €   `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \
 //
 //                              0   1   2   3   .
 //
 //                            NBSP
 
-// ----------- finnish dvorak, 4. level
-// the same as 3. level
+// ----------- finnish dvorak writer, 1. and 2. level
+//      Å   Ä   Ö                               Š
+//      å   ä   ö                               š
+//
+//          »   nda '   P   Y   F   G   C   R   L   ?   +   |
+//              en dash
+//          «   ,   .   p   y   f   g   c   r   l   /   =   \
+//
+//          A   O   E   U   I   D   H   T   N   S   _
+//          a   o   e   u   i   d   h   t   n   s   -
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+//
+//                            NBSP
+//                            space
+
+// ----------- finnish dvorak writer, 3. level
+//  ~   !   @   #   $   %   ^   &   *   (   )   {   }
+//
+//          "   <   >   §       ,   7   8   9   [   ]   +   |
+//
+//          @   °       `       :   4   5   6   =   \
+//
+//                              0   1   2   3   .
+//
+//                            NBSP
 
 xkb_symbols "base" {
   // topmost row
@@ -92,10 +117,9 @@ xkb_symbols "base" {
 
   // ISO_Left_Tab
   key <TAB>  {[ Tab,        Tab,      Tab,          Tab          ]};
-  key <AD01> {[ apostrophe, quotedbl, VoidSymbol,   VoidSymbol   ]};
-  // en dash (pomlcka)
-  key <AD02> {[ comma,      less,     U2013,        U2013        ]};
-  key <AD03> {[ period,     greater,  exclam,       exclam       ]};
+  //key <AD01> see specific variants
+  //key <AD02> see specific variants
+  //key <AD03> see specific variants
   key <AD04> {[ p,          P,        section,      section      ]};
   key <AD05> {[ y,          Y,        VoidSymbol,   VoidSymbol   ]};
   key <AD06> {[ f,          F,        comma,        comma        ]};
@@ -166,6 +190,29 @@ xkb_symbols "base" {
   // this could be useful for some window managers which utilize the
   // Meta key, but it could have bad impact on level3 of some keys
   //modifier_map Mod1 { ISO_Level3_Shift };
+};
+
+xkb_symbols "ltgt" {
+  include "find(base)"
+
+  name[Group1] = "Finnish Dvorak ltgt (useful for text with lots of <>)";
+
+  key <AD01> {[ apostrophe, quotedbl, VoidSymbol, VoidSymbol ]};
+  // en dash
+  key <AD02> {[ comma,      less,     U2013,      U2013      ]};
+  key <AD03> {[ period,     greater,  exclam,     exclam     ]};
+};
+
+xkb_symbols "writer" {
+  include "find(base)"
+
+  name[Group1] = "Finnish Dvorak writer (useful for text with left/right UTF-8 double angle quotes)";
+
+  // left/right UTF-8 double angle quotes
+  key <AD01> {[ U00AB,  U00BB,      quotedbl, quotedbl ]};
+  // en dash
+  key <AD02> {[ comma,  U2013,      less,     less     ]};
+  key <AD03> {[ period, apostrophe, greater,  greater  ]};
 };
 
 // vim: ft=xkb:

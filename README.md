@@ -51,7 +51,7 @@ Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *M
 
 The naming convention of layouts follows the [ISO 639-2](http://www.loc.gov/standards/iso639-2/php/English_list.php) language naming standard and adds the suffix `d` as an abbreviation for `Dvorak` (as the layouts are based on the [Dvorak simplified keyboard](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard ) layout).
 
-Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages while maintaining a relaxed feeling while typing (compared to other layouts). Also considering the rapidly growing amount of human input in English (compared to other languages), Dvorak as a layout primarily focused on English is a sustainable solution for decades. This makes ULKL a perfect fit for teaching [touch typing](https://en.wikipedia.org/wiki/Touch_typing ) at schools.
+Dvorak layout surprisingly performs only [very few percent](http://mkweb.bcgsc.ca/carpalx/?popular_alternatives) worse than optimal layouts for each latin-based language, but provides by far the best overall score among latin languages while maintaining a relaxed feeling while typing (compared to other layouts). Also considering the rapidly growing amount of human input in English (compared to other languages), Dvorak as a layout originally primarily focused on English is a sustainable solution for decades. This makes ULKL a perfect fit for teaching [touch typing](https://en.wikipedia.org/wiki/Touch_typing ) at schools.
 
 Example layout names:
 
@@ -197,9 +197,9 @@ Characters *minus* and *en dash* were chosen to be present instead of others bas
 
 #### Motivation and reasoning for decisions made in ULKL
 
-(The following text is in Czech because of it's history. It'll be translated as soon as someone requests it.)
+Switching layouts requires one to learn wildly differing layouts for each existing alphabe. Not switching layouts means most of special or national characters are nearly inaccessible due to too high number of levels one needs to switch to. As a consequence one would need to learn a specific layout for one language. A solution of this is simply use separate layouts, but maintain full compatibility for the basic characters (i.e. for the whole latin alphabet and numbers) while appropriately changing the rest according to a beforehand defined trivial pattern.
 
-Volim proto variantu, kdy uzivatel bezne pouziva vice jazykove-specifickych layoutu a mezi nimi se podle potreby prepina. Tim ovsem vznika otazka nauceni se mnoha layoutu. Resenim je zachovat kompatibilitu zakladnich znaku (napr. cele latinky) a vhodne menit pouze zbytek (lze napr. prohazet urovne, cimz se dosahne pozadovane efektivity) podle predem daneho jednoducheho vzoru.
+(the following text is in Czech because of its origin; it'll get translated to English once someone requests it)
 
 Otazkou je, jake layouty tedy vytvorit? Dospel jsem k nazoru, ze je nejvhodnejsi cilit na dve zakladni skupiny uzivatelu klavesnic.
 
