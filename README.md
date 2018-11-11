@@ -96,6 +96,7 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
 
 ## TODO
 
+* **create a variant usable by just one hand (disregarding whether left or right) to allow use on mobile devices or by handicapped persons - i.e. create a variant without any need to press two or more keys at the same time (hint: use dead key) - maybe making the compose key well accessible will be enough...**
 * a tiny "manual" (just a paragraph in README.md?) how to setup the ULKL **including** a standardized cross-platform way of switching between ULKL layouts
 * **Semver versioning** of the whole repository (not to each layout file nor to the whole platform)
 * organize packages for easy installation (win -> msi/exe; osx -> dmg; x11 -> *distro-specific-e.g.-PKGBUILD*)
