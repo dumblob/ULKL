@@ -151,8 +151,8 @@ To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard 
         * `e` or `E` designating `*10^` ("times ten power")
         * ` ` space or non-breakable-space (needed for splitting groups of numbers)
     * add characters for phonetics written in English or make it a separate layout?
-    * pressing one Shift, then the other (disregarding in which order) and releasing **either** of the two pressed Shifts will switch temporarily to 3rd level for one non-Shift character
-    * pressing one Shift, then the other (disregarding in which order) and releasing **both** two pressed Shifts will switch permanently to 3rd level until any Shift is pressed (without the requirement to release it before proceeding; so this pressed Shift will permanently switch off the 3rd level and will activate 2nd level as usually)
+    * pressing and holding one Shift, then the other (disregarding in which order) and releasing **either** of the two pressed Shifts will switch temporarily to 3rd level for one non-Shift character
+    * pressing and holding one Shift, then the other (disregarding in which order) and releasing **both** two pressed Shifts will switch permanently to 3rd level until any Shift is pressed (without the requirement to release it before proceeding; so this pressed Shift will permanently switch off the 3rd level and will activate 2nd level as usually)
         * this 3rd level could turn on the CapsLock LED (or maybe not to prevent confusion?)
 * get certification from [Ceska ergonomicka spolecnost](http://www.vubp.cz/ces/ )
 * generate GIF with the 3 levels for each layout
