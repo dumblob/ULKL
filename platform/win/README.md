@@ -13,6 +13,8 @@
 
 ## Useful links
 
+* https://github.com/MaiaVictor/OSX/tree/master/windows_keyboard (modern AHK/AutoHotKey script initialization with superior speed and less issues)
+    * note AHK can then produces `.exe` files (probably self contained) - that's super handy!
 * https://www.windows-noob.com/forums/topic/6701-custom-keyboard-layout/
     * `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\a0000420]`
 * http://www.kbdedit.com/manual/admin_deploy.html#Language bar (`HKCU\Keyboard Layout\Preload`, `HKCU\Keyboard Layout\Substitutes`)
