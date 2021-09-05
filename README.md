@@ -243,3 +243,5 @@ X upstream: xkeyboard-config-2.10.1/rules/compat/layoutsMapping.lst
 [Czech National Corpus](http://ucnk.ff.cuni.cz/syn2010.php ) (maintained by FFUK)
 
 [UCWCS X11 layout](http://kam.mff.cuni.cz/~pasky/dev/debian/lenny/ucwcs-xkb/ucwcs-xkb/README.CZ )
+
+[English Letter Frequency Counts: Mayzner Revisited or ETAOIN SRHLDCU](http://norvig.com/mayzner.html )
