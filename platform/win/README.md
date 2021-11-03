@@ -31,7 +31,7 @@
 1. [MSKLC](https://www.microsoft.com/en-us/download/details.aspx?id=22339 ) - does require administrator priviliges to install the resulting compiled DLL layouts and everything is closed source
 
     * [Virtual-Key Codes](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx ) (see [Appendix 1](https://reactos.org/wiki/Create_a_keyboard_layout ) for hints which key is which on a HW keyboard)
-    * [.klc format](https://pastebin.com/UXc1ub4V ) parser in C# (disassembled from MSKLC)
+    * [.klc format](https://pastebin.com/UXc1ub4V ) parser in C# (hopefully similar to the one in MSKLC)
     * [klc2ini.pl](https://github.com/amire80/msklc_reader ) - parses .klc files and converts them to AutoHotkey .ini format
 
 
