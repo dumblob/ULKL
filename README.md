@@ -10,7 +10,7 @@ Ever experienced any of the following issues?
 * *Hand-pain* (wrist, carpal tunnels etc.).
 * *Switching to another nationalized layout* (both in the head and in the hand-memory).
 * *Weird, inefficient* layouts on smaller devices (PDAs, handhelds, netbooks, palmtops, etc.).
-* Impossibility to type a character into a *password field or a security app* (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
+* Difficulties typing certain characters into a *password field or a security app* (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
 * *Other issues* with keyboard input...
 
 ULKLs mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
