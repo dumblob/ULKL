@@ -13,7 +13,7 @@ Ever experienced any of the following issues?
 * Impossibility to type a character into a *password field or a security app* (happens on login screens, [HW password storage devices](https://www.crowdsupply.com/nth-dimension/signet ), HW TPM modules, etc.).
 * *Other issues* with keyboard input...
 
-ULKL mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
+ULKLs mitigate these issues by introducing an all-encompassing, fully **intuitive** way of having a separate keyboard layout for **each latin-based alphabet**, while targetting 100% mutual compatibility between them (achieved through high uniformity).
 
 The layout design idea is thus:
 
