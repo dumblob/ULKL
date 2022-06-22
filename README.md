@@ -184,7 +184,7 @@ keysym Caps_Lock = Escape
 
 to `"$HOME/.xmodmaprc"`.
 
-In *console* e.g. by running echo `'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
+In *console* e.g. by running `echo 'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
 #### Dash, en dash, minus, hyphen, soft hyphen, non-breaking hyphen, ...
 

@@ -1,6 +1,14 @@
 // 2010-2018 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
+// FIXME add symbols from https://ilyabirman.net/typography-layout/
+//   copyright C
+//   trademark TM
+//   promile
+//   approximate equals
+//   +-
+//   patent "r in circle"
+
 // The concept of this keyboard layout
 //   motto: be as much compatible with ISO dvorak as possible
 //   4. level is the same as 3. level
@@ -52,8 +60,8 @@
 // ----------- czech dvorak ltgt, 3. level
 //  ~   !   @   #   $   %   ^   &   *   (   )   {   }
 //
-//              nda !   §       ,   7   8   9   [   ]   +   |
-//              en dash
+//              en  !   §       ,   7   8   9   [   ]   +   |
+//              dash
 //
 //          @   °       `       :   4   5   6   =   \
 //
@@ -65,8 +73,8 @@
 //  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
 //  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
 //
-//          “   nda '   P   Y   F   G   C   R   L   ?   Ť   Ň
-//              en dash
+//          “   en  '   P   Y   F   G   C   R   L   ?   Ť   Ň
+//              dash
 //          „   ,   .   p   y   f   g   c   r   l   /   ť   ň
 //
 //          A   O   E   U   I   D   H   T   N   S   _
@@ -95,6 +103,8 @@
 //alphanumeric_keys                        // wtf is this?
 //modifier_keys                            // wtf is this?
 //xkb_compatibility "some_xkb_symbols_id"  // wtf is this?
+
+// do NOT use individually but only in "include ..."
 xkb_symbols "base" {
   //virtual_modifiers LevelThree, Lock;
   //interpret ISO_Level3_Shift + Lock {
@@ -175,7 +185,7 @@ xkb_symbols "base" {
 
   // Shift_Lock
   key <LFSH> {[ Shift_L,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
-  // left bottom key, right from <LFSH>, which doesn't follow the kbd standard
+  // left bottom key, right from <LFSH>, which does not follow kbd standard
   key <LSGT> {[ VoidSymbol, VoidSymbol,       VoidSymbol,       VoidSymbol       ]};
   key <AB01> {[ semicolon,  colon,            VoidSymbol,       VoidSymbol       ]};
   key <AB02> {[ q,          Q,                VoidSymbol,       VoidSymbol       ]};
