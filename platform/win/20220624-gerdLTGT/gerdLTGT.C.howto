@@ -1,0 +1,29 @@
+lshift 0xa0
+rshift 0xa1
+lctrl 0xa2
+lctrl 0xa3
+lmenu 0xa4
+rmenu 0xa5
+
+
+
+shift 0x10
+ctrl 0x11
+menu 0x12
+
+
+
+
+
+
+
+
+
+base                level 0
+shift               level 1
+ctrl
+shift + ctrl
+alt                 level 1
+shift + alt         level 2
+alt + ctrl
+shift + alt + ctrl

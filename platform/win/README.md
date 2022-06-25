@@ -2,6 +2,8 @@
 
 ### LShift + RShift modifier combination doesn't work
 
+1. re-read https://metacpan.org/pod/UI::KeyboardLayout#Keyboard-input-on-Windows,-Part-I:-what-is-the-kernel-doing? and come up with some hacks?
+
 1. generate all possible `Ctrl + Shift + Alt + AltGr` combination by MSKLC and compare sources to gain more knowledge about `CharModifiers` table
 
 1. reevaluate `CharModifiers` table by taking inspiration from https://github.com/microsoft/Windows-driver-samples/blob/master/input/layout/fe_kbds/jpn/101/kbd101.c
@@ -18,6 +20,8 @@
     - check it works **by default** seamlessly (only turning IME on in system settings is acceptable but it's unacceptable to turn IME on at login screen every time it'll show up)
         - at the login screen
         - for all users
+    - sometimes has some issues (e.g. shows a tiny annoying button/icon in just under every input field widget)
+    - sometimes does not work on password input fields
 
 ## Available general solutions
 
@@ -37,6 +41,7 @@
 
 ## Useful links
 
+* *extended key* means it's one from the "middle group" on a full/long keyboard (which has 3 separate blocks: alphanumeric, arrow, and numeric) - see https://docs.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input
 * a non-Microsoft reimplementation of some of the kernel building blocks of keyboard handling on Windows - it **dumps the content of structures** etc.: https://github.com/awakecoding/Win32Keyboard
 * `kbd.h` from 1991 (in contrast to the current `kbd.h` from 1995 or newer): https://gist.github.com/ozh/5340054
 * thorough explanation of reasoning behind the frozen state of the Windows keyboard handling internals (probably from the author of kbdedit.com ): https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices-insiderplat_pc/how-to-implement-multiple-deadkey-strokes/4ff38c09-b58c-490a-963e-3cc745dfb396
@@ -52,4 +57,3 @@
 * http://www.klm32.com/KbdEdit.html
 * http://ahkscript.org/
 * [dverty](https://github.com/chid/dvorak-qwerty/tree/master/dverty ) with simple regedit register files for better locale settings
-* *extended key* means it's one from the "middle group" on a full/long keyboard (which has 3 separate blocks: alphanumeric, arrow, and numeric) - see https://docs.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input
