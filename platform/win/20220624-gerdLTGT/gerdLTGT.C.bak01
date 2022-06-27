@@ -1,4 +1,3 @@
-// FIXME contact Michael S. Kaplan (blogs.msdn.com/b/michkap/archive/2006/04/10/570570.aspx )
 // FIXME use virtual keys (e.g. OEM_ or rather undefined ones) instead of Shifts
 //   disdvantage: might not work with some of the "shift levels"
 // FIXME has E1 other possibilities than E0 ?
