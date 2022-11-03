@@ -1,7 +1,7 @@
 // 2010-2018 Jan Pacner <pacnerjan@volny.cz>
 // etaoin shrdlu!
 
-// FIXME this will be improved and simplified in the future
+// FIXME this will be improved and cleaned up in the future
 
 // The concept of this keyboard layout
 //   motto: be as much compatible with ISO dvorak as possible
@@ -26,8 +26,8 @@
 //          "   <   >   P   Y   F   G   C   R   L   ?   +   |
 //          '   ,   .   p   y   f   g   c   r   l   /   =   \
 //
-//          A   O   E   U   I   D   H   T   N   S   _
-//          a   o   e   u   i   d   h   t   n   s   -
+//          A   O   E   U   I   D   H   T   N   S   _   LF
+//          a   o   e   u   i   d   h   t   n   s   -   LF
 //
 //          :   Q   J   K   X   B   M   W   V   Z
 //          ;   q   j   k   x   b   m   w   v   z
@@ -83,7 +83,7 @@ xkb_symbols "base" {
   key <AC09> {[ n,      N,          6,          6          ]};
   key <AC10> {[ s,      S,          equal,      equal      ]};
   key <AC11> {[ minus,  underscore, backslash,  backslash  ]};
-  key <RTRN> {[ Return, Return,     Return,     Return     ]};
+  key <RTRN> {[ Return, Return,     cr,         cr         ]};
 
   key <LFSH> {[ Shift_L,    ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]};
   // left bottom key, right from <LFSH>, which does not follow kbd standard
@@ -107,7 +107,7 @@ xkb_symbols "base" {
   // META
   key <LALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
               [ Alt_L,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
-  key <SPCE> {[ space,      nobreakspace, nobreakspace, nobreakspace ]};
+  key <SPCE> {[ space,      space,        nobreakspace, nobreakspace ]};
   // META
   key <RALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
               [ Alt_R,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};

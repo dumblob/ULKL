@@ -24,8 +24,8 @@
 //          "   <   >   P   Y   F   G   C   R   L   ?   +   |
 //          '   ,   .   p   y   f   g   c   r   l   /   =   \
 //
-//          A   O   E   U   I   D   H   T   N   S   _
-//          a   o   e   u   i   d   h   t   n   s   -
+//          A   O   E   U   I   D   H   T   N   S   _   LF
+//          a   o   e   u   i   d   h   t   n   s   -   LF
 //
 //          :   Q   J   K   X   B   M   W   V   Z
 //          ;   q   j   k   x   b   m   w   v   z
@@ -40,13 +40,13 @@
 //          "   <   >   P   Y   F   G   C   R   L   ?   +   |
 //          '   ,   .   p   y   f   g   c   r   l   /   =   \
 //
-//          A   O   E   U   I   D   H   T   N   S   _
-//          a   o   e   u   i   d   h   t   n   s   -
+//          A   O   E   U   I   D   H   T   N   S   _   LF
+//          a   o   e   u   i   d   h   t   n   s   -   LF
 //
 //          :   Q   J   K   X   B   M   W   V   Z
 //          ;   q   j   k   x   b   m   w   v   z
 //
-//                            NBSP
+//                            space
 //                            space
 
 // ----------- german dvorak ltgt, 3. level
@@ -55,7 +55,7 @@
 //              nda !   §       ,   7   8   9   [   ]   +   |
 //              en dash
 //
-//          @   °       `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \   CR
 //
 //                              0   1   2   3   .
 //
@@ -69,13 +69,13 @@
 //              en dash
 //          „   ,   .   p   y   f   g   c   r   l   /   =   \
 //
-//          A   O   E   U   I   D   H   T   N   S   _
-//          a   o   e   u   i   d   h   t   n   s   -
+//          A   O   E   U   I   D   H   T   N   S   _   LF
+//          a   o   e   u   i   d   h   t   n   s   -   LF
 //
 //          :   Q   J   K   X   B   M   W   V   Z
 //          ;   q   j   k   x   b   m   w   v   z
 //
-//                            NBSP
+//                            space
 //                            space
 
 // ----------- german dvorak writer, 3. level
@@ -83,7 +83,7 @@
 //
 //          "   <   >   §       ,   7   8   9   [   ]   +   |
 //
-//          @   °       `       :   4   5   6   =   \
+//          @   °       `       :   4   5   6   =   \   CR
 //
 //                              0   1   2   3   .
 //
@@ -141,7 +141,7 @@ xkb_symbols "base" {
   key <AC09> {[ n,        N,          6,          6          ]};
   key <AC10> {[ s,        S,          equal,      equal      ]};
   key <AC11> {[ minus,    underscore, backslash,  backslash  ]};
-  key <RTRN> {[ Return,   Return,     Return,     Return     ]};
+  key <RTRN> {[ Return,   Return,     cr,         cr         ]};
 
   // bottom row
 
@@ -171,7 +171,7 @@ xkb_symbols "base" {
   // META
   key <LALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
               [ Alt_L,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};
-  key <SPCE> {[ space,      nobreakspace, nobreakspace, nobreakspace ]};
+  key <SPCE> {[ space,      space,        nobreakspace, nobreakspace ]};
   // META
   key <RALT> { type[Group1] = "FOUR_LEVEL", symbols[Group1] =
               [ Alt_R,      VoidSymbol,   VoidSymbol,   VoidSymbol   ]};

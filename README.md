@@ -186,6 +186,10 @@ to `"$HOME/.xmodmaprc"`.
 
 In *console* e.g. by running `echo 'keycode 58 = Escape Escape Escape Escape' | loadkeys -`.
 
+#### List of all available symbols in X11
+
+- `/usr/include/X11/keysymdef.h` and other headers in that dir
+
 #### Dash, en dash, minus, hyphen, soft hyphen, non-breaking hyphen, ...
 
 Characters *minus* and *en dash* were chosen to be present instead of others based on the following information.
