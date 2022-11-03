@@ -2,6 +2,10 @@
 
 ### LShift + RShift modifier combination doesn't work
 
+1. add CR for 3+ levels
+
+1. maybe enforce LF for 2- levels (for 3+ levels CR is enforced)?
+
 1. re-read https://metacpan.org/pod/UI::KeyboardLayout#Keyboard-input-on-Windows,-Part-I:-what-is-the-kernel-doing? and come up with some hacks?
 
 1. generate all possible `Ctrl + Shift + Alt + AltGr` combination by MSKLC and compare sources to gain more knowledge about `CharModifiers` table
