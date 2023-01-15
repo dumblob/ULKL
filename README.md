@@ -1,10 +1,10 @@
-# ULKL (Uniform Latin Keyboard Layouts)
+# ULKL - Uniform Latin Keyboard Layouts
 
 Ever experienced any of the following issues?
 
 * A *slow typing* feeling.
 * *Tricky-accessible characters* (especially the national ones).
-* The need to *learn yet another* cryptic shortcut.
+* The need to *learn yet another* cryptic shortcut (bye bye muscle memory).
 * Pressing *large amount* of keys to write even the most basic characters.
 * The feeling *everything is randomly scattered* and destroying the integrity of inputting anything using a keyboard.
 * *Hand-pain* (wrist, carpal tunnels etc.).
@@ -17,17 +17,32 @@ ULKLs mitigate these issues by introducing an all-encompassing, fully **intuitiv
 
 The layout design idea is thus:
 
-> Put the nationalized characters at places, where your fingers expect them to be **without** pressing any modifiers.
+> Put the nationalized characters at places, where your finger muscle memory expects them to be **without** pressing any modifiers.
 
 (modifiers are in general keys like `Shift` `Ctrl` `Alt` etc.)
 
 It means that typing `č` will use the same finger as typing `c`. The same holds for `Č` and `C` - even here, only one modifier is needed for both cases - the `Shift`. This allows one to very quickly switch between layouts **without the need to learn** anything. Exceptions to this rule, where finger overloading would happen, still guarantee a position of the symbol logical enough to be learned in a second. The following graphics explains it on the `czed` (ltgt variant) layout.
 
-FIXME add a few shiny pictures (animated gifs?) depicting among other things differences between czed and engd to demonstrate compatibility and the easy-to-learn property
+```c
+// ----------- czech dvorak ltgt, 1. and 2. level
+//  Ú   É   Á   Ó   Ě   Ů   Ý   Ď   Í   Č   Ř   Š   Ž
+//  ú   é   á   ó   ě   ů   ý   ď   í   č   ř   š   ž
+//
+//          "   <   >   P   Y   F   G   C   R   L   ?   Ť   Ň
+//          '   ,   .   p   y   f   g   c   r   l   /   ť   ň
+//
+//          A   O   E   U   I   D   H   T   N   S   _   LF
+//          a   o   e   u   i   d   h   t   n   s   -   LF
+//
+//          :   Q   J   K   X   B   M   W   V   Z
+//          ;   q   j   k   x   b   m   w   v   z
+```
 
-Please note, the goal is **not** to have one *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both), because that leads by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc.
+(FIXME add shiny pictures (animated gifs?) depicting among other things differences between czed and engd to demonstrate compatibility and the easy-to-learn property)
 
-## Supported features
+Please note, the goal is **not** to have **one** *ultimate keyboard layout* (disregarding if by combining keys or by switching to ultra-high levels or both). That would lead by definition to awkward writing of many symbols, numeric expressions, digraphs, trigraphs, math, etc. Instead, we encourage to switch between multiple layouts as you are used to with the bonus of having all of them muscle-memory-compatible.
+
+## Features
 
 * the particular national alphabet fully accessible without any modifier (so called **first level layout**)
     * the absence of a modifier prevents majority of issues with password and other trusted inputs
@@ -45,7 +60,7 @@ Please note, the goal is **not** to have one *ultimate keyboard layout* (disrega
 
 FIXME add FSM depicting the work with Shifts (mainly the third level) and later with other modifiers (probably just the compose key)
 
-## Available layouts
+## Available layouts and platforms
 
 Supported platforms include *X11* (Linux, BSD, etc.), *console* (Linux, BSD), *Mac OS*, and *Windows*. Layouts are to be found in corresponding directories: `platform/x11` `platform/console` `platform/osx` `platform/win`.
 
@@ -63,7 +78,7 @@ Example layout names:
 
 Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowed to provide up to 4 language-specific punctuation characters (e.g. `„“`), which might be useful especially to writers at the expense of slightly less accessible `<` and `>` characters. The *ltgt* variant on the other hand does provide `<` and `>` characters well accessible just like Dvorak does. *ltgt* is the default variant.
 
-## Usage
+## Installation and usage
 
 ### Windows
 
@@ -93,6 +108,23 @@ Each layout has 2 variants - *ltgt* and *writer*. The *writer* variant is allowe
 3. Enable the new keyboard layout from System Preferences.
 
 To apply changes to a keyboard layout later, run `sudo touch '/Library/Keyboard Layouts'` and restart.
+
+## Contributions
+
+Please contribute! In whatever form (suggestions, bugs, new layouts, etc.).
+
+### Creation and submission of new layouts
+
+1. Choose platform you wish to create the layout for (Linux is the simpliest).
+2. Copy & paste existing *definition file* (e.g. https://github.com/dumblob/ULKL/blob/master/platform/x11/symbols/czed or https://github.com/dumblob/ULKL/blob/master/platform/win/source-20220624-gerdLTGT/gerdLTGT.klc ) - use [ISO 639-2/B 3-character identification of your language](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes ) (if there are multiple, just choose one you like - other will be symlinks or plain copies if they use identical alphabet) plus `d` character as suffix (to resemble `dvorak`) as both file name and layout name (used inside of the *definition file*).
+3. Change keyboard ["visualizations"](https://github.com/dumblob/ULKL/blob/2265077c2befa47a5de644df25dbf73ae373ea45/platform/x11/symbols/czed#L29-L99 ) at the top of the *definition file* to suite your language so that each possible character of the full alphabet (i.e. containing all possible tuples of a [letter](https://en.wikipedia.org/wiki/Letter_(alphabet) ) and corresponding [diacritical mark(s)](https://en.wikipedia.org/wiki/Diacritic )). Overloading (i.e. use an empty space for "overloaded" column - see e.g. `ťŤňŇ` in https://github.com/dumblob/ULKL/blob/2265077c2befa47a5de644df25dbf73ae373ea45/platform/x11/symbols/czed#L49-L53 ) **shall** maintain relative spatial positioning if possible (with the exception of competitors having significantly different usage frequency in which case the highest priority for the most frequently used letter with diacritics has the empty space closest to the index finger) and **must** maintain the half of the keyboard to be written with the **same hand** (see e.g. `úÚéÉ` in https://github.com/dumblob/ULKL/blob/2265077c2befa47a5de644df25dbf73ae373ea45/platform/x11/symbols/czed#L46-L53 ).
+4. Change labels/names of characters in the *definition file* to match keyboard visualizations from (3). Do not forget to meticulously fill in `VoidSymbol` on X11 (`-1` on Windows meaning *\<none\>*; `&#x0010;` on macOS/Apple FIXME is this correct?) for 3rd (and 4th) level for letters which do not have any diacritical mark (and at the same time do not need to be "overloaded").
+    - X11 names (Linux/BSD/...) are usually in `/usr/include/X11/keysymdef.h` (or https://github.com/dumblob/ULKL/blob/master/xorg.lst or https://github.com/dumblob/ULKL/blob/master/x11_symbol_names-en_US.UTF-8 )
+    - Windows names are usually in `kbd.h` or in the GUI of MSKLC (Microsoft Keyboard Layout Creator)
+    - macOS/Apple names seem to be somewhere in `/Library/Keyboard Layouts/` (use `grep -r` to find them)
+5. Repeat 1-4 for other platforms if you can :wink:.
+6. Test your results (see *Installation and usage* in this readme).
+7. Make a PR (pull request) in this repo. Feel free to submit even unfinished work!
 
 ## TODO
 
