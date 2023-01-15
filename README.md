@@ -126,6 +126,8 @@ Please contribute! In whatever form (suggestions, bugs, new layouts, etc.).
 6. Test your results (see *Installation and usage* in this readme).
 7. Make a PR (pull request) in this repo. Feel free to submit even unfinished work!
 
+**By issuing a pull request to this repo, you agree to the licencing conditions of this repository.**
+
 ## TODO
 
 * **create a variant usable by just one hand (disregarding whether left or right) to allow use on mobile devices or by handicapped persons - i.e. create a variant without any need to press two or more keys at the same time (hint: use dead key) - maybe making the compose key well accessible will be enough...**
